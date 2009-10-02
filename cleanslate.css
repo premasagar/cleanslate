@@ -1,0 +1,215 @@
+/*
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+  CleanSlate CSS
+  the most !important reset stylesheet
+
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
+
+This stylesheet declares values for all (likely) HTML elements that may be in use on a host page. It gives default (or appropriate) values for all CSS properties on those elements.
+Where 'inherit' is given as a value for an element, a more specific value should be given on relevant potential elements - e.g. strong {font-weight:bold; } and the root container element, .cleanslate
+
+Minify, Compress & Cache
+For speedy loading, this file should be served minified (e.g. with YUI Compressor), Gzipped (there are many repeat strings here to be substituted) and served with moderate to heavy caching. (New versions can be addressed via a version number in the filename or query string)
+
+
+Building blocks:
+* Default style sheet for HTML 4 - http://www.w3.org/TR/CSS2/sample.html
+* HTML 5 Reset Stylesheet -  http://html5doctor.com/html-5-reset-stylesheet
+* W3C CSS2 Cascade & Inheritance - http://www.w3.org/TR/CSS2/cascade.html
+* W3C CSS3 Selectors - http://www.w3.org/TR/css3-selectors/
+
+
+=========================
+
+MIT License
+
+Copyright (c) 2009 Premasagar Rose: http://premasagar.com
+A Dharmafly project: http://dharmafly.com
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+=========================*/
+
+/*
+HTML elements
+*/
+
+/* HTML 4.01 */
+.cleanslate, .cleanslate h1, .cleanslate h2, .cleanslate h3, .cleanslate h4, .cleanslate h5, .cleanslate h6, .cleanslate p, .cleanslate td, .cleanslate dl, .cleanslate tr, .cleanslate dt, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate table,  .cleanslate th, .cleanslate tbody, .cleanslate tfoot, .cleanslate caption, .cleanslate thead, .cleanslate ul, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate li, .cleanslate iframe, .cleanslate strong, .cleanslate legend, .cleanslate em, .cleanslate s, .cleanslate cite, .cleanslate span, .cleanslate input, .cleanslate sup, .cleanslate label, .cleanslate dfn, .cleanslate object, .cleanslate big, .cleanslate q, .cleanslate font, .cleanslate samp, .cleanslate acronym, .cleanslate small, .cleanslate img, .cleanslate strike, .cleanslate code, .cleanslate sub, .cleanslate ins, .cleanslate textarea, .cleanslate var, .cleanslate a, .cleanslate abbr, .cleanslate applet, .cleanslate del, .cleanslate kbd, .cleanslate tt, .cleanslate b, .cleanslate i, .cleanslate hr,
+
+/* HTML5 */
+.cleanslate article, .cleanslate aside, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section, .cleanslate time, .cleanslate mark, .cleanslate audio, .cleanslate video {
+	background-attachment:scroll !important;
+	background-color:transparent !important;
+	background-image:none !important; /* This rule affects the use of pngfix JavaScript http://dillerdesign.org/experiment/BB_BelatedPNG for IE6, which is used to force the browser to recognise alpha-transparent PNGs files that replca the IE6 lack of PNG transparency. (The rule overrides the VML image that is used to replace the given CSS background-image). If you don't know what that means, then you probably haven't used the pngfix script, and this comment may be ignored :) */
+	background-position:0 0 !important;
+	background-repeat:repeat !important;
+	border-color:black !important; /* because border-color should match font color, so it is impossible for the reset stylesheet to know what color it should be. Guideline: if you haven't already declared a border-color for an element, be sure to do so when you first declare the border-width */
+	border-style:none !important;
+	border-width:medium !important;
+	bottom:auto !important;
+	clear:none !important;
+	clip:auto !important;
+	color:inherit !important;
+	content:normal !important;
+	counter-increment:none !important;
+	counter-reset:none !important;
+	cursor:auto !important;
+	direction:inherit !important;
+	display:inline !important;
+	float:none !important;
+	font-family: inherit !important; /* As with other inherit values, this needs to be set on the root container element */
+	font-size: inherit !important;
+	font-style:inherit !important;
+	font-variant:normal !important;
+	font-weight:inherit !important;
+	height:auto !important;
+	left:auto !important;
+	letter-spacing:normal !important;
+	line-height:inherit !important;
+	list-style:disc outside none !important; /* Could set list-style-type to none */
+	margin:0 !important;
+	max-height:none !important;
+	max-width:none !important;
+	min-height:0 !important;
+	min-width:0 !important;
+	outline:invert none medium !important;
+	overflow:visible !important;
+	padding:0 !important;
+	position:static !important;
+	quotes: "" "" !important;
+	right:auto !important;
+	table-layout:auto !important;
+	text-align:inherit !important;
+	text-decoration:inherit !important;
+	text-indent:0 !important;
+	text-transform:none !important;
+	top:auto !important;
+	unicode-bidi:normal !important;
+	vertical-align:baseline !important;
+	visibility:visible !important;
+	white-space:normal !important;
+	width:auto !important;
+	word-spacing:normal !important;
+	z-index:auto !important;
+	
+	/* CSS3 and proprietary */	
+	border-radius:0 !important;
+	-moz-border-radius:0 !important;
+	-webkit-border-radius:0 !important;
+	opacity:1;
+}
+/* Block-level elements */
+/* HTML 4.01 */
+.cleanslate, .cleanslate th, .cleanslate table, .cleanslate h3, .cleanslate h5, .cleanslate p, .cleanslate h1, .cleanslate td, .cleanslate dl, .cleanslate tr, .cleanslate dt, .cleanslate h6, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate tbody, .cleanslate h2, .cleanslate tfoot, .cleanslate caption, .cleanslate thead, .cleanslate h4, .cleanslate ul, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate li, .cleanslate textarea, .cleanslate hr,
+/* HTML5 new elements */
+.cleanslate article, .cleanslate aside, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section {
+    display: block !important; /* Actually, some of these should be inline-block and other values, but block is fine */
+}
+/*
+Specific elements
+Some of these are browser defaults; some are just useful resets
+*/
+.cleanslate strong {
+	font-weight:bold !important;
+}
+.cleanslate em {
+	font-style:italic !important;
+}
+.cleanslate kbd, .cleanslate samp, .cleanslate code {
+  font-family: monospace !important;
+}
+.cleanslate a, .cleanslate a *, .cleanslate input[type=submit], .cleanslate input[type=radio], .cleanslate input[type=checkbox], .cleanslate select {
+	cursor:pointer !important;
+}
+.cleanslate a:hover {
+	text-decoration:underline !important;
+}
+.cleanslate button, .cleanslate input[type=submit] {
+  text-align: center !important;
+}
+.cleanslate input[type=hidden] {
+	display:none !important;
+}
+.cleanslate abbr[title], .cleanslate acronym[title], .cleanslate dfn[title] {
+	cursor:help !important;
+    border-bottom-width:1px !important;
+	border-bottom-style:dotted !important;
+}
+.cleanslate ins {
+	background-color:#ff9 !important;
+	color:black !important;
+}
+.cleanslate del {
+	text-decoration: line-through !important;
+}
+.cleanslate blockquote, .cleanslate q  {
+	quotes:none !important; /* HTML5 */
+}
+.cleanslate blockquote:before, .cleanslate blockquote:after, .cleanslate q:before, .cleanslate q:after, .cleanslate li:before, .cleanslate li:after  {
+	content: "" !important;
+	content:none !important; /* HTML5 */
+}
+.cleanslate input, .cleanslate select {
+	vertical-align:middle !important;
+}
+.cleanslate select, .cleanslate textarea, .cleanslate input {
+	border:1px solid #ccc !important;
+}
+.cleanslate table {
+	border-collapse:collapse !important;
+	border-spacing:0 !important;
+}
+
+.cleanslate hr {
+	display:block !important;
+	height:1px !important;
+	border:0 !important;
+	border-top:1px solid #ccc !important;
+	margin:1em 0 !important;
+}
+.cleanslate *[dir=rtl] {
+	direction: rtl !important;
+}
+.cleanslate mark {
+	background-color:#ff9 !important;
+	color:black !important;
+	font-style:italic !important;
+	font-weight:bold !important;
+}
+
+
+
+/*
+Root container element
+- values to be inherited, where default properties was set to 'inherit' 
+*/
+.cleanslate {
+	font-size: medium !important; /* To restrict to a pixel unit, use 12px */
+	line-height: 1 !important;
+	direction:ltr !important;
+	text-align:left !important;
+	font-family: serif !important; /* Override this with whatever font-family is required */
+	color: black !important;
+	font-style:normal !important;
+	font-weight:normal !important;
+	text-decoration:none !important;
+}
