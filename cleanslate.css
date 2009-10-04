@@ -1,40 +1,17 @@
-/*=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-
+/*
   CleanSlateCSS
-  the most !important reset stylesheet
   http://code.google.com/p/cleanslatecss/
-
   An extreme CSS reset stylesheet, for normalising the styling of a container element and its children.
 
-  Copyright (c) 2009 Premasagar Rose: http://premasagar.com
+  By Premasagar Rose: http://premasagar.com
   A Dharmafly project: http://dharmafly.com
-
-  =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
   Lisensed under the MIT license:
   http://www.opensource.org/licenses/mit-license.php
-  
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to deal
-  in the Software without restriction, including without limitation the rights
-  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-  copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-  
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-  
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-  THE SOFTWARE.
 
 */
 
-/* HTML elements */
+/* == BLANKET RESET RULES == */
 
 /* HTML 4.01 */
 .cleanslate, .cleanslate h1, .cleanslate h2, .cleanslate h3, .cleanslate h4, .cleanslate h5, .cleanslate h6, .cleanslate p, .cleanslate td, .cleanslate dl, .cleanslate tr, .cleanslate dt, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate table,  .cleanslate th, .cleanslate tbody, .cleanslate tfoot, .cleanslate caption, .cleanslate thead, .cleanslate ul, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate li, .cleanslate iframe, .cleanslate strong, .cleanslate legend, .cleanslate em, .cleanslate s, .cleanslate cite, .cleanslate span, .cleanslate input, .cleanslate sup, .cleanslate label, .cleanslate dfn, .cleanslate object, .cleanslate big, .cleanslate q, .cleanslate font, .cleanslate samp, .cleanslate acronym, .cleanslate small, .cleanslate img, .cleanslate strike, .cleanslate code, .cleanslate sub, .cleanslate ins, .cleanslate textarea, .cleanslate var, .cleanslate a, .cleanslate abbr, .cleanslate applet, .cleanslate del, .cleanslate kbd, .cleanslate tt, .cleanslate b, .cleanslate i, .cleanslate hr,
@@ -95,23 +72,24 @@
 	word-spacing:normal !important;
 	z-index:auto !important;
 	
-	/* CSS3 and proprietary */	
+	/* CSS3 and proprietary */
+  /* This section needs extendin */
 	border-radius:0 !important;
 	-moz-border-radius:0 !important;
 	-webkit-border-radius:0 !important;
 	opacity:1;
 }
-/* Block-level elements */
+
+/* == BLOCK-LEVEL == */
+/* Actually, some of these should be inline-block and other values, but block is fine */
 /* HTML 4.01 */
 .cleanslate, .cleanslate th, .cleanslate table, .cleanslate h3, .cleanslate h5, .cleanslate p, .cleanslate h1, .cleanslate td, .cleanslate dl, .cleanslate tr, .cleanslate dt, .cleanslate h6, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate tbody, .cleanslate h2, .cleanslate tfoot, .cleanslate caption, .cleanslate thead, .cleanslate h4, .cleanslate ul, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate li, .cleanslate textarea, .cleanslate hr,
 /* HTML5 new elements */
 .cleanslate article, .cleanslate aside, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section {
-    display: block !important; /* Actually, some of these should be inline-block and other values, but block is fine */
+    display: block !important; 
 }
-/*
-Specific elements
-Some of these are browser defaults; some are just useful resets
-*/
+/* == SPECIFIC ELEMENTS == */
+/* Some of these are browser defaults; some are just useful resets */
 .cleanslate strong {
 	font-weight:bold !important;
 }
@@ -162,7 +140,6 @@ Some of these are browser defaults; some are just useful resets
 	border-collapse:collapse !important;
 	border-spacing:0 !important;
 }
-
 .cleanslate hr {
 	display:block !important;
 	height:1px !important;
@@ -182,10 +159,8 @@ Some of these are browser defaults; some are just useful resets
 
 
 
-/*
-Root container element
-- values to be inherited, where default properties was set to 'inherit' 
-*/
+/* == ROOT CONTAINER ELEMENT == */
+/* This contains default values for child elements to inherit  */
 .cleanslate {
 	font-size: medium !important; /* To restrict to a pixel unit, use 12px */
 	line-height: 1 !important;
