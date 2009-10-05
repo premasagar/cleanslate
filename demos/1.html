@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CleanSlateCSS Demo 1</title>
+  <!--<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />-->
+  <!--<link rel="stylesheet" href="http://cleanslatecss.googlecode.com/svn/trunk/cleanslate.css" type="text/css" />-->  
+  <link rel="stylesheet" href="../cleanslate.css" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+  <style>
+    /* Host stylesheet */
+    #intro {
+      padding:0.3em;
+      background-color:#ccc;
+    }
+
+    #contents #sidebar div {
+      background-color:yellow;
+      color:#999;
+    }
+    #contents #sidebar h2 {
+      color:#999;
+    }
+  </style>
+
+  <style>
+    /* Guest stylesheet */
+    .guest1 {
+      background-color:white;
+      font-size:12px;
+      color:green;
+    }
+    .guest2 {
+      background-color:white !important;
+      font-size:12px !important;
+      color:green !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="intro">
+    <a href="http://code.google.com/p/cleanslatecss/">CleanSlate CSS</a> Demo
+  </div>
+
+  <div class="host">
+    <div id="contents">
+    <h1>host contents</h1>
+      <blockquote>
+        <p>Mary had a little lamb</p>
+      </blockquote>
+      <ul>
+        <li>blah</li>
+        <li>blah</li>
+      </ul>
+  
+      <div id="sidebar">
+        <div class="guest1">
+          <h2>guest contents - not cleanslated (css class='guest1')</h2>
+          <blockquote>
+            <p>Mary had a little lamb</p>
+          </blockquote>
+          <ul>
+            <li>blah</li>
+            <li>blah</li>
+          </ul>
+        </div>
+    
+        <div class="cleanslate">
+          <h2>cleanslated content (css class='cleanslate')</h2>
+          <blockquote>
+            <p>Mary had a little lamb</p>
+          </blockquote>
+          <ul>
+            <li>blah</li>
+            <li>blah</li>
+          </ul>
+        </div>
+    
+        <div class="guest2 cleanslate">
+          <h2>guest contents - cleanslated (css class='guest2 cleanslate')</h2>
+          <blockquote>
+            <p>Mary had a little lamb</p>
+          </blockquote>
+          <ul>
+            <li>blah</li>
+            <li>blah</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<!--
+
+Notes
+* Include html5 demo, with ie shiv, using new elements
+* Include demo of border-color and font-size relative
+
+-->
+</html>
