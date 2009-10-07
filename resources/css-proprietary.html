@@ -117,7 +117,7 @@
     $('#numStyles').text(numStyles);
     $('#css-properties')
       .attr('rows', numStyles)
-      .attr('cols', maxRuleLength)
+      .attr('cols', maxRuleLength + 6) // Why 6? Dunno. But look in Chrome.
       .text(cssText)
       .click(function(){
         this.select()
