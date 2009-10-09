@@ -3,6 +3,7 @@
       background-color:#ccc;
     }
 	
-		#intro a {
+		#intro a,
+		#intro span {
 		  margin-left: 10px;
 		}
