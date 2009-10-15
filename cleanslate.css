@@ -63,7 +63,9 @@
 	right:auto !important;
 	table-layout:auto !important;
 	text-align:inherit !important;
+	/*
 	text-decoration:inherit !important;
+	*/
 	text-indent:0 !important;
 	text-transform:none !important;
 	top:auto !important;
@@ -76,7 +78,7 @@
 	z-index:auto !important;
 	
 	/* CSS3 and proprietary */
-  /* This section needs extendin */
+  	/* This section needs extendin */
 	border-radius:0 !important;
 	-moz-border-radius:0 !important;
 	-webkit-border-radius:0 !important;
