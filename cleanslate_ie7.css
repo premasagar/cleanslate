@@ -1,0 +1,42 @@
+/*
+  CleanSlateCSS
+  http://code.google.com/p/cleanslatecss/
+  An extreme CSS reset stylesheet, for normalising the styling of a container element and its children.
+
+  By Premasagar Rose: http://premasagar.com
+  A Dharmafly project: http://dharmafly.com
+
+  Lisensed under the MIT license:
+  http://www.opensource.org/licenses/mit-license.php
+
+  v0.9
+
+*/
+/* == IE6+7 INHERIT RESET RULES == */
+
+/* HTML 4.01 */
+.cleanslate h1, .cleanslate h2, .cleanslate h3, .cleanslate h4, .cleanslate h5, .cleanslate h6, .cleanslate p, .cleanslate td, .cleanslate dl, .cleanslate tr, .cleanslate dt, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate table,  .cleanslate th, .cleanslate tbody, .cleanslate tfoot, .cleanslate caption, .cleanslate thead, .cleanslate ul, .cleanslate li, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate li, .cleanslate iframe, .cleanslate strong, .cleanslate legend, .cleanslate em, .cleanslate s, .cleanslate cite, .cleanslate span, .cleanslate input, .cleanslate sup, .cleanslate label, .cleanslate dfn, .cleanslate object, .cleanslate big, .cleanslate q, .cleanslate font, .cleanslate samp, .cleanslate acronym, .cleanslate small, .cleanslate img, .cleanslate strike, .cleanslate code, .cleanslate sub, .cleanslate ins, .cleanslate textarea, .cleanslate var, .cleanslate a, .cleanslate abbr, .cleanslate applet, .cleanslate del, .cleanslate kbd, .cleanslate tt, .cleanslate b, .cleanslate i, .cleanslate hr
+
+/* HTML5
+,.cleanslate article, .cleanslate aside, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section, .cleanslate time, .cleanslate mark, .cleanslate audio, .cleanslate video  */{
+	/*
+	color:expression((this.parentNode.currentStyle ? this.parentNode.currentStyle.color: 'black') + ' !important');
+	font-size:expression((this.parentNode.currentStyle ? this.parentNode.currentStyle.fontSize: 'medium') + ' !important');
+	font-style:expression((this.parentNode.currentStyle ? this.parentNode.currentStyle.fontStyle: 'normal') + ' !important');
+	font-weight:expression((this.parentNode.currentStyle ? this.parentNode.currentStyle.fontWeight: 'normal') + ' !important');
+	line-height:expression((this.parentNode.currentStyle ? this.parentNode.currentStyle.lineHeight: 'normal') + ' !important');
+	text-align:expression((this.parentNode.currentStyle ? this.parentNode.currentStyle.textAlign: 'left') + ' !important');
+	text-decoration:expression((this.parentNode.currentStyle ? this.parentNode.currentStyle.textDecoration: 'none') + ' !important');
+	*/
+	
+	color:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.color: 'black');
+	direction:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.direction: 'ltr');
+	font-family:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontFamily: 'monospace');
+	font-size:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontSize: 'medium');
+	font-style:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontStyle: 'normal');
+	font-weight:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontWeight: 'normal');
+	line-height:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.lineHeight: 'normal');
+	list-style-type:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.listStyeType: 'disc');
+	text-align:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.textAlign: 'left');
+	text-decoration:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.textDecoration: 'none');
+}
