@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>CleanSlateCSS Demo 5</title>
+  <!--<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />-->
+  <!--<link rel="stylesheet" href="http://cleanslatecss.googlecode.com/svn/trunk/cleanslate.css" type="text/css" />-->  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="../../repository/cleanslate.css" type="text/css" />
+  <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="../../repository/cleanslate_ie7.css" /><![endif]-->
+  <link rel="stylesheet" href="demo.css" type="text/css" />
+  <style>
+
+	h1 {
+		color: #ff0000;
+		direction: rtl;
+		font-family: monospace;
+		font-size: 18px;
+		font-style: italic;
+		font-weight: bolder;
+		line-height: 2em;
+		list-style-type: square;
+		text-align: center;	
+		text-decoration: line-through;
+	}
+	
+	.cleanslate {
+		/*
+		color:green;
+		text-decoration: none;
+		*/
+	}
+	
+	/*
+	.cleanslate h1 {
+		color:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.color: 'black');
+		direction:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.direction: 'ltr');
+		font-family:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontFamily: 'monospace');
+		font-size:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontSize: 'medium');
+		font-style:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontStyle: 'normal');
+		font-weight:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontWeight: 'normal');
+		line-height:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.lineHeight: 'normal');
+		list-style-type:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.listStyeType: 'disc');
+		text-align:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.textAlign: 'left');
+		text-decoration:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.textDecoration: 'none');
+	}
+	*/
+	
+</style> 
+</head>
+
+<body>
+  	<div id="intro">
+    	<a href="http://code.google.com/p/cleanslatecss/">CleanSlate CSS</a>
+    	<a href="1.html">Demo 1</a>
+        <a href="2.html">Demo 2</a>
+        <a href="3.html">Demo 3</a>
+        <span>Demo 4</span>
+  	</div>
+
+  	<div class="host">
+    	<div id="contents">
+      		<div id="main-content">
+   	    		<h1>Host content</h1>
+      		</div>
+      
+      		<div id="sidebar"> 
+        		<div class="cleanslate">
+          			<h1>Cleanslated content</h1>
+        		</div>
+      		</div>
+    	</div>
+  	</div>
+</body>
+</html>
