@@ -107,10 +107,10 @@
 	list-style-type: square !important;
 }
 .cleanslate li {	
-	display: list-item !important;	
+	display: list-item !important;
 	/* Fixes IE7 issue with positioning of nested bullets */
-	min-height: auto !important;
-	min-width: auto !important;
+	min-height:auto !important;
+	min-width:auto !important;
 }
 .cleanslate strong {
 	font-weight:bold !important;
@@ -188,7 +188,7 @@
 	line-height: 1 !important;
 	direction:ltr !important;
 	text-align:left !important;
-	font-family: serif !important; /* Override this with whatever font-family is required */
+	font-family: "Times New Roman", Times, serif !important; /* Override this with whatever font-family is required */
 	color: black !important;
 	font-style:normal !important;
 	font-weight:normal !important;
