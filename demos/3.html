@@ -10,9 +10,11 @@
   <link rel="stylesheet" href="demo.css" type="text/css" />
   <style>
 
-	.host h1 {
-		font-size: 50px;
+	
+	.host {
+		font-size: 1.2em;
 	}
+	/*
 	.host h2 {
 		font-size: 40px;
 	}
@@ -22,10 +24,41 @@
 	.host p {
 		font-size: 20px;
 	}
+	.host li {
+		display: inline;
+	}
 	
 	.cleanslate {
 		font-size: 10px !important;
 	}
+	*/
+	
+	
+	.cleanslate {
+		font-size: 120% !important;
+	}
+	
+	
+	/*
+	.cleanslate ul li {
+		font-size: large !important;
+		font-size: small !important;
+		font-size: x-large !important;
+		font-size: xx-large !important;
+		font-size: x-small !important;
+		font-size: xx-small !important;
+	}
+	
+	.cleanslate p {
+		font-size: 120% !important;
+	}
+	*/
+	/*
+	.cleanslate ul li ul li {
+		font-size: 1em !important;
+	}
+	*/
+	
 	
   </style>
 </head>
@@ -36,13 +69,17 @@
     	<a href="1.html">Demo 1</a>
         <a href="2.html">Demo 2</a>
         <span>Demo 3</span>
+        <a href="4.html">Demo 4</a>
   	</div>
 
   	<div class="host">
+    	<p>This is a test</p>
     	<div id="contents">
+        	<p>This is a test</p>
       		<div id="main-content">
    	    		<h1>Host content</h1>
                 <h2>Unordered list</h2>
+                <p>This is a test</p>
         		<ul>
           			<li>blah</li>
           			<li>blah
@@ -98,6 +135,14 @@
         		<div class="cleanslate">
           			<h2>Cleanslated content</h2>
                     <h3>Unordered list</h3>
+                    <p>This is a test</p>
+                    <div>
+                    	<p>This is a test</p>
+                        
+                        <div>
+                        	<p>This is a test</p>
+                        </div>
+                    </div>
           			<ul>
                         <li>blah</li>
                         <li>blah

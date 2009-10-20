@@ -11,7 +11,19 @@
   <link rel="stylesheet" href="demo.css" type="text/css" />
   <style>
 
-	h1 {
+	.cleanslate h1 {
+		color: expression((function (_this) {
+			window.setTimeout(function () {
+				_this.setAttribute("style", "color:" +
+					(_this.parentNode.currentStyle ?
+						_this.parentNode.currentStyle.color : 'green') + " !important");
+			}, 0);
+			return _this.parentNode.currentStyle ?
+				_this.parentNode.currentStyle.color : 'green';
+		})(this));
+	}
+
+	.host h1 {
 		color: #ff0000;
 		direction: rtl;
 		font-family: monospace;
@@ -24,18 +36,11 @@
 		text-decoration: line-through;
 	}
 	
-	.cleanslate {
-		/*
-		color:green;
-		text-decoration: none;
-		*/
-	}
-	
 	/*
 	.cleanslate h1 {
 		color:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.color: 'black');
 		direction:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.direction: 'ltr');
-		font-family:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontFamily: 'monospace');
+		font-family:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontFamily: 'Arial');
 		font-size:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontSize: 'medium');
 		font-style:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontStyle: 'normal');
 		font-weight:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontWeight: 'normal');
@@ -45,6 +50,10 @@
 		text-decoration:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.textDecoration: 'none');
 	}
 	*/
+	
+	
+	
+	
 	
 </style> 
 </head>

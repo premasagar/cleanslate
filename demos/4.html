@@ -11,7 +11,13 @@
   <link rel="stylesheet" href="demo.css" type="text/css" />
   <style>
 
-	h2 {
+	.host div {
+		min-width: 500px;
+		min-height: 500px;
+		background: #FFFF99;
+	}
+
+	.host h1 {
 		color: #ff0000;
 		direction: rtl;
 		font-family: monospace;
@@ -20,23 +26,15 @@
 		font-weight: bolder;
 		line-height: 2em;
 		text-align: center;	
-		/*
 		text-decoration: line-through;
-		*/
 	}
+	
 	.cleanslate {
-		color:green !important;
+		/*
+		min-width: 700px !important;
+		*/
+		background: #FFCC99 !important;
 	}
-	/*
-	.host h2 {
-		color: #009900;
-	}
-	
-	
-	.host ul {
-		list-style-type: square;
-	}
-	*/
 
 </style> 
 </head>
@@ -54,114 +52,11 @@
     	<div id="contents">
       		<div id="main-content">
    	    		<h1>Host content</h1>
-                <h2><a><span>Unordered list</span></a></h2>
-                <ul>
-                    <li><p><a><span>blah</span></a></p></li>
-                    <li>blah
-                        <ul>
-                            <li>blah</li>
-                            <li>blah
-                                <ul>
-                                    <li>blah</li>
-                                    <li>blah
-                                        <ul>
-                                            <li>blah</li>
-                                            <li>blah
-                                                <ul>
-                                                    <li>blah</li>
-                                                    <li>blah</li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                <h2>Ordered list</h2>
-                <ol>
-                    <li>blah</li>
-                    <li>blah
-                        <ol>
-                            <li>blah</li>
-                            <li>blah
-                                <ol>
-                                    <li>blah</li>
-                                    <li>blah
-                                        <ol>
-                                            <li>blah</li>
-                                            <li>blah
-                                                <ol>
-                                                    <li>blah</li>
-                                                    <li>blah</li>
-                                                </ol>
-                                            </li>
-                                        </ol>
-                                    </li>
-                                </ol>
-                            </li>
-                        </ol>
-                    </li>
-                </ol>
       		</div>
       
       		<div id="sidebar"> 
         		<div class="cleanslate">
-          			<h2>Cleanslated content</h2>
-                    <a>LINK</a><br />
-                    <p>PARAGRAPH</p><br />
-                    <span>SPAN</span><br />
-                    <h3><a><span>Unordered list</span></a></h3>
-        			<ul>
-          				<li><p><a><span>blah</span></a></p></li>
-                        <li>blah
-                            <ul>
-                                <li>blah</li>
-                                <li>blah
-                                    <ul>
-                                        <li>blah</li>
-                                        <li>blah
-                                            <ul>
-                                                <li>blah</li>
-                                                <li>blah
-                                                    <ul>
-                                                        <li>blah</li>
-                                                        <li>blah</li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <h3>Ordered list</h3>
-                    <ol>
-                        <li>blah</li>
-                        <li>blah
-                            <ol>
-                                <li>blah</li>
-                                <li>blah
-                                    <ol>
-                                        <li>blah</li>
-                                        <li>blah
-                                            <ol>
-                                                <li>blah</li>
-                                                <li>blah
-                                                    <ol>
-                                                        <li>blah</li>
-                                                        <li>blah</li>
-                                                    </ol>
-                                                </li>
-                                            </ol>
-                                        </li>
-                                    </ol>
-                                </li>
-                            </ol>
-                        </li>
-                    </ol>
+          			<h1>Cleanslated content</h1>
         		</div>
       		</div>
     	</div>
