@@ -28,7 +28,7 @@
 	text-align:expression((this.parentNode.currentStyle ? this.parentNode.currentStyle.textAlign: 'left') + ' !important');
 	text-decoration:expression((this.parentNode.currentStyle ? this.parentNode.currentStyle.textDecoration: 'none') + ' !important');
 	*/
-	
+	/*
 	color:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.color: 'black');
 	direction:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.direction: 'ltr');
 	font-family:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontFamily: 'monospace');
@@ -39,4 +39,16 @@
 	list-style-type:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.listStyeType: 'disc');
 	text-align:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.textAlign: 'left');
 	text-decoration:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.textDecoration: 'none');
+
+	color:black !important;
+	direction:ltr !important;
+	font-family:"Times New Roman", Times, serif !important;
+	font-size:medium !important;
+	font-style:normal !important;
+	font-weight:normal !important;
+	line-height:normal !important;
+	list-style-type:disc !important;
+	text-align:left !important;
+	text-decoration:none !important;
+	*/
 }
