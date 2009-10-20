@@ -63,9 +63,7 @@
 	right:auto !important;
 	table-layout:auto !important;
 	text-align:inherit !important;
-	/*
 	text-decoration:inherit !important;
-	*/
 	text-indent:0 !important;
 	text-transform:none !important;
 	top:auto !important;
@@ -91,25 +89,28 @@
 .cleanslate, .cleanslate th, .cleanslate table, .cleanslate h3, .cleanslate h5, .cleanslate p, .cleanslate h1, .cleanslate td, .cleanslate dl, .cleanslate tr, .cleanslate dt, .cleanslate h6, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate tbody, .cleanslate h2, .cleanslate tfoot, .cleanslate caption, .cleanslate thead, .cleanslate h4, .cleanslate ul, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate textarea, .cleanslate hr,
 /* HTML5 new elements */
 .cleanslate article, .cleanslate aside, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section {
-    display: block !important; 
+    display:block !important; 
 }
 /* == SPECIFIC ELEMENTS == */
 /* Some of these are browser defaults; some are just useful resets */
 
+.cleanslate nav ul, .cleanslate nav ol {
+	list-style-type:none !important;
+}
 .cleanslate ul, .cleanslate menu {
-	list-style-type: disc !important;
+	list-style-type:disc !important;
 }
 .cleanslate ol {
-	list-style-type: decimal !important;
+	list-style-type:decimal !important;
 }
 .cleanslate ol ul, .cleanslate ul ul, .cleanslate menu ul, .cleanslate ol menu, .cleanslate ul menu, .cleanslate menu menu {
-	list-style-type: circle !important;
+	list-style-type:circle !important;
 }
 .cleanslate ol ol ul, .cleanslate ol ul ul, .cleanslate ol menu ul, .cleanslate ol ol menu, .cleanslate ol ul menu, .cleanslate ol menu menu, .cleanslate ul ol ul, .cleanslate ul ul ul, .cleanslate ul menu ul, .cleanslate ul ol menu, .cleanslate ul ul menu, .cleanslate ul menu menu, .cleanslate menu ol ul, .cleanslate menu ul ul, .cleanslate menu menu ul, .cleanslate menu ol menu, .cleanslate menu ul menu, .cleanslate menu menu menu {
-	list-style-type: square !important;
+	list-style-type:square !important;
 }
 .cleanslate li {	
-	display: list-item !important;
+	display:list-item !important;
 	/* Fixes IE7 issue with positioning of nested bullets */
 	min-height:auto !important;
 	min-width:auto !important;
@@ -121,7 +122,7 @@
 	font-style:italic !important;
 }
 .cleanslate kbd, .cleanslate samp, .cleanslate code {
-  font-family: monospace !important;
+  font-family:monospace !important;
 }
 .cleanslate a, .cleanslate a *, .cleanslate input[type=submit], .cleanslate input[type=radio], .cleanslate input[type=checkbox], .cleanslate select {
 	cursor:pointer !important;
@@ -186,7 +187,7 @@
 /* == ROOT CONTAINER ELEMENT == */
 /* This contains default values for child elements to inherit  */
 .cleanslate {
-	font-size: medium !important; /* To restrict to a pixel unit, use 12px */
+	font-size: 100% !important; /* To restrict to a pixel unit, use 12px */
 	line-height: 1 !important;
 	direction:ltr !important;
 	text-align:left !important;
