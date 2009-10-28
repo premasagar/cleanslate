@@ -2,64 +2,244 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>CleanSlateCSS Demo 4</title>
+  <title>CleanSlateCSS Demo 3</title>
   <!--<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />-->
   <!--<link rel="stylesheet" href="http://cleanslatecss.googlecode.com/svn/trunk/cleanslate.css" type="text/css" />-->  
   <link rel="stylesheet" href="../cleanslate.css" type="text/css" />
-  <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="../cleanslate_ie7.css" /><![endif]-->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
   <link rel="stylesheet" href="demo.css" type="text/css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
   <style>
-
-	.host div {
-		min-width: 500px;
-		min-height: 500px;
-		background: #FFFF99;
-	}
-
-	.host h1 {
-		color: #ff0000;
-		direction: rtl;
-		font-family: monospace;
-		font-size: 18px;
-		font-style: italic;
-		font-weight: bolder;
-		line-height: 2em;
-		text-align: center;	
-		text-decoration: line-through;
+    /* Host stylesheet */
+	
+	.host {
+		width: 600px;
 	}
 	
-	.cleanslate {
-		/*
-		min-width: 700px !important;
-		*/
-		background: #FFCC99 !important;
+	.host div {
+		font-family: Verdana, Arial, Helvetica, sans-serif;
 	}
+	
+	#header {
+		padding: 10px;
+		background: #d7ecff;
+		border: solid 1px blue;
+		margin-bottom: 10px;
+		min-height: 85px;
+		position: relative;
+	}
+	
+	#header img {
+		float: left;
+	}	
+	
+	#header h1 {
+		color: blue;
+		font-size: 1.1em;
+		font-style: italic;
+		margin: 0;
+		float: left;
+		position: absolute;
+		left: 210px;
+		bottom: 11px;
+	}
+	
+	
+	#main-content {
+		width: 350px;		
+		padding: 10px;		
+	}
+	
+	#contents div {			
+		float: left;
+		font-size: 1em;
+		font-family: Verdana, Arial, Helvetica, sans-serif;
+		border: solid 1px blue;
+		background: #d7ecff;
+	}
+	
+	#contents ul {
+		padding: 0;
+	}
+	
+	#contents li {
+		list-style: none;
+	}
+	
+		#contents div h2 {
+			margin: 0 20px 0 0;
+			font-weight: normal;
+			font-size: 1em;
+			color: blue;
+		}
+		
+		#contents div p {
+			margin-top: 0;
+		}
+		
+	#contents #sidebar {
+		width: 218px;
+		margin-left: 10px;
+		border: none;
+		padding: 0;
+		background: white;
+	}
+	
+  </style>
 
-</style> 
+  <style>
+    /* Guest #1 stylesheet */
+	
+  	.guest1 {
+    	background-color: #ffebeb;
+		border: 1px solid #bb1717;
+	  	padding: 10px;
+	  	font-family: Arial, Helvetica, sans-serif;
+		margin-bottom: 10px;
+    }
+	
+		.guest1 h2 {
+			color: red;
+			margin: 10px 0 10px 0;
+		}
+		
+		.guest1 ul {
+			padding-left: 10px;
+			position: relative;
+		}
+		
+		.guest1 li {
+			margin-bottom: 5px;
+		}
+		
+  </style>
+    
+  <style>
+    /* Guest #2 stylesheet */
+		
+    .guest2 {
+    	background-color: #ffebeb !important;
+	  	border: 1px solid #bb1717 !important;
+	  	padding: 10px !important;
+		font-family: Arial, Helvetica, sans-serif !important;
+		margin-bottom: 10px !important;
+	}
+	
+		.guest2 h2 {
+			color: red !important;
+			margin: 10px 0 10px 0 !important;
+		}
+		
+		.guest2 ul {
+			padding-left: 10px !important;
+			list-style-type: square !important;
+		}
+		
+		.guest2 li {
+			margin-bottom: 5px !important;
+		}
+		
+  </style>
 </head>
 
 <body>
-  	<div id="intro">
-    	<a href="http://code.google.com/p/cleanslatecss/">CleanSlate CSS</a>
-    	<a href="1.html">Demo 1</a>
-        <a href="2.html">Demo 2</a>
-        <a href="3.html">Demo 3</a>
-        <span>Demo 4</span>
-  	</div>
-
-  	<div class="host">
-    	<div id="contents">
-      		<div id="main-content">
-   	    		<h1>Host content</h1>
-      		</div>
+  <div id="intro">
+    <a href="http://code.google.com/p/cleanslatecss/">CleanSlate CSS</a>
+    <a href="1.html">Demo 1</a>    
+    <a href="2.html">Demo 2</a>
+    <a href="3.html">Demo 3</a>
+    <span>Demo 4</span>
+  </div>
+  <div class="host">
+    <div id="header">
+      <img src="images/logo_host.gif" />
+      <h1>all the news in one place</h1>
+    </div>
+    <div id="contents">
+      <div id="main-content">
+   	    <h2>This is host content</h2>
+        <ul>
+          <li>
+            <a href="#">Host headline #1</a>
+            <p>Short summary for host headline #1</p>
+          </li>
+          <li>
+            <a href="#">Host headline #2</a>
+            <p>Short summary for host headline #2</p>
+          </li>
+          <li>
+            <a href="#">Host headline #3</a>
+            <p>Short summary for host headline #3</p>
+          </li>
+          <li>
+            <a href="#">Host headline #4</a>
+            <p>Short summary for host headline #4</p>
+          </li>
+          <li>
+            <a href="#">Host headline #5</a>
+            <p>Short summary for host headline #5</p>
+          </li>
+          <li>
+            <a href="#">Host headline #6</a>
+            <p>Short summary for host headline #6</p>
+          </li>
+        </ul>
+      </div>
       
-      		<div id="sidebar"> 
-        		<div class="cleanslate">
-          			<h1>Cleanslated content</h1>
-        		</div>
-      		</div>
-    	</div>
-  	</div>
+      <div id="sidebar">    
+        <div class="guest1">
+          <img src="images/logo_guest1.gif" />
+          <h2>This is guest content</h2>
+          <ul>
+            <li>
+              <a href="#">Guest headline #1</a>
+            </li>
+            <li>
+              <a href="#">Guest headline #2</a>
+            </li>
+            <li>
+              <a href="#">Guest headline #3</a>
+            </li>
+          </ul>
+        </div>
+        <div class="cleanslate">
+          <h2>This is cleanslated content</h2>
+          <ul>
+            <li>
+              <a href="#">Guest headline #1</a>
+            </li>
+            <li>
+              <a href="#">Guest headline #2</a>
+            </li>
+            <li>
+              <a href="#">Guest headline #3</a>
+            </li>
+          </ul>
+        </div>
+        <div class="guest2 cleanslate">
+          <img src="images/logo_guest1.gif" />
+          <h2>This is cleanslated guest content</h2>
+          <ul>
+            <li>
+              <a href="#">Guest headline #1</a>
+            </li>
+            <li>
+              <a href="#">Guest headline #2</a>
+            </li>
+            <li>
+              <a href="#">Guest headline #3</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+<!--
+
+Notes
+* Include html5 demo, with ie shiv, using new elements
+* Include demo of border-color and font-size relative
+
+-->
 </html>
