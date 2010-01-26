@@ -1,0 +1,238 @@
+/*
+----------------------------------------------
+ CleanSlateCSS / DEMO container styles
+ Developed by Ollie Bettany / Dharmafly
+ Created: 26/01/10
+----------------------------------------------
+*/
+
+/* styles for existing basic demo */
+
+	#intro {
+      	padding:0.3em;
+      	background-color:#ccc;
+	  	margin-bottom: 10px;
+    }
+	
+		#intro a,
+		#intro span {
+		  	margin-left: 10px;
+		}
+
+ 
+
+/* RESET CSS BY ERIC MEYER */
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+	body {
+		background-image: url(../images/bg-demo.png);
+		border-top: 4em solid #000;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 67.5%;
+	}	
+	
+	#wrapper {
+		margin: 0 auto;
+		width: 1022px;
+	}
+
+	
+/* top nav */
+
+	#nav {
+		position: relative;
+		top: -2.2em;	
+		font-size: 1.2em;
+	}
+
+		#nav ul {
+			float: right;
+			margin-right: 38px;
+		}
+		
+		#nav li {
+			list-style: none;
+			float: left;
+			margin-left: 20px;
+		}
+		
+		#nav a {
+			color: #999;
+			text-decoration: underline;
+		}
+		
+		#nav a:hover {
+			text-decoration: none;
+		}
+		
+		#nav li.current a {
+			color: #cdff03;
+			text-decoration: none;
+			font-weight: bolder;
+		}
+		
+/* HEADER */
+	
+	#header {
+		position: relative;
+		margin: 0 38px 0 48px;
+	}
+	
+		#header h1 {
+			display: block;
+			text-indent: -1000em;
+			background: url(../images/logo.png) no-repeat;
+			width: 254px;
+			height: 76px;
+			position: absolute;
+			top: 36px;
+		}
+		
+	#header p {
+		position: absolute;
+		right: 0;
+		top: 148px;
+		color: #cdff03;
+		font-style: italic;
+		font-size: 1.8em;
+		width: 636px;
+		text-align: center;
+	}
+		
+/* progress nav */
+	
+	#progress {
+		position: absolute;
+		right: 0;
+		top: 50px;
+		list-style: none;
+		text-transform: uppercase;
+	}
+		
+		#progress li {
+			float: left;
+			padding-left: 30px;
+			background: url(../images/bullet-progress-nav.png) no-repeat 14px 25px;
+		}
+		
+		#progress li.step1 {
+			padding-left: 0;
+			background: none;
+		}
+		
+			#progress li a {
+				background: url(../images/progress-nav.png) no-repeat;
+				display: block;
+				width: 196px;
+				height: 58px;
+				text-indent: -1000em;
+			}
+			
+			#progress li.step1 a {
+				background-position: 0 bottom;
+			}
+			#progress li.step1 a:hover {
+				background-position: 0 -58px;
+			}
+			#progress li.step1 a.current {
+				background-position: 0 top;
+			}
+			
+			#progress li.step2 a {
+				background-position: -196px bottom;
+			}
+			#progress li.step2 a:hover {
+				background-position: -196px -58px;
+			}
+			#progress li.step2 a.current {
+				background-position: -196px top;
+			}
+			
+			#progress li.step3 a {
+				background-position: -392px bottom;
+				width: 184px;
+			}
+			#progress li.step3 a:hover {
+				background-position: -392px -58px;
+			}
+			#progress li.step3 a.current {
+				background-position: -392px top;
+			}
+			
+			
+		
+/* utility nav */
+
+	#utility {
+		position: absolute;
+		list-style: none;
+		position: absolute;
+		top: 148px;
+		text-transform: uppercase;
+	}
+	
+		#utility li {
+			float: left;
+		}
+		
+			#utility li.notes a {
+				color: #cfdf8e;
+			}
+			
+			#utility li.source a {
+				color: #98cadb;
+			}
