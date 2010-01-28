@@ -79,7 +79,7 @@ table {
 
 
 	body {
-		background-image: url(../images/bg-demo.png);
+		background-image: url(../images/bg-main.png);
 		border-top: 4em solid #000;
 		font-family: Arial, Helvetica, sans-serif;
 		font-size: 67.5%;
@@ -96,7 +96,7 @@ table {
 	#nav {
 		position: relative;
 		top: -2.2em;	
-		font-size: 1.2em;
+		font-size: 1.3em;
 	}
 
 		#nav ul {
@@ -108,11 +108,20 @@ table {
 			list-style: none;
 			float: left;
 			margin-left: 20px;
+			background: url(../images/icon-sprite.png) no-repeat left -79px;
+			padding-left: 20px;
+		}
+		
+		#nav li.first {
+			background: none;
+			padding-left: 0;
 		}
 		
 		#nav a {
 			color: #999;
 			text-decoration: underline;
+			display: block;
+			padding: 2px 0 1.5em 0;
 		}
 		
 		#nav a:hover {
@@ -123,6 +132,7 @@ table {
 			color: #cdff03;
 			text-decoration: none;
 			font-weight: bolder;
+			background: url(../images/icon-sprite.png) no-repeat center bottom;
 		}
 		
 /* HEADER */
@@ -130,6 +140,7 @@ table {
 	#header {
 		position: relative;
 		margin: 0 38px 0 48px;
+		min-height: 219px;
 	}
 	
 		#header h1 {
@@ -211,9 +222,7 @@ table {
 			}
 			#progress li.step3 a.current {
 				background-position: -392px top;
-			}
-			
-			
+			}	
 		
 /* utility nav */
 
@@ -221,18 +230,123 @@ table {
 		position: absolute;
 		list-style: none;
 		position: absolute;
-		top: 148px;
+		top: 152px;
 		text-transform: uppercase;
+		font-size: 1.1em;
+		font-weight: bolder;
 	}
 	
 		#utility li {
 			float: left;
+			margin-right: 20px;
 		}
+		
+			#utility li a {
+				background: url(../images/icon-sprite.png) no-repeat;
+				padding-left: 20px;
+			}
+			#utility li a:hover {
+				text-decoration: none;
+			}
 		
 			#utility li.notes a {
 				color: #cfdf8e;
+				background-position: left -35px;
 			}
 			
 			#utility li.source a {
 				color: #98cadb;
+				background-position: left 3px;
+			}
+
+
+/* DEMO CONTAINER */
+
+		#content {
+			background: url(../images/bg-demo-top.png) no-repeat left top;
+			padding-top: 9px;
+		}
+		
+		#content-inner {
+			background: url(../images/bg-demo.png) repeat-y left top;
+			padding-left: 7px;
+		}
+		
+		#demo {
+			background-image: url(../images/bg-sample.png);
+		}
+		
+			
+/* FOOTER */
+
+	#footer {
+		color: #999;
+		width: 100%;
+		background: #000;
+		font-size: 1em;
+	}
+	
+		#footer .container {
+			width: 1022px;
+			margin: 50px auto 0;
+			min-height: 3em;
+			padding: 35px 48px 20px 38px;
+		}
+	
+		#footer ul {
+			list-style: none;
+			display: block;
+			float: right; 
+		}
+	
+		#footer li {
+			float: left;
+			margin-left: 10px;
+			background: url(../images/icon-sprite.png) no-repeat left -80px;
+			padding-left: 10px;
+		}
+		
+		#footer li.first {
+			padding-left: 0;
+			background: none;
+		}
+		
+		#footer a {
+			color: #999;
+			text-decoration: none;
+		}
+		
+		#footer a:hover {
+			text-decoration: underline;
+		}
+		
+		#footer li.df {
+			background: none;
+			margin-top: -1px;
+			padding-left: 0;
+		}
+
+			#footer li.df a {
+				color: #A6C664;
+				font-weight: bold;
+				background-color: white;
+				text-transform: uppercase;
+				text-decoration: none;
+				opacity: 0 .8;
+				line-height: 0.9em;
+				display: block;
+				min-height: 0.8em;
+				font-family: Verdana, Arial, Helvetica, sans-serif;
+				font-size: 0.8em;
+				padding: 2px;
+				margin-top: 1px;
+			}
+			
+			#footer li.df a:hover {
+				text-decoration: none;
+			}
+			#footer li.df a:hover {
+				opacity: 1;
+				background-color: #A6C664;
+				color: white;			
 			}
