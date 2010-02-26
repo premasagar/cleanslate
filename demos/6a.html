@@ -4,22 +4,30 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script src="javascripts/jquery-1.3.2.min.js"></script>
 	<link href="stylesheets/demo.css" rel="stylesheet" type="text/css" media="screen" />
-    <link rel="stylesheet" href="../cleanslate.css" type="text/css" />
     <!--[if lte IE 8]><link href="stylesheets/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
 	<!--[if lte IE 7]><link href="stylesheets/ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
     <!--[if lte IE 6]><link href="stylesheets/ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
-	<style>
+	<script>
 	
-		#welcome-msg {
-			display: none;
-		}
-	
-	</style>
+		$(document).ready(function(){
+			$(".continue").click(
+				function() {
+					// Do on mouseover
+					$(this).parent().parent().addClass("hide");
+				}
+			);
+		});
+
+	</script>
 	<noscript>
 	<style>
 	
 		#noscript-msg {
 			display: block;
+		}
+		
+		#welcome-msg {
+			display: none;
 		}
 	
 	</style>
@@ -152,6 +160,7 @@
 
 /* Third party */
 
+		
 		.article {
 			border: 1px solid #cedae0;
 			background: #fff url(images/bg-article.png) no-repeat center 1px;
@@ -160,7 +169,6 @@
 			padding: 30px 30px 15px 30px;
 			color: #636364;
 			overflow: hidden;
-			font-size: 100%;
 		}
 		
 		.article .leftcol,
@@ -221,7 +229,7 @@
 			
 			.article ul {
 				list-style: square;
-				margin: 15px 20px 15px 10px;
+				margin: 15px 20px;
 				font-size: 1.3em;
 			}
 			
@@ -258,12 +266,12 @@
         	<h1>Cleanslate</h1>
             
             <ul id="progress">
-            	<li class="first">
+            	<li class="first current">
 					<div class="inner">
 						<a href="6a.html"><span>1</span> Broken styles</a>
 					</div>
 				</li>
-                <li class="current">
+                <li>
 					<div class="inner">
 						<a href="6b.html"><span>2</span> Add cleanslate</a>
 					</div>		
@@ -275,7 +283,7 @@
 				</li>
             </ul>
            
-           	<p class="descr">CleanSlateCSS is added and resets all guest styles on the page</p>
+           	<p class="descr">Styles are broken and inheriting the styles from the news site.</p>
             
             <ul id="utility">
 				<li class="notes"><a href="#">Show notes</a></li>   
