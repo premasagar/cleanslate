@@ -384,6 +384,29 @@
             $('head link[href=' + cleanslateUrl + ']')
                 .remove();
 	    }
+	    
+	    function addImportantToThirdPartyCSS(){
+	        var
+	            oldStyleElem = $('#css-third-party').remove();
+
+            $('head')
+                .append(
+                    '<style id="css-third-party">' +
+                        $.important(oldStyleElem.html()) +
+                    '</style>'
+                );
+	    }
+	    function removeImportantFromThirdPartyCSS(){
+	        var
+	            oldStyleElem = $('#css-third-party').remove();
+
+            $('head')
+                .append(
+                    '<style id="css-third-party">' +
+                        $.important(oldStyleElem.html(), false) +
+                    '</style>'
+                );
+	    }
 	
 		$('.continue')
 		    .click(function(){
@@ -413,9 +436,7 @@
                     .text('Styles are broken and inheriting the styles from the news site.');
             
                 removeCleanslate();
-                console.log($('#css-third-party').html());
-                $('#css-third-party').important(false);
-                console.log($('#css-third-party').html());
+                removeImportantFromThirdPartyCSS();
                 
                 return false;
             });
@@ -426,9 +447,7 @@
                     .text('CleanSlateCSS is added and resets all guest styles on the page');
                     
                 addCleanslate();
-                console.log($('#css-third-party').html());
-                $('#css-third-party').important(false);
-                console.log($('#css-third-party').html());
+                removeImportantFromThirdPartyCSS();
                 return false;
             });
             
@@ -438,9 +457,7 @@
                     .text('!important rules are added resolving the problem of incorrect inheritance');
             
                 addCleanslate();
-                console.log($('#css-third-party').html());
-                $('#css-third-party').important();
-                console.log($('#css-third-party').html());
+                addImportantToThirdPartyCSS();
                 return false;
             });
 	</script>
