@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script src="jquery.js"></script>
+	<link href="stylesheets/demo.css" rel="stylesheet" type="text/css" media="screen" />
+    <!--[if lte IE 8]><link href="stylesheets/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+	<!--[if lte IE 7]><link href="stylesheets/ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
+    <!--[if lte IE 6]><link href="stylesheets/ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+
+    <script>
+        var cleanslateUrl = '../cleanslate.css';
+    </script>
+    <!-- load important js plugin - used in the demo, but not required for using cleanslate.css in production -->
+    <script src='http://github.com/premasagar/important/raw/master/important.js'></script>
+	
+	<noscript>
+	<style>
+	
+		#noscript-msg {
+			display: block;
+		}
+		
+		#welcome-msg {
+			display: none;
+		}
+	
+	</style>
+	</noscript>
+	
+    <style id="css-core">
+	
+		#demo {
+			background-color: #fff;
+			font-family: Arial, Helvetica, sans-serif;
+			padding: 25px 25px 50px 25px;
+			overflow: hidden;
+		}
+
+		#demo .maincol,
+		#demo .rightcol {
+			float: left;
+		}
+		
+		#demo .maincol {
+			width: 650px;
+			margin-right: 70px;
+		}
+		
+		#demo .rightcol {
+			width: 220px;
+		}
+		
+		#demo .head {
+			border-bottom: 1px solid #999;
+			position: relative;
+			min-height: 100px;
+			margin: 25px 25px 0 25px;
+		}
+		
+		#demo h1 {
+			text-indent: -1000em;
+			display: block;
+			width: 374px;
+			height: 26px;
+			background: url(images/demo-master-title.png) left top;
+			position: absolute;
+			bottom: 25px;
+		}
+		
+		#demo .head p {
+			text-transform: uppercase;
+			color: #999;
+			position: absolute;
+			bottom: 25px;
+			left: 400px;
+			font-size: 1.4em;
+			margin-left: 0;
+		}
+		
+		#demo strong {
+			font-weight: bolder;
+		}
+		
+		#demo h2 {
+			color: #fff;
+			padding: 10px;
+			text-transform: uppercase;
+			font-size: 1.5em;
+			font-weight: normal;
+			margin: 25px 0 0 0;
+			clear: left;
+			background-color: #e50000;	
+		}
+		
+		#demo h2.grey {
+			background-color: #303030;
+		}
+		
+		#demo h2.reverse {
+			background-color: transparent;
+			color: #222;
+		}
+		
+		#demo h3 {
+			text-transform: uppercase;
+			color: #000;
+			margin: 20px 10px 0 0;
+			font-size: 1.2em;
+			line-height: 1.3em;
+		}
+		
+		#demo p {
+			clear: left;
+			color: #666;
+			font-size: 1.4em;
+			padding: 10px 0 0 25px;
+		}
+		
+		#demo img {
+			float: left;
+			clear: left;
+			margin: 10px 10px 10px 0;
+		}
+		
+		#demo ul {
+			margin: 25px 10px 10px 12px;
+		}
+		
+		#demo li {
+			background: url(images/bullet.png) no-repeat left 3px;
+			padding-left: 18px;
+			margin-bottom: 10px;
+			color: #666;
+			font-size: 1.2em;
+			line-height: 1.3em;
+		}
+		
+		#demo blockquote {
+			background-color: #333;
+			padding: 25px;
+		}
+		
+			#demo blockquote p {
+				color: #fff;
+				padding: 0;
+				line-height: 1.3em;
+			}
+		
+		#demo .maincol h2 {
+			margin-left: 25px;
+			float: left;	
+		}
+</style>		
+		
+<style id="css-third-party">
+/* Third party */
+
+		
+		.article {
+			border: 1px solid #cedae0;
+			background: #fff url(images/bg-article.png) no-repeat center 1px;
+			margin-top: 30px;
+			font-family: Georgia, "Times New Roman", Times, serif;
+			padding: 30px 30px 15px 30px;
+			color: #636364;
+			overflow: hidden;
+		}
+		
+		.article .leftcol,
+		.article .rightcol {
+			float: left;
+		}		
+		
+		.article .leftcol {
+			width: 352px;
+			margin-right: 30px;
+		}
+		
+		.article .rightcol {
+			width: 206px;
+		}
+		
+			.article h3 {
+				color: #0b4664;
+				font-size: 2.2em;
+				margin: 10px 0 15px 0;
+				font-weight: normal;
+			}
+			
+			.article h4 {
+				color: #000;
+				font-size: 1.8em;
+				font-weight: normal;
+			}
+			
+				.article span span {
+					font-family: Arial, Helvetica, sans-serif;
+				}
+				
+			
+			.article img {
+				border: 1px solid #0b4664;
+			}
+			
+			.article p {
+				margin-bottom: 15px;
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.2em;
+				line-height: 1.1em;
+			}
+			
+			.article p.caption {
+				text-align: right;
+				padding: 10px;
+				font-style: italic;
+				color: #fff;
+				background: #0b4664;
+				font-size: 1.1em;
+				
+				font-weight: bolder;
+				margin-top: -1px;
+			}
+			
+			
+			.article ul {
+				list-style: square;
+				margin: 15px 20px;
+				font-size: 1.3em;
+			}
+			
+			.article li {
+				border-bottom: 1px dotted #959697;
+				color: #0b4664;
+				margin-bottom: 5px;
+				padding-bottom: 5px;
+				line-height: 1.2em;
+			}
+			
+			.article blockquote p {
+				color: #809eae;
+				font-style: italic;
+				font-size: 1.7em;
+				font-weight: bolder;
+			}
+	
+	</style>
+
+	<title>CleanSlateCSS</title>
+</head>
+<body>
+    <div id="wrapper">
+    	<div id="nav">
+        	<ul>
+            	<li class="first"><a href="#">Back to Google Code Project</a></li>
+                <li class="current"><a href="#">NEWS DEMO</a></li>
+                <li><a href="#">WIDGET DEMO</a></li>
+            </ul>
+        </div>
+        
+        <div id="header">
+        	<h1>Cleanslate</h1>
+            
+            <ul id="progress">
+            	<li class="first current">
+					<div class="inner">
+						<a id="btn-broken-styles" href="6a.html"><span>1</span> Broken styles</a>
+					</div>
+				</li>
+                <li>
+					<div class="inner">
+						<a id="btn-add-cleanslate" href="6b.html"><span>2</span> Add cleanslate</a>
+					</div>		
+				</li>
+                <li>
+					<div class="inner">
+						<a id="btn-finish-styles" href="6c.html"><span>3</span> Finish styles</a>
+					</div>
+				</li>
+            </ul>
+           
+           	<p class="desc">Styles are broken and inheriting the styles from the news site.</p>
+            
+            <ul id="utility">
+				<li class="notes"><a href="#">Show notes</a></li>   
+                <li class="source"><a href="#">View demo source</a></li>            
+            </ul>  
+        </div>
+        
+        <div id="content">
+        	<div id="content-inner">
+            	<div id="demo">
+                	<div class="head">
+                		<h1>The Daily News</h1>
+                    	<p>Wednesday 4th January 2010</p>
+                  	</div>
+                    
+                    <div class="maincol">
+                    	<h2 class="grey"><strong>Top story</strong> on the host site</h2>
+						<p>Praesent lorem felis, dictum at dignissim ut, bibendum id lectus. Praesent ac odio ac metus aliquet 
+                         eleifend sit amet non neque. Morbi ut enim metus.Sed feugiat sag.</p>
+                         
+                        <div class="cleanslate article">
+                        	<span><span>News provided by:</span> OTHER NEWS.COM</span>                           
+                            <h3>Top story from the 3rd party site</h3>
+                        	<div class="leftcol"> 	
+                                <img src="images/guest-img.jpg" alt="#">
+                                <p class="caption">This is the photo caption</p>                            
+                            
+                            	<p>Praesent lorem felis, dictum at dignissim ut, bibendum id lectus.Praesent lorem felis, 
+                                 dictum at dignissim ut, bibendum id lectus.</p>
+                            </div>
+                            
+                            <div class="rightcol">
+                                <h4>More News</h4>
+                                <ul>
+                                    <li>This is another latest news story headline</li>
+                                    <li>This is another latest news story headline</li>
+                                    <li>This is another latest news story headline</li>
+                                </ul>
+                                
+                                <blockquote>
+                                    <p>A quote from the news story sits here</p>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="rightcol">
+                    	<h2><strong>Hot</strong> off the press</h2>
+                        <img src="images/headline-img.jpg" alt="#" width="90" height="70">
+                        <h3>This is the title of a lead story</h3>
+                        
+                        <h2 class="grey"><strong>Sports</strong> news</h2>                       
+                        <ul>
+                        	<li>This is another latest news story headline</li>
+                            <li>This is another latest news story headline</li>
+                            <li>This is another latest news story headline</li>
+                        </ul>
+                        
+                        <h2 class="reverse"><strong>Quote</strong> of the week</h2> 
+                        <blockquote>
+                        	<p>"This is a blockquote in the host page."</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+    	<div class="container">
+            <ul>
+                <li class="first"><a href="#">This is a footer link</a></li>
+                <li><a href="#">Here's another</a></li>
+                <li class="df"><a href="#">Dharmafly</a></li>
+            </ul>
+        </div>
+    </div>
+	
+	<div id="noscript-msg" class="overlay">
+		<div class="overlay-inner">
+			<h2>You do not have <br />JavaScript enabled</h2>
+			<p>This site requires JavaScript. Please enable JavaScript in your browser settings and then hit refresh to continue.</p>
+		</div>
+	</div>
+	<div id="welcome-msg" class="overlay">
+		<div class="overlay-inner">
+			<h2>Welcome to CleanSlate!</h2>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla elementum tempus elit.</p>
+			<a class="continue button" href="#"><span>Continue</span></a>
+		</div>
+	</div>
+
+	<script>
+	    function hasCleanslate(){
+            return !!$('head link[href=' + cleanslateUrl + ']').length;
+	    }
+	    function addCleanslate(){
+	        if (!hasCleanslate()){
+                $('head').append('<link rel="stylesheet" href="' + cleanslateUrl + '" type="text/css" />');
+            }
+	    }
+	    function removeCleanslate(){
+            $('head link[href=' + cleanslateUrl + ']')
+                .remove();
+	    }
+	
+		$('.continue')
+		    .click(function(){
+			    $(this)
+			        .parents('.overlay:first')
+			        .hide();
+			    return false;
+		    });
+
+		$('#progress li a')
+		    .click(function(){
+		        $('#progress li a')
+		            .each(function(){
+		                $(this)
+                            .parents('li:first')
+		                    .removeClass('current');
+		            });
+		            
+    		    $(this)
+			        .parents('li:first')
+			            .addClass('current')
+            });
+
+		$('#btn-broken-styles')
+            .click(function(){
+                $('#progress + .desc')
+                    .text('Styles are broken and inheriting the styles from the news site.');
+            
+                removeCleanslate();
+                console.log($('#css-third-party').html());
+                $('#css-third-party').important(false);
+                console.log($('#css-third-party').html());
+                
+                return false;
+            });
+
+        $('#btn-add-cleanslate')
+            .click(function(){
+                $('#progress + .desc')
+                    .text('CleanSlateCSS is added and resets all guest styles on the page');
+                    
+                addCleanslate();
+                console.log($('#css-third-party').html());
+                $('#css-third-party').important(false);
+                console.log($('#css-third-party').html());
+                return false;
+            });
+            
+        $('#btn-finish-styles')
+            .click(function(){
+                $('#progress + .desc')
+                    .text('!important rules are added resolving the problem of incorrect inheritance');
+            
+                addCleanslate();
+                console.log($('#css-third-party').html());
+                $('#css-third-party').important();
+                console.log($('#css-third-party').html());
+                return false;
+            });
+	</script>
+</body>
+</html>
