@@ -106,19 +106,19 @@ The [Speed Speed page] lists some standard techniques to optimise the load time 
 
 h2. History
 
-This approach, of aggressively reset styling on a host page with the use of @!important@ rules, came about while developing the [http://www.bbc.co.uk/worldservice/programmes/000000_widget_terms.shtml BBC World Service widget] (see [http://dharmafly.com/bbc-world-service-widget this blog post]). The widget is injected into a page, not with an @iframe@, but a simple @<div>@ element (the widget's "lightbox" overlay is similarly just a simple @<div>@). The @!important@ styles helped us to prevent any unpredictable CSS styles "bleeding" into the widget.
+This approach, of aggressively reset styling on a host page with the use of @!important@ rules, came about while developing the "BBC World Service widget":http://www.bbc.co.uk/worldservice/programmes/000000_widget_terms.shtml (see "this blog post":http://dharmafly.com/bbc-world-service-widget). The widget is injected into a page, not with an @iframe@, but a simple @<div>@ element (the widget's "lightbox" overlay is similarly just a simple @<div>@). The @!important@ styles helped us to prevent any unpredictable CSS styles "bleeding" into the widget.
 
 Since then, the various rules have been consolidated, cleaned up and extended, to form the CleanSlateCSS stylesheet.
 
 h2. References
 
 The following documents were invaluable as building blocks for CleanSlateCSS:
- * Eric Meyer's Reset CSS - http://meyerweb.com/eric/tools/css/reset/
- * HTML5 Reset Stylesheet by Richard Clark - http://html5doctor.com/html-5-reset-stylesheet
- * Default stylesheet for HTML 4 - http://www.w3.org/TR/CSS2/sample.html
- * Default stylesheet for Mozilla Firefox - http://mxr.mozilla.org/mozilla-central/source/layout/style/html.css?raw=1
- * W3C CSS2 Cascade & Inheritance - http://www.w3.org/TR/CSS2/cascade.html
- * W3C CSS3 Selectors - http://www.w3.org/TR/css3-selectors
- * List of CSS Properties - http://meiert.com/en/indices/css-properties/
+ * Eric Meyer's Reset CSS - "http://meyerweb.com/eric/tools/css/reset/":http://meyerweb.com/eric/tools/css/reset/
+ * HTML5 Reset Stylesheet by Richard Clark - "http://html5doctor.com/html-5-reset-stylesheet":http://html5doctor.com/html-5-reset-stylesheet
+ * Default stylesheet for HTML 4 - "http://www.w3.org/TR/CSS2/sample.html":http://www.w3.org/TR/CSS2/sample.html
+ * Default stylesheet for Mozilla Firefox - "http://mxr.mozilla.org/mozilla-central/source/layout/style/html.css?raw=1":http://mxr.mozilla.org/mozilla-central/source/layout/style/html.css?raw=1
+ * W3C CSS2 Cascade & Inheritance - "http://www.w3.org/TR/CSS2/cascade.html":http://www.w3.org/TR/CSS2/cascade.html
+ * W3C CSS3 Selectors - "http://www.w3.org/TR/css3-selectors":http://www.w3.org/TR/css3-selectors
+ * List of CSS Properties - "http://meiert.com/en/indices/css-properties/":http://meiert.com/en/indices/css-properties/
 
 Please get in touch if you have any thoughts, would like to contribute, or if you use CleanSlateCSS within a project.
