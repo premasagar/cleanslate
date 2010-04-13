@@ -24,6 +24,7 @@ The stylesheet lists all possible HTML elements, and assigns to them the default
 h2. Usage
 
 h3. 1) Link to stylesheet from the @<head>@
+
 Add a @<link>@ to the stylesheet, in the document @<head>@:
 
 bc. <link type="text/css" rel="stylesheet" href="http://example.com/cleanslate.css" />
@@ -35,7 +36,6 @@ bc. $('head').append('<link type="text/css" rel="stylesheet" href="http://exampl
 Alternatively, you could use "@import":http://www.w3.org/TR/CSS2/cascade.html#at-import to call it from within another stylesheet or @<style>@ element:
 
 bc. @import http://example.com/cleanslate.css
-
 /* Add the rest of your CSS here */
 
 _(On a live site, it's best to include the CSS file on the site, rather than hot-linking to the Google-hosted version.)_
