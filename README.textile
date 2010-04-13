@@ -2,22 +2,27 @@ h1. CleanSlateCSS
 
 
 h2. What Is It?
+
 *CleanSlateCSS is an extreme CSS reset stylesheet.* It is used to reset a styled HTML element, and all its children, back to default CSS values. It is composed exclusively of "!important rules":http://www.w3.org/TR/CSS2/cascade.html#important-rules, which override all other types of rules.
 
 h2. Why Would I Need It?
+
 CleanSlateCSS is useful when there have already been CSS styles declared on a page, and you need to reset those styles within a particular area. This is _not_ a stylesheet to use when developing your own website. For that, try Eric Meyer's classic "Reset CSS":http://meyerweb.com/eric/tools/css/reset/ or the "HTML5 Doctors' version":http://html5doctor.com/html-5-reset-stylesheet.
 
 Instead, it can be useful when distributing content (e.g. a widget, or syndicated news) to third-party websites. The CSS rules in the host site may be unknown and unpredictable, or may change in future without notice, or there may be many websites you need to distribute to. In such situations, the CleanSlateCSS stylesheet will aggressively reset your portion of content (and nothing else) back to some reasonable default values that you can then build from.
 
 h2. Some Example Uses
+
  * The distribution of HTML/CSS/Javascript widgets to third-party websites. If your widget does not use an @iframe@ to sandbox its contents (and there are a few reasons why you wouldn't use an @iframe@), then you can use CleanSlateCSS to prevent CSS styles "bleeding" into your widget (see the "History" section, below).
  * The distribution of styled content as part of a partner's website. Again, you may not want your content to be sandboxed within and @iframe@ (where it will miss out on Google Juice, and might require Javascript). Instead, you could include your styled HTML content, and simply drop in the CleanSlateCSS stylesheet to bring a baseline to the styles for your content.
  * Any other good examples? Share them with "@premasagar":http://twitter.com/premasagar, or add it to the wiki.
 
 h2. How Does It Do It?
+
 The stylesheet lists all possible HTML elements, and assigns to them the default (or otherwise appropriate) values for every CSS property. It only looks within elements that have a class attribute of @cleanslate@.
 
 h2. Usage
+
 h3. 1) Link to stylesheet from the @<head>@
 Add a @<link>@ to the stylesheet, in the document @<head>@:
 
@@ -37,6 +42,7 @@ _(On a live site, it's best to include the CSS file on the site, rather than hot
 
 
 h3. 2) Add the class attribute @cleanslate@ to your HTML container
+
 The @cleanslate@ element will have its styling be reset:
 
 bc. <body>
@@ -56,6 +62,7 @@ bc. $('.myContainer').addClass('cleanslate');
 
 
 h3. 3) Use @!important@ in your CSS rules
+
 For all of your CSS rules that relate to a @cleanslate@ element or its children, add the keyword @!important@:
 
 bc. .myContainer a {
@@ -66,6 +73,7 @@ bc. .myContainer a {
 }
 
 h3. 4) Set the default styling
+
 CleanSlateCSS automatically applies the following styles to any @cleanslate@ element and its children:
 
 bc. .cleanslate {
@@ -93,14 +101,17 @@ That's all.
 Well, at least, that's the theory. You should [Techniques read the Techniques page] to understand some of the finer points.
 
 h2. Optimising the Load Time
+
 The [Speed Speed page] lists some standard techniques to optimise the load time for the stylesheet. These are nothing special - just standard practices for all kinds of CSS and Javascript files.
 
 h2. History
+
 This approach, of aggressively reset styling on a host page with the use of @!important@ rules, came about while developing the [http://www.bbc.co.uk/worldservice/programmes/000000_widget_terms.shtml BBC World Service widget] (see [http://dharmafly.com/bbc-world-service-widget this blog post]). The widget is injected into a page, not with an @iframe@, but a simple @<div>@ element (the widget's "lightbox" overlay is similarly just a simple @<div>@). The @!important@ styles helped us to prevent any unpredictable CSS styles "bleeding" into the widget.
 
 Since then, the various rules have been consolidated, cleaned up and extended, to form the CleanSlateCSS stylesheet.
 
 h2. References
+
 The following documents were invaluable as building blocks for CleanSlateCSS:
  * Eric Meyer's Reset CSS - http://meyerweb.com/eric/tools/css/reset/
  * HTML5 Reset Stylesheet by Richard Clark - http://html5doctor.com/html-5-reset-stylesheet
