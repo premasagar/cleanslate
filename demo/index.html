@@ -4,15 +4,15 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script src="jquery.js"></script>
 	<link href="stylesheets/demo.css" rel="stylesheet" type="text/css" media="screen" />
-    <!--[if lte IE 8]><link href="stylesheets/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if lte IE 8]><link href="stylesheets/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
 	<!--[if lte IE 7]><link href="stylesheets/ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
-    <!--[if lte IE 6]><link href="stylesheets/ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+  <!--[if lte IE 6]><link href="stylesheets/ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
-    <script>
-        var cleanslateUrl = '../cleanslate.css';
-    </script>
-    <!-- load important js plugin - used in the demo, but not required for using cleanslate.css in production -->
-    <script src='http://github.com/premasagar/important/raw/master/important.js'></script>
+  <script>
+  	var cleanslateUrl = '../cleanslate.css';
+  </script>
+  <!-- load important js plugin - used in the demo, but not required for using cleanslate.css in production -->
+  <script src='http://github.com/premasagar/important/raw/master/important.js'></script>
 	
 	<noscript>
 	<style>
@@ -54,8 +54,8 @@
 		#demo .head {
 			border-bottom: 1px solid #999;
 			position: relative;
-			min-height: 100px;
-			margin: 25px 25px 0 25px;
+			min-height: 60px;
+			margin: 0 25px 0 25px;
 		}
 		
 		#demo h1 {
@@ -249,127 +249,128 @@
 	<title>CleanSlateCSS</title>
 </head>
 <body>
-    <div id="wrapper">
-    	<div id="nav">
-        	<ul>
-            	<li class="first"><a href="#">Back to Google Code Project</a></li>
-                <li class="current"><a href="#">NEWS DEMO</a></li>
-                <li><a href="#">WIDGET DEMO</a></li>
-            </ul>
-        </div>
+  <div id="wrapper">
+    <div id="nav">
+    	<ul>
+      	<li class="first"><a href="#">Back to Google Code Project</a></li>
+        <li class="current"><a href="#">NEWS DEMO</a></li>
+        <li><a href="#">WIDGET DEMO</a></li>
+      </ul>
+    </div>
+      
+    <div id="header">
+      <h1>Cleanslate</h1>
         
-        <div id="header">
-        	<h1>Cleanslate</h1>
-            
-            <ul id="progress">
-            	<li class="first current">
-					<div class="inner">
-						<a id="btn-broken-styles" href="6a.html"><span>1</span> Broken styles</a>
-					</div>
-				</li>
-                <li>
-					<div class="inner">
-						<a id="btn-add-cleanslate" href="6b.html"><span>2</span> Add cleanslate</a>
-					</div>		
-				</li>
-                <li>
-					<div class="inner">
-						<a id="btn-finish-styles" href="6c.html"><span>3</span> Finish styles</a>
-					</div>
-				</li>
-            </ul>
-           
-           	<p class="desc">Styles are broken and inheriting the styles from the news site.</p>
-            
-            <ul id="utility">
-				<li class="notes"><a href="#">Show notes</a></li>   
-                <li class="source"><a href="#">View demo source</a></li>            
-            </ul>  
-        </div>
-        
-        <div id="content">
-        	<div id="content-inner">
-            	<div id="demo">
-                	<div class="head">
-                		<h1>The Daily News</h1>
-                    	<p>Wednesday 4th January 2010</p>
-                  	</div>
-                    
-                    <div class="maincol">
-                    	<h2 class="grey"><strong>Top story</strong> on the host site</h2>
-						<p>Praesent lorem felis, dictum at dignissim ut, bibendum id lectus. Praesent ac odio ac metus aliquet 
-                         eleifend sit amet non neque. Morbi ut enim metus.Sed feugiat sag.</p>
-                         
-                        <div class="cleanslate article">
-                        	<span><span>News provided by:</span> OTHER NEWS.COM</span>                           
-                            <h3>Top story from the 3rd party site</h3>
-                        	<div class="leftcol"> 	
-                                <img src="images/guest-img.jpg" alt="#">
-                                <p class="caption">This is the photo caption</p>                            
-                            
-                            	<p>Praesent lorem felis, dictum at dignissim ut, bibendum id lectus.Praesent lorem felis, 
-                                 dictum at dignissim ut, bibendum id lectus.</p>
-                            </div>
-                            
-                            <div class="rightcol">
-                                <h4>More News</h4>
-                                <ul>
-                                    <li>This is another latest news story headline</li>
-                                    <li>This is another latest news story headline</li>
-                                    <li>This is another latest news story headline</li>
-                                </ul>
-                                
-                                <blockquote>
-                                    <p>A quote from the news story sits here</p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="rightcol">
-                    	<h2><strong>Hot</strong> off the press</h2>
-                        <img src="images/headline-img.jpg" alt="#" width="90" height="70">
-                        <h3>This is the title of a lead story</h3>
+      <ul id="progress">
+        <li class="first current">
+          <div class="inner">
+            <a id="btn-broken-styles" href="wireframes/6a.html"><span>1</span> Broken styles</a>					
+          </div>
+        </li>
+        <li>
+          <div class="inner">
+            <a id="btn-add-cleanslate" href="wireframes/6b.html"><span>2</span> Add cleanslate</a>					
+          </div>		
+        </li>
+        <li>
+          <div class="inner">
+            <a id="btn-finish-styles" href="wireframes/6c.html"><span>3</span> Finish styles</a>					
+          </div>
+        </li>
+      </ul>
+     
+      <p class="desc">Styles are broken and inheriting the styles from the news site.</p>
+      
+      <ul id="utility">
+        <li class="notes"><a href="#">Show notes</a></li>   
+        <li class="source"><a href="#">View demo source</a></li>            
+      </ul>  
+    </div>
+    
+    <div id="content">
+      <div id="content-inner">
+        <div id="demo">
+          <div class="head">
+            <h1>The Daily News</h1>
+            <p>Wednesday 4th January 2010</p>
+          </div>
+                
+          <div class="maincol">
+            <h2 class="grey"><strong>Top story</strong> on the host site</h2>
+            <p>Praesent lorem felis, dictum at dignissim ut, bibendum id lectus. Praesent ac odio ac metus aliquet 
+             eleifend sit amet non neque. Morbi ut enim metus.Sed feugiat sag.</p>
+                     
+            <div class="cleanslate article">
+              <span><span>News provided by:</span> OTHER NEWS.COM</span>                           
+              <h3>Top story from the 3rd party site</h3>
+              
+              <div class="leftcol"> 	
+                <img src="images/guest-img.jpg" alt="#">
+                <p class="caption">This is the photo caption</p>                                                        
+                <p>Praesent lorem felis, dictum at dignissim ut, bibendum id lectus.Praesent lorem felis, 
+                 dictum at dignissim ut, bibendum id lectus.</p>
+              </div>
                         
-                        <h2 class="grey"><strong>Sports</strong> news</h2>                       
-                        <ul>
-                        	<li>This is another latest news story headline</li>
-                            <li>This is another latest news story headline</li>
-                            <li>This is another latest news story headline</li>
-                        </ul>
-                        
-                        <h2 class="reverse"><strong>Quote</strong> of the week</h2> 
-                        <blockquote>
-                        	<p>"This is a blockquote in the host page."</p>
-                        </blockquote>
-                    </div>
-                </div>
+              <div class="rightcol">
+                <h4>More News</h4>
+                <ul>
+                  <li>This is another latest news story headline</li>
+                  <li>This is another latest news story headline</li>
+                  <li>This is another latest news story headline</li>
+                </ul>
+                            
+                <blockquote>
+                  <p>A quote from the news story sits here</p>
+                </blockquote>
+              </div>
             </div>
-        </div>
-    </div>
-    <div id="footer">
-    	<div class="container">
+          </div>
+                
+          <div class="rightcol">
+            <h2><strong>Hot</strong> off the press</h2>
+            <img src="images/headline-img.jpg" alt="#" width="90" height="70">
+            <h3>This is the title of a lead story</h3>
+              
+            <h2 class="grey"><strong>Sports</strong> news</h2>                       
             <ul>
-                <li class="first"><a href="#">This is a footer link</a></li>
-                <li><a href="#">Here's another</a></li>
-                <li class="df"><a href="#">Dharmafly</a></li>
+              <li>This is another latest news story headline</li>
+              <li>This is another latest news story headline</li>
+              <li>This is another latest news story headline</li>
             </ul>
+              
+            <h2 class="reverse"><strong>Quote</strong> of the week</h2> 
+            <blockquote>
+              <p>"This is a blockquote in the host page."</p>
+            </blockquote>
+          </div>
         </div>
+      </div>
     </div>
-	
-	<div id="noscript-msg" class="overlay">
-		<div class="overlay-inner">
-			<h2>You do not have <br />JavaScript enabled</h2>
-			<p>This site requires JavaScript. Please enable JavaScript in your browser settings and then hit refresh to continue.</p>
-		</div>
-	</div>
-	<div id="welcome-msg" class="overlay">
-		<div class="overlay-inner">
-			<h2>Welcome to CleanSlate!</h2>
-			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla elementum tempus elit.</p>
-			<a class="continue button" href="#"><span>Continue</span></a>
-		</div>
-	</div>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <ul>
+        <li class="first"><a href="#">This is a footer link</a></li>
+        <li><a href="#">Here's another</a></li>
+        <li class="df"><a href="#">Dharmafly</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="noscript-msg" class="overlay">
+    <div class="overlay-inner">
+      <h2>You do not have <br />JavaScript enabled</h2>
+      <p>This site requires JavaScript. Please enable JavaScript in your browser settings and then hit refresh to continue.</p>
+    </div>
+  </div>
+  <div id="welcome-msg" class="overlay">
+    <div class="overlay-inner">
+      <h2>Welcome to CleanSlate!</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla elementum tempus elit.</p>
+      <a class="continue button" href="#"><span>Continue</span></a>
+    </div>
+  </div>
 
 	<script>
 	    function hasCleanslate(){

@@ -140,7 +140,9 @@ table {
 	#header {
 		position: relative;
 		margin: 0 38px 0 48px;
-		min-height: 219px;
+		min-height: 189px;
+		overflow: hidden;
+		width: 936px;
 	}
 	
 		#header h1 {
@@ -150,35 +152,35 @@ table {
 			width: 254px;
 			height: 76px;
 			position: absolute;
-			top: 36px;
+			top: 21px;
 		}
 		
 	#header p {
-		position: absolute;
-		right: 0;
-		top: 148px;
+		float: right;
+		clear: right;
 		color: #cdff03;
 		font-style: italic;
 		font-size: 1.8em;
-		width: 636px;
+		width: 638px;
 		text-align: center;
+		margin: 18px 0 36px 0;
 	}
 		
 /* progress nav */
 	
 	#progress {
-		position: absolute;
-		right: 0;
-		top: 50px;
+		float: right;
 		list-style: none;
 		text-transform: uppercase;
 		max-width: 660px;
+		margin-top: 38px;
 	}
 		
 		#progress li {
 			float: left;
 			padding-left: 30px;
 			background: url(../images/bullet-progress-nav.png) no-repeat 14px 25px;
+			margin-bottom: 18px;
 		}
 		
 		#progress li.first {
@@ -256,15 +258,16 @@ table {
 		position: absolute;
 		list-style: none;
 		position: absolute;
-		top: 152px;
+		top: 137px;
 		text-transform: uppercase;
 		font-size: 1.1em;
 		font-weight: bolder;
+		max-width: 260px;
 	}
 	
 		#utility li {
 			float: left;
-			margin-right: 20px;
+			margin: 0 20px 10px 0;
 		}
 		
 			#utility li a {
@@ -280,6 +283,10 @@ table {
 				background-position: left -35px;
 			}
 			
+		#utility li.source {
+			margin-right: 0;
+		}
+		
 			#utility li.source a {
 				color: #98cadb;
 				background-position: left 3px;
