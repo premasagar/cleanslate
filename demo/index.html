@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<script src="jquery.js"></script>
+	<script src="javascripts/jquery.js"></script>
 	<link href="stylesheets/demo.css" rel="stylesheet" type="text/css" media="screen" />
   <!--[if lte IE 8]><link href="stylesheets/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
 	<!--[if lte IE 7]><link href="stylesheets/ie7.css" rel="stylesheet" type="text/css" /><![endif]-->
@@ -28,7 +28,7 @@
 	</style>
 	</noscript>
 	
-    <style id="css-core">
+  <style id="css-core">
 	
 		#demo {
 			background-color: #fff;
@@ -151,11 +151,30 @@
 			margin-left: 25px;
 			float: left;	
 		}
-</style>		
-		
-<style id="css-third-party">
-/* Third party */
-
+	
+  </style>		
+    
+  <!--[if lte IE 6]>
+  <style>
+    
+    #content-inner,
+    #demo {
+      float: left;
+    }
+    
+      #demo .head {
+        height: 60px;
+      }
+      
+        #demo .maincol h2 {
+          margin-left: 12px;
+        }
+    
+  </style>
+  <![endif]-->
+      
+  <style id="css-third-party">
+	/* Third party */
 		
 		.article {
 			border: 1px solid #cedae0;
@@ -245,6 +264,18 @@
 			}
 	
 	</style>
+  
+  <!--[if lte IE 6]>
+  <style>
+    
+    .article {
+    	float: left; 
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+    
+  </style>
+  <![endif]-->
 
 	<title>CleanSlateCSS</title>
 </head>
@@ -272,7 +303,7 @@
             <a id="btn-add-cleanslate" href="wireframes/6b.html"><span>2</span> Add cleanslate</a>					
           </div>		
         </li>
-        <li>
+        <li class="last">
           <div class="inner">
             <a id="btn-finish-styles" href="wireframes/6c.html"><span>3</span> Finish styles</a>					
           </div>

@@ -5,3 +5,42 @@
  Created: 26/01/10
 ----------------------------------------------
 */
+
+/* HEADER */
+
+	#header {
+		height: 189px;
+		margin-right: 18px;
+		width: 956px;
+	}
+	
+		#nav ul {
+			position: relative;
+			margin-right: 18px;
+		}
+
+/* progress nav */
+
+	#progress {
+		width: 680px;
+	}
+	
+			#progress li.last .inner a {
+				width: 150px;
+				white-space: nowrap;
+			}
+
+			#progress li .inner,
+			#progress li .inner a {
+				float: left;
+			}
+			
+			#progress li .inner a {
+				margin-left: 5px;
+			}
+	
+				#progress li .inner a:hover, 
+				.button:hover span {
+					cursor: pointer;
+				}
+				
