@@ -3,27 +3,19 @@
 <head>
   <meta charset="utf-8" />
   <title>CleanSlateCSS Demo 5</title>
-  <!--<link rel="shortcut icon" type="image/ico" href="/favicon.ico" />-->
-  <!--<link rel="stylesheet" href="http://cleanslatecss.googlecode.com/svn/trunk/cleanslate.css" type="text/css" />-->  
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
   <link rel="stylesheet" href="../../cleanslate.css" type="text/css" />
-  <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="../cleanslate_ie7.css" /><![endif]-->
-  <link rel="stylesheet" href="../stylesheets/demo.css" type="text/css" />
+  <!--[if lte IE 7]><link rel="stylesheet" type="text/css" href="../../cleanslate_ie7.css" /><![endif]-->
+  <link rel="stylesheet" href="../stylesheets/wireframes.css" type="text/css" />
   <style>
-
-	.cleanslate h1 {
-		color: expression((function (_this) {
-			window.setTimeout(function () {
-				_this.setAttribute("style", "color:" +
-					(_this.parentNode.currentStyle ?
-						_this.parentNode.currentStyle.color : 'green') + " !important");
-			}, 0);
-			return _this.parentNode.currentStyle ?
-				_this.parentNode.currentStyle.color : 'green';
-		})(this));
+	
+	#contents {
+		width: 600px;
 	}
 
-	.host h1 {
+	.host h1,
+	.host a,
+	.host p,
+	.host ul {
 		color: #ff0000;
 		direction: rtl;
 		font-family: monospace;
@@ -32,29 +24,45 @@
 		font-weight: bolder;
 		line-height: 2em;
 		list-style-type: square;
-		text-align: center;	
+		text-align: right;	
 		text-decoration: line-through;
 	}
 	
+	.guest {
+		color: #0033CC !important;
+		direction: rtl !important;
+		font-family: Verdana, Arial, Helvetica, sans-serif !important;
+		font-size: 22px !important;
+		font-style: italic !important;
+		font-weight: bolder !important;
+		line-height: 3em !important;
+		list-style-type: square !important;
+		text-align: center !important;	
+		text-decoration: overline !important;
+	}
+	
 	/*
-	.cleanslate h1 {
-		color:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.color: 'black');
-		direction:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.direction: 'ltr');
-		font-family:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontFamily: 'Arial');
-		font-size:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontSize: 'medium');
-		font-style:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontStyle: 'normal');
-		font-weight:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.fontWeight: 'normal');
-		line-height:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.lineHeight: 'normal');
-		list-style-type:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.listStyeType: 'disc');
-		text-align:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.textAlign: 'left');
-		text-decoration:expression(this.parentNode.currentStyle ? this.parentNode.currentStyle.textDecoration: 'none');
+	.cleanslate h1,
+	.cleanslate a,
+	.cleanslate p,
+	.cleanslate ul {
+    filter: expression(function(e){
+			e.runtimeStyle.color = 'black';
+			e.runtimeStyle.direction = 'ltr';
+			e.runtimeStyle.fontFamily = '"Times New Roman"';
+			e.runtimeStyle.fontSize = '100%';
+			e.runtimeStyle.fontStyle = 'normal';
+			e.runtimeStyle.fontWeight = 'normal';
+			e.runtimeStyle.lineHeight = '1';
+			e.runtimeStyle.listStyleType = 'disc';
+			e.runtimeStyle.textAlign = 'left';
+			e.runtimeStyle.textDecoration = 'none';
+			e.style.filter = '';
+		}(this));
 	}
 	*/
 	
-	
-	
-	
-	
+
 </style> 
 </head>
 
@@ -64,18 +72,44 @@
     	<a href="1.html">Demo 1</a>
         <a href="2.html">Demo 2</a>
         <a href="3.html">Demo 3</a>
-        <span>Demo 4</span>
+        <a href="4.html">Demo 4</a>
+        <span>Demo 5</span>
   	</div>
 
   	<div class="host">
     	<div id="contents">
       		<div id="main-content">
    	    		<h1>Host content</h1>
+            <a href="#">This is a link</a>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla elementum tempus elit. Nunc sagittis arcu id diam. Morbi quis 
+             tellus. Quisque sit amet orci non ipsum tincidunt tristique.</p>
+            <ul>
+            	<li>blah</li>
+            	<li>blah</li>
+          	</ul>
       		</div>
       
       		<div id="sidebar"> 
         		<div class="cleanslate">
           			<h1>Cleanslated content</h1>
+                <a href="#">This is a link</a>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla elementum tempus elit. Nunc sagittis arcu id diam. Morbi quis 
+             		 tellus. Quisque sit amet orci non ipsum tincidunt tristique.</p>
+                <ul>
+                  <li>blah</li>
+                  <li>blah</li>
+                </ul>
+        		</div>
+            
+            <div class="cleanslate guest">
+          			<h1>Cleanslated content</h1>
+                <a href="#">This is a link</a>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nulla elementum tempus elit. Nunc sagittis arcu id diam. Morbi quis 
+             		 tellus. Quisque sit amet orci non ipsum tincidunt tristique.</p>
+                <ul>
+                  <li>blah</li>
+                  <li>blah</li>
+                </ul>
         		</div>
       		</div>
     	</div>
