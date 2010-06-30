@@ -5,20 +5,6 @@
  Created: 26/01/10
 ----------------------------------------------
 */
-
-/* styles for existing basic demo */
-
-	#intro {
-      	padding:0.3em;
-      	background-color:#ccc;
-	  	margin-bottom: 10px;
-    }
-	
-		#intro a,
-		#intro span {
-		  	margin-left: 10px;
-		}
-
  
 
 /* RESET CSS BY ERIC MEYER */
