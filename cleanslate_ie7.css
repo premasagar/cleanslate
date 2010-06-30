@@ -21,17 +21,27 @@
 .cleanslate article, .cleanslate aside, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section, .cleanslate time, .cleanslate mark, .cleanslate audio, .cleanslate video {
 	
 	filter: expression(function(e){
-		e.runtimeStyle.color = 'black';
-		/* e.runtimeStyle.direction = 'rtl'; */
-		e.runtimeStyle.fontFamily = 'Times New Roman';
+	/*
 		e.runtimeStyle.fontSize = '100%';
+		e.runtimeStyle.lineHeight = '1';
+		e.runtimeStyle.direction = 'ltr';
+		e.runtimeStyle.textAlign = 'left';
+		e.runtimeStyle.fontFamily = 'Times New Roman';
+		e.runtimeStyle.color = 'black';
 		e.runtimeStyle.fontStyle = 'normal';
 		e.runtimeStyle.fontWeight = 'normal';
-		e.runtimeStyle.lineHeight = '1';
-		/* e.runtimeStyle.listStyleType = 'disc'; */
-		e.runtimeStyle.textAlign = 'left';
 		e.runtimeStyle.textDecoration = 'none';
+		e.runtimeStyle.listStyleType = 'disc';	
+		*/
+		e.style.cssText = 'font-family:Times New Roman;';
+		
 		/* alert('success'); */
 		e.style.filter = '';
 	}(this));
 }
+
+.cleanslate article, .cleanslate aside, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section, .cleanslate time, .cleanslate mark, .cleanslate audio, .cleanslate video {
+font-family:monospace !important;
+}
+
+
