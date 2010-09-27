@@ -31,7 +31,7 @@
 	clear:none !important;
 	clip:auto !important;
 	color:inherit !important;
-	content:normal !important;
+	/* content:"" !important; /* removed, because it kills rendering in Opera */
 	counter-increment:none !important;
 	counter-reset:none !important;
 	cursor:auto !important;
