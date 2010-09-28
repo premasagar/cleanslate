@@ -31,7 +31,6 @@
 	clear:none !important;
 	clip:auto !important;
 	color:inherit !important;
-	/* content:"" !important; /* removed, because it kills rendering in Opera */
 	counter-increment:none !important;
 	counter-reset:none !important;
 	cursor:auto !important;
@@ -152,8 +151,7 @@
 	quotes:none !important; /* HTML5 */
 }
 .cleanslate blockquote:before, .cleanslate blockquote:after, .cleanslate q:before, .cleanslate q:after, .cleanslate li:before, .cleanslate li:after  {
-	content: "" !important;
-	content:none !important; /* HTML5 */
+	content:"" !important;
 }
 .cleanslate input, .cleanslate select {
 	vertical-align:middle !important;
