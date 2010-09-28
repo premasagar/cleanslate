@@ -30,7 +30,8 @@
 	background-position:0 0 !important;
 	background-repeat:repeat !important;
 	border-color:black !important;
-	border-color:currentColor !important; /* border-color should match font color. Modern browsers (incl. IE9) allow the use of "currentColor" to match the current font 'color' value. For older browsers, a default of 'black' is given before this rule. Guideline to support older browsers: if you haven't already declared a border-color for an element, be sure to do so, e.g. when you first declare the border-width. */
+	border-color:currentColor !important; /* `border-color` should match font color. Modern browsers (incl. IE9) allow the use of "currentColor" to match the current font 'color' value <http://www.w3.org/TR/css3-color/#currentcolor>. For older browsers, a default of 'black' is given before this rule. Guideline to support older browsers: if you haven't already declared a border-color for an element, be sure to do so, e.g. when you first declare the border-width. */
+	border-radius:0 !important;
 	border-style:none !important;
 	border-width:medium !important;
 	bottom:auto !important;
@@ -60,6 +61,7 @@
 	max-width:none !important;
 	min-height:0 !important;
 	min-width:0 !important;
+	opacity:1;
 	outline:invert none medium !important;
 	overflow:visible !important;
 	padding:0 !important;
@@ -80,16 +82,14 @@
 	word-spacing:normal !important;
 	z-index:auto !important;
 	
-	/* CSS3 and proprietary */
-  /* This section needs extending */
-	border-radius:0 !important;
+	/* Proprietary and draft rules */
+    /* This section needs extending */
 	-moz-border-radius:0 !important;
 	-webkit-border-radius:0 !important;
-	opacity:1;
 }
 
 /* == BLOCK-LEVEL == */
-/* Actually, some of these should be inline-block and other values, but block is fine */
+/* Actually, some of these should be inline-block and other values, but block works fine (TODO: rigorously verify this) */
 /* HTML 4.01 */
 .cleanslate, .cleanslate th, .cleanslate table, .cleanslate h3, .cleanslate h5, .cleanslate p, .cleanslate h1, .cleanslate td, .cleanslate dl, .cleanslate tr, .cleanslate dt, .cleanslate h6, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate tbody, .cleanslate h2, .cleanslate tfoot, .cleanslate caption, .cleanslate thead, .cleanslate h4, .cleanslate ul, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate textarea, .cleanslate hr,
 /* HTML5 new elements */
