@@ -1,0 +1,129 @@
+/*!
+* CleanSlate: proprietary rules
+*   github.com/premasagar/cleanslate
+*
+*//*
+    An extreme CSS reset stylesheet, for normalising the styling of a container element and its children.
+
+    by Premasagar Rose
+        dharmafly.com
+
+    license
+        opensource.org/licenses/mit-license.php
+
+    **
+        
+    v0.9.1
+        
+*/
+
+/* == PROPRIETARY RULES == */
+
+/* HTML 4.01 */
+.cleanslate, .cleanslate h1, .cleanslate h2, .cleanslate h3, .cleanslate h4, .cleanslate h5, .cleanslate h6, .cleanslate p, .cleanslate td, .cleanslate dl, .cleanslate tr, .cleanslate dt, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate table,  .cleanslate th, .cleanslate tbody, .cleanslate tfoot, .cleanslate caption, .cleanslate thead, .cleanslate ul, .cleanslate li, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate li, .cleanslate iframe, .cleanslate strong, .cleanslate legend, .cleanslate em, .cleanslate s, .cleanslate cite, .cleanslate span, .cleanslate input, .cleanslate sup, .cleanslate label, .cleanslate dfn, .cleanslate object, .cleanslate big, .cleanslate q, .cleanslate font, .cleanslate samp, .cleanslate acronym, .cleanslate small, .cleanslate img, .cleanslate strike, .cleanslate code, .cleanslate sub, .cleanslate ins, .cleanslate textarea, .cleanslate var, .cleanslate a, .cleanslate abbr, .cleanslate applet, .cleanslate del, .cleanslate kbd, .cleanslate tt, .cleanslate b, .cleanslate i, .cleanslate hr,
+
+/* HTML5 */
+.cleanslate article, .cleanslate aside, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section, .cleanslate time, .cleanslate mark, .cleanslate audio, .cleanslate video {
+	
+	/* already in main stylesheet - repeated here for completeness */
+	-moz-border-radius:0 !important;
+	-webkit-border-radius:0 !important;
+	
+	/* Mozilla Firefox */
+	-moz-appearance: none !important; 
+	-moz-background-clip: border !important; 
+	-moz-background-inline-policy: continuous !important; 
+	-moz-background-origin: padding !important; 
+	-moz-binding: none !important; 
+	-moz-border-bottom-colors: none !important; 
+	-moz-border-image: none !important; 
+	-moz-border-left-colors: none !important; 
+	-moz-border-right-colors: none !important; 
+	-moz-border-top-colors: none !important; 
+	-moz-border-radius-bottomleft: 0px !important; 
+	-moz-border-radius-bottomright: 0px !important; 
+	-moz-border-radius-topleft: 0px !important; 
+	-moz-border-radius-topright: 0px !important; 
+	-moz-box-align: stretch !important; 
+	-moz-box-direction: normal !important; 
+	-moz-box-flex: 0 !important; 
+	-moz-box-ordinal-group: 1 !important; 
+	-moz-box-orient: horizontal !important; 
+	-moz-box-pack: start !important; 
+	-moz-box-shadow: none !important; 
+	-moz-box-sizing: content-box !important; 
+	-moz-column-count: auto !important; 
+	-moz-column-width: auto !important; 
+	-moz-column-gap: 16px !important; 
+	-moz-column-rule-color: rgb(0, 0, 0) !important; 
+	-moz-column-rule-width: 0px !important; 
+	-moz-column-rule-style: none !important; 
+	-moz-float-edge: content-box !important; 
+	-moz-force-broken-image-icon: 0 !important; 
+	-moz-image-region: auto !important; 
+	-moz-outline-radius-bottomleft: 0px !important; 
+	-moz-outline-radius-bottomright: 0px !important; 
+	-moz-outline-radius-topleft: 0px !important; 
+	-moz-outline-radius-topright: 0px !important; 
+	-moz-stack-sizing: stretch-to-fit !important; 
+	-moz-transform: none !important; 
+	-moz-transform-origin: 50% 50% !important; 
+	-moz-user-focus: none !important; 
+	-moz-user-input: auto !important; 
+	-moz-user-modify: read-only !important; 
+	-moz-user-select: auto !important; 
+	-moz-window-shadow: default !important;
+
+    /* Webkit */
+	-webkit-appearance: none !important;
+	-webkit-background-clip: border !important;
+	-webkit-background-composite: source-over !important;
+	-webkit-background-origin: padding !important;
+	-webkit-background-size: auto auto !important;
+	-webkit-border-fit: border !important;
+	-webkit-border-horizontal-spacing: 0px !important;
+	-webkit-border-vertical-spacing: 0px !important;
+	-webkit-box-align: stretch !important;
+	-webkit-box-direction: normal !important;
+	-webkit-box-flex: 0 !important;
+	-webkit-box-flex-group: 1 !important;
+	-webkit-box-lines: single !important;
+	-webkit-box-ordinal-group: 1 !important;
+	-webkit-box-orient: horizontal !important;
+	-webkit-box-pack: start !important;
+	-webkit-box-shadow: none !important;
+	-webkit-box-sizing: content-box !important;
+	-webkit-column-break-after: auto !important;
+	-webkit-column-break-before: auto !important;
+	-webkit-column-break-inside: auto !important;
+	-webkit-column-count: auto !important;
+	-webkit-column-gap: normal !important;
+	-webkit-column-rule-color: rgb(0, 0, 0) !important;
+	-webkit-column-rule-style: none !important;
+	-webkit-column-rule-width: 0px !important;
+	-webkit-column-width: auto !important;
+	-webkit-highlight: none !important;
+	-webkit-line-break: normal !important;
+	-webkit-line-clamp: none !important;
+	-webkit-margin-bottom-collapse: collapse !important;
+	-webkit-margin-top-collapse: collapse !important;
+	-webkit-marquee-direction: auto !important;
+	-webkit-marquee-increment: 6px !important;
+	-webkit-marquee-repetition: infinite !important;
+	-webkit-marquee-style: scroll !important;
+	-webkit-nbsp-mode: normal !important;
+	-webkit-rtl-ordering: logical !important;
+	-webkit-text-decorations-in-effect: none !important;
+	-webkit-text-fill-color: rgb(0, 0, 0) !important;
+	-webkit-text-security: none !important;
+	-webkit-text-stroke-color: rgb(0, 0, 0) !important;
+	-webkit-text-stroke-width: 0 !important;
+	-webkit-user-drag: auto !important;
+	-webkit-user-modify: read-only !important;
+	-webkit-user-select: text !important;
+	-webkit-dashboard-region: null !important;
+	-webkit-border-bottom-left-radius: 0px !important;
+	-webkit-border-bottom-right-radius: 0px !important;
+	-webkit-border-top-left-radius: 0px !important;
+	-webkit-border-top-right-radius: 0px !important;
+}
