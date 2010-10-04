@@ -191,7 +191,7 @@
 /* == ROOT CONTAINER ELEMENT == */
 /* This contains default values for child elements to inherit  */
 .cleanslate {
-	font-size: 100% !important; /* To restrict to a pixel unit, use 12px */
+	font-size: medium !important;
 	line-height: 1 !important;
 	direction:ltr !important;
 	text-align:left !important;
