@@ -121,4 +121,4 @@ The following documents were invaluable as building blocks for CleanSlateCSS:
  * W3C CSS3 Selectors - "http://www.w3.org/TR/css3-selectors":http://www.w3.org/TR/css3-selectors
  * List of CSS Properties - "http://meiert.com/en/indices/css-properties/":http://meiert.com/en/indices/css-properties/
 
-Please get in touch if you have any thoughts, would like to contribute, or if you use CleanSlateCSS within a project.
+Please get in touch if you have any thoughts, would like to contribute, or if you use CleanSlate within a project.
