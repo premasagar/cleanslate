@@ -1,20 +1,22 @@
-h1. CleanSlateCSS
+h1. CleanSlate
 
 
 h2. What Is It?
 
-*CleanSlateCSS is an extreme CSS reset stylesheet.* It is used to reset a styled HTML element, and all its children, back to default CSS values. It is composed exclusively of "!important rules":http://www.w3.org/TR/CSS2/cascade.html#important-rules, which override all other types of rules.
+*CleanSlate is an extreme CSS reset stylesheet.* It is used to reset a styled HTML element, and all its children, back to default CSS values. It is composed exclusively of "!important rules":http://www.w3.org/TR/CSS2/cascade.html#important-rules, which override all other types of rules.
+
+It can be used independently of JavaScript. Or can be combined within JavaScript widgets, such as those created by the "Sqwidget":http://github.com/premasagar/sqwidget library.
 
 h2. Why Would I Need It?
 
-CleanSlateCSS is useful when there have already been CSS styles declared on a page, and you need to reset those styles within a particular area. This is _not_ a stylesheet to use when developing your own website. For that, try Eric Meyer's classic "Reset CSS":http://meyerweb.com/eric/tools/css/reset/ or the "HTML5 Doctors' version":http://html5doctor.com/html-5-reset-stylesheet.
+CleanSlate is useful when there have already been CSS styles declared on a page, and you need to reset those styles within a particular area. This is _not_ a stylesheet to use when developing your own website. For that, try Eric Meyer's classic "Reset CSS":http://meyerweb.com/eric/tools/css/reset/ or the "HTML5 Doctors' version":http://html5doctor.com/html-5-reset-stylesheet.
 
-Instead, it can be useful when distributing content (e.g. a widget, or syndicated news) to third-party websites. The CSS rules in the host site may be unknown and unpredictable, or may change in future without notice, or there may be many websites you need to distribute to. In such situations, the CleanSlateCSS stylesheet will aggressively reset your portion of content (and nothing else) back to some reasonable default values that you can then build from.
+Instead, it can be useful when distributing content (e.g. a widget, or syndicated news) to third-party websites. The CSS rules in the host site may be unknown and unpredictable, or may change in future without notice, or there may be many websites you need to distribute to. In such situations, the CleanSlate stylesheet will aggressively reset your portion of content (and nothing else) back to some reasonable default values that you can then build from.
 
 h2. Some Example Uses
 
- * The distribution of HTML/CSS/Javascript widgets to third-party websites. If your widget does not use an @iframe@ to sandbox its contents (and there are a few reasons why you wouldn't use an @iframe@), then you can use CleanSlateCSS to prevent CSS styles "bleeding" into your widget (see the "History" section, below).
- * The distribution of styled content as part of a partner's website. Again, you may not want your content to be sandboxed within and @iframe@ (where it will miss out on Google Juice, and might require Javascript). Instead, you could include your styled HTML content, and simply drop in the CleanSlateCSS stylesheet to bring a baseline to the styles for your content.
+ * The distribution of HTML/CSS/Javascript widgets to third-party websites. If your widget does not use an @iframe@ to sandbox its contents (and there are a few reasons why you wouldn't use an @iframe@), then you can use CleanSlate to prevent CSS styles "bleeding" into your widget (see the "History" section, below).
+ * The distribution of styled content as part of a partner's website. Again, you may not want your content to be sandboxed within and @iframe@ (where it will miss out on Google Juice, and might require Javascript). Instead, you could include your styled HTML content, and simply drop in the CleanSlate stylesheet to bring a baseline to the styles for your content.
  * Any other good examples? Share them with "@premasagar":http://twitter.com/premasagar, or add it to the wiki.
 
 h2. How Does It Do It?
@@ -74,7 +76,7 @@ bc. .myContainer a {
 
 h3. 4) Set the default styling
 
-CleanSlateCSS automatically applies the following styles to any @cleanslate@ element and its children:
+CleanSlate automatically applies the following styles to any @cleanslate@ element and its children:
 
 bc. .cleanslate {
     font-family: "Times New Roman", Times, serif !important;
@@ -108,11 +110,11 @@ h2. History
 
 This approach, of aggressively reset styling on a host page with the use of @!important@ rules, came about while developing the "BBC World Service widget":http://www.bbc.co.uk/worldservice/programmes/000000_widget_terms.shtml (see "this blog post":http://dharmafly.com/bbc-world-service-widget). The widget is injected into a page, not with an @iframe@, but a simple @<div>@ element (the widget's "lightbox" overlay is similarly just a simple @<div>@). The @!important@ styles helped us to prevent any unpredictable CSS styles "bleeding" into the widget.
 
-Since then, the various rules have been consolidated, cleaned up and extended, to form the CleanSlateCSS stylesheet.
+Since then, the various rules have been consolidated, cleaned up and extended, to form the CleanSlate stylesheet.
 
 h2. References
 
-The following documents were invaluable as building blocks for CleanSlateCSS:
+The following documents were invaluable as building blocks for CleanSlate:
  * Eric Meyer's Reset CSS - "http://meyerweb.com/eric/tools/css/reset/":http://meyerweb.com/eric/tools/css/reset/
  * HTML5 Reset Stylesheet by Richard Clark - "http://html5doctor.com/html-5-reset-stylesheet":http://html5doctor.com/html-5-reset-stylesheet
  * Default stylesheet for HTML 4 - "http://www.w3.org/TR/CSS2/sample.html":http://www.w3.org/TR/CSS2/sample.html
