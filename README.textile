@@ -128,11 +128,11 @@ jQuery(elem).css("border", "red");
 
 or make an element's styles use @!important@:
 
-jQuery(elem).important();
+bc. jQuery(elem).important();
 
 or not:
 
-jQuery(elem).important(false);
+bc. jQuery(elem).important(false);
 
 ...amongst other useful features.
 
