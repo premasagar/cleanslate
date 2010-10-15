@@ -104,7 +104,7 @@ Well, at least, that's the theory. You should [Techniques read the Techniques pa
 
 h2. Manipulating @!important@ styles with JavaScript
 
-Once a DOM node has @!important@ styles associated with it, you will find that you cannot change its styles by simply manipulating its @elem.style@ object, as you might do normally. Instead, you will need to edit its @elem.style.cssText@ property, or change its @style@ attribute.
+You don't need to use JavaScript to take advantage of the CleanSlate stylesheet. However, if you do want to manipulate CleanSlated elements with JavaScript, then you will find that you cannot change its styles by simply manipulating its @elem.style@ object, as you might do normally. Instead, you will need to edit its @elem.style.cssText@ property, or change its @style@ attribute.
 
 E.g.
 
