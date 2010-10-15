@@ -102,9 +102,12 @@ That's all.
 
 Well, at least, that's the theory. You should [Techniques read the Techniques page] to understand some of the finer points.
 
-h2. Optimising the Load Time
+h2. Manipulating @!important@ styles with JavaScript
 
-The [Speed Speed page] lists some standard techniques to optimise the load time for the stylesheet. These are nothing special - just standard practices for all kinds of CSS and Javascript files.
+Once an element has @!important@ styles associated with it, you will find that you cannot simply change the @element.style@ object to affect its styling. Instead, you will need to add a CSS rule to the @element.style.cssText@ property, or to the element's @style@ attribute.
+
+If you are using jQuery, the "Important" plugin can be used to make this process much more easy: "github.com/premasagar/important":http://github.com/premasagar/important
+
 
 h2. History
 
