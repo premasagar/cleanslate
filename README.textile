@@ -1,29 +1,31 @@
 h1. CleanSlate
 
 
-h2. What Is It?
+h2. What is it?
 
 *CleanSlate is an extreme CSS reset stylesheet.* It is used to reset a styled HTML element, and all its children, back to default CSS values. It is composed exclusively of "!important rules":http://www.w3.org/TR/CSS2/cascade.html#important-rules, which override all other types of rules.
 
 It can be used independently of JavaScript. Or can be combined within JavaScript widgets, such as those created by the "Sqwidget":http://github.com/premasagar/sqwidget library.
 
-h2. Why Would I Need It?
+h2. Why would I need it?
 
 CleanSlate is useful when there have already been CSS styles declared on a page, and you need to reset those styles within a particular area. This is _not_ a stylesheet to use when developing your own website. For that, try Eric Meyer's classic "Reset CSS":http://meyerweb.com/eric/tools/css/reset/ or the "HTML5 Doctors' version":http://html5doctor.com/html-5-reset-stylesheet.
 
 Instead, it can be useful when distributing content (e.g. a widget, or syndicated news) to third-party websites. The CSS rules in the host site may be unknown and unpredictable, or may change in future without notice, or there may be many websites you need to distribute to. In such situations, the CleanSlate stylesheet will aggressively reset your portion of content (and nothing else) back to some reasonable default values that you can then build from.
 
-h2. Some Example Uses
+h2. Some example uses
 
  * The distribution of HTML/CSS/Javascript widgets to third-party websites. If your widget does not use an @iframe@ to sandbox its contents (and there are a few reasons why you wouldn't use an @iframe@), then you can use CleanSlate to prevent CSS styles "bleeding" into your widget (see the "History" section, below).
  * The distribution of styled content as part of a partner's website. Again, you may not want your content to be sandboxed within and @iframe@ (where it will miss out on Google Juice, and might require Javascript). Instead, you could include your styled HTML content, and simply drop in the CleanSlate stylesheet to bring a baseline to the styles for your content.
- * Any other good examples? Share them with "@premasagar":http://twitter.com/premasagar, or add it to the wiki.
+ * Any other good examples? Share them with "@premasagar":http://twitter.com/premasagar, or add it to "the wiki":http://github.com/premasagar/cleanslate/wiki.
 
-h2. How Does It Do It?
+
+h2. How does it do it?
 
 The stylesheet lists all possible HTML elements, and assigns to them the default (or otherwise appropriate) values for every CSS property. It only looks within elements that have a class attribute of @cleanslate@.
 
-h2. Usage
+
+h2. How do I use it?
 
 h3. 1) Link to stylesheet from the @<head>@
 
@@ -39,8 +41,6 @@ Alternatively, you could use "@import":http://www.w3.org/TR/CSS2/cascade.html#at
 
 bc. @import http://example.com/cleanslate.css
 /* Add the rest of your CSS here */
-
-_(On a live site, it's best to include the CSS file on the site, rather than hot-linking to the Google-hosted version.)_
 
 
 h3. 2) Add the class attribute @cleanslate@ to your HTML container
@@ -98,9 +98,12 @@ bc. .myContainer {
 }
 
 
-That's all.
+h2. History
 
-Well, at least, that's the theory. You should [Techniques read the Techniques page] to understand some of the finer points.
+This approach, of aggressively reset styling on a host page with the use of @!important@ rules, came about while developing the "BBC World Service widget":http://www.bbc.co.uk/worldservice/programmes/000000_widget_terms.shtml (see "this blog post":http://dharmafly.com/bbc-world-service-widget). The widget is injected into a page, not with an @iframe@, but a simple @<div>@ element (the widget's "lightbox" overlay is similarly just a simple @<div>@). The @!important@ styles helped us to prevent any unpredictable CSS styles "bleeding" into the widget.
+
+Since then, the various rules have been consolidated, cleaned up and extended, to form the CleanSlate stylesheet.
+
 
 h2. Manipulating @!important@ styles with JavaScript
 
@@ -135,13 +138,6 @@ or not:
 bc. jQuery(elem).important(false);
 
 ...amongst other useful features.
-
-
-h2. History
-
-This approach, of aggressively reset styling on a host page with the use of @!important@ rules, came about while developing the "BBC World Service widget":http://www.bbc.co.uk/worldservice/programmes/000000_widget_terms.shtml (see "this blog post":http://dharmafly.com/bbc-world-service-widget). The widget is injected into a page, not with an @iframe@, but a simple @<div>@ element (the widget's "lightbox" overlay is similarly just a simple @<div>@). The @!important@ styles helped us to prevent any unpredictable CSS styles "bleeding" into the widget.
-
-Since then, the various rules have been consolidated, cleaned up and extended, to form the CleanSlate stylesheet.
 
 h2. References
 
