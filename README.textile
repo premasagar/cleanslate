@@ -5,13 +5,15 @@ h2. What is it?
 
 *CleanSlate is an extreme CSS reset stylesheet.* It is used to reset a styled HTML element, and all its children, back to default CSS values. It is composed exclusively of "!important rules":http://www.w3.org/TR/CSS2/cascade.html#important-rules, which override all other types of rules.
 
-It can be used independently of JavaScript. Or can be combined within JavaScript widgets, such as those created by the "Sqwidget":http://github.com/premasagar/sqwidget library.
+It does not require any JavaScript - it's just a CSS stylesheet. However, you may find it useful when used within JavaScript widgets, such as those created by the "Sqwidget":http://github.com/premasagar/sqwidget library.
+
 
 h2. Why would I need it?
 
 CleanSlate is useful when there have already been CSS styles declared on a page, and you need to reset those styles within a particular area. This is _not_ a stylesheet to use when developing your own website. For that, try Eric Meyer's classic "Reset CSS":http://meyerweb.com/eric/tools/css/reset/ or the "HTML5 Doctors' version":http://html5doctor.com/html-5-reset-stylesheet.
 
 Instead, it can be useful when distributing content (e.g. a widget, or syndicated news) to third-party websites. The CSS rules in the host site may be unknown and unpredictable, or may change in future without notice, or there may be many websites you need to distribute to. In such situations, the CleanSlate stylesheet will aggressively reset your portion of content (and nothing else) back to some reasonable default values that you can then build from.
+
 
 h2. Some example uses
 
@@ -138,6 +140,7 @@ or not:
 bc. jQuery(elem).important(false);
 
 ...amongst other useful features.
+
 
 h2. References
 
