@@ -104,9 +104,29 @@ Well, at least, that's the theory. You should [Techniques read the Techniques pa
 
 h2. Manipulating @!important@ styles with JavaScript
 
-Once an element has @!important@ styles associated with it, you will find that you cannot simply change the @element.style@ object to affect its styling. Instead, you will need to add a CSS rule to the @element.style.cssText@ property, or to the element's @style@ attribute.
+Once a DOM node has @!important@ styles associated with it, you will find that you cannot change its styles by simply manipulating its @elem.style@ object, as you might do normally. Instead, you will need to edit its @elem.style.cssText@ property, or change its @style@ attribute.
 
-If you are using jQuery, the "Important" plugin can be used to make this process much more easy: "github.com/premasagar/important":http://github.com/premasagar/important
+E.g.
+
+bc. elem.style.border = "red";                            // WON'T work
+elem.style.border = "red !important";                 // WON'T work
+elem.style.cssText = "border: red !important";        // will work
+elem.setAttribute("style", "border: red !important"); // will work
+//
+jQuery(elem).css("border", "red");                    // WON'T work
+jQuery(elem).css("border", "red !important");         // WON'T work
+jQuery(elem).attr("style", "border: red !important"); // will work
+
+If you are using jQuery, you can use my "'Important' plugin":http://github.com/premasagar/important to make this process much more easy. With this, you can add @true@ as a third argument to the @css()@ method:
+
+bc. jQuery(elem).css("border", "red", true);
+
+...or turn on @!important@ handling by default:
+
+bc. jQuery.important();
+jQuery(elem).css("border", "red");
+
+...amongst other simple shortcuts.
 
 
 h2. History
