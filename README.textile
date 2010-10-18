@@ -41,13 +41,13 @@ The stylesheet lists all possible HTML elements, and assigns them the default (o
 
 h2. How do I use it?
 
-h3. 1) Include a stylesheet link in the @<head>@
+h3. 1) Include a stylesheet link in the head
 
 E.g. add this to the host document's @<head>@:
 
 bc. <link rel="stylesheet" href="http://example.com/cleanslate.css" type="text/css" />
 
-With HTML5, you can optionally trim this down to this:
+With HTML5, you can optionally trim this down:
 
 bc. <link rel=stylesheet href="http://example.com/cleanslate.css">
 
