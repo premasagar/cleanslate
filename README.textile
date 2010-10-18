@@ -3,51 +3,69 @@ h1. CleanSlate
 
 h2. What is it?
 
-*CleanSlate is an extreme CSS reset stylesheet.* It is used to reset a styled HTML element, and all its children, back to default CSS values. It is composed exclusively of "!important rules":http://www.w3.org/TR/CSS2/cascade.html#important-rules, which override all other types of rules.
+*CleanSlate is an extreme CSS reset stylesheet.* It is used to the styling of an HTML element and all its children, back to default CSS values. It is composed exclusively of "!important rules":http://www.w3.org/TR/CSS2/cascade.html#important-rules, which override all other types of rules.
 
-It does not require any JavaScript - it's just a CSS stylesheet. However, you may find it useful when used within JavaScript widgets, such as those created by the "Sqwidget":http://github.com/premasagar/sqwidget library.
+It does not require any JavaScript - it's just a CSS stylesheet. However, you may find it useful when used within JavaScript widgets, such as those created by the '"Sqwidget":http://github.com/premasagar/sqwidget' library.
+
+If you have any feedback or questions, or if you've found CleanSlate useful in a project, please tell "@premasagar":http://twitter.com/premasagar, or add a note to "the wiki":http://github.com/premasagar/cleanslate/wiki. Feel free to fork and improve the code.
 
 
 h2. Why would I need it?
 
-CleanSlate is useful when there have already been CSS styles declared on a page, and you need to reset those styles within a particular area. This is _not_ a stylesheet to use when developing your own website. For that, try Eric Meyer's classic "Reset CSS":http://meyerweb.com/eric/tools/css/reset/ or the "HTML5 Doctors' version":http://html5doctor.com/html-5-reset-stylesheet.
+CleanSlate is useful when there are existing CSS styles on a page, and you want to prevent those styles cascading into some part of the page. This is _not_ a stylesheet to use when developing your own website (for that, try Eric Meyer's classic "Reset CSS":http://meyerweb.com/eric/tools/css/reset/ or the "HTML5 Doctors' adaptation":http://html5doctor.com/html-5-reset-stylesheet).
 
-Instead, it can be useful when distributing content (e.g. a widget, or syndicated news) to third-party websites. The CSS rules in the host site may be unknown and unpredictable, or may change in future without notice, or there may be many websites you need to distribute to. In such situations, the CleanSlate stylesheet will aggressively reset your portion of content (and nothing else) back to some reasonable default values that you can then build from.
+The stylesheet can be useful when distributing content (e.g. a widget, or syndicated news) to third-party websites. The CSS rules in the host site may be unknown and unpredictable, or may change in future without notice, or there may be so many websites you need to distribute to that it is impractical to write specific CSS that overrides the styles in each one. In such situations, the CleanSlate stylesheet will aggressively reset your portion of the content (and nothing else) back to some reasonable default values that you can then build from.
 
 
-h2. Some example uses
+h2. Why not just use an iframe?
 
- * The distribution of HTML/CSS/Javascript widgets to third-party websites. If your widget does not use an @iframe@ to sandbox its contents (and there are a few reasons why you wouldn't use an @iframe@), then you can use CleanSlate to prevent CSS styles "bleeding" into your widget (see the "History" section, below).
- * The distribution of styled content as part of a partner's website. Again, you may not want your content to be sandboxed within and @iframe@ (where it will miss out on Google Juice, and might require Javascript). Instead, you could include your styled HTML content, and simply drop in the CleanSlate stylesheet to bring a baseline to the styles for your content.
- * Any other good examples? Share them with "@premasagar":http://twitter.com/premasagar, or add it to "the wiki":http://github.com/premasagar/cleanslate/wiki.
+Third-party content is often distributed in iframes. Because JavaScript within an iframe can be prevented from accessing the host page, iframes are particularly useful when the host site has security concerns and does not explicitly trust the third-party content.
+
+However, iframes have some drawbacks:
+* You cannot display content outside of the box of the iframe
+* It is tricky to resize the iframe to match the size of its contents
+* Your content will be unable to interact with the host page, even if it is trusted
+* Search engines like Google will not see the content on the host page. Content that is syndicated from a partner website can avoid this by being directly included in the host page.
+
+h3. iframe-based resetting for distributed content
+
+CleanSlate only resets CSS styles. But if you also need to protect your content from JavaScript on the host page, then see '"AppleOfMyIframe":http://github.com/premasagar/appleofmyiframe', which allows you to inject HTML into a "sourceless" iframe element that the browser treats as being on the same domain as the host.
+
+If your host page needs to isolate and sandbox third-party JavaScript, then you might want to use '"Sandie":http://github.com/premasagar/sandie'.
 
 
 h2. How does it do it?
 
-The stylesheet lists all possible HTML elements, and assigns to them the default (or otherwise appropriate) values for every CSS property. It only looks within elements that have a class attribute of @cleanslate@.
+The stylesheet lists all possible HTML elements, and assigns them the default (or otherwise appropriate) values for every CSS property. It only looks within elements that have a @class@ attribute of "@cleanslate@".
 
 
 h2. How do I use it?
 
-h3. 1) Link to stylesheet from the @<head>@
+h3. 1) Include a stylesheet link in the @<head>@
 
-Add a @<link>@ to the stylesheet, in the document @<head>@:
+E.g. add this to the host document's @<head>@:
 
-bc. <link type="text/css" rel="stylesheet" href="http://example.com/cleanslate.css" />
+bc. <link rel="stylesheet" href="http://example.com/cleanslate.css" type="text/css" />
 
-If you are distributing a Javascript widget, then this can be done programatically. E.g. with jQuery:
+With HTML5, you can optionally trim this down to this:
 
-bc. $('head').append('<link type="text/css" rel="stylesheet" href="http://example.com/cleanslate.css" />');
+bc. <link rel=stylesheet href="http://example.com/cleanslate.css">
 
-Alternatively, you could use "@import":http://www.w3.org/TR/CSS2/cascade.html#at-import to call it from within another stylesheet or @<style>@ element:
+If you are distributing a Javascript widget, then you can add the stylesheet programatically, e.g. with jQuery:
 
-bc. @import http://example.com/cleanslate.css
-/* Add the rest of your CSS here */
+bc. jQuery('<link rel=stylesheet href="cleanslate.css">')
+    .appendTo('head');
+
+Alternatively, if you want to import CleanSlate into another stylesheet or @<style>@ element, then you can "@import":http://www.w3.org/TR/CSS2/cascade.html#at-import it:
+
+bc. /* start of stylesheet */
+@import http://example.com/cleanslate.css
+/* your other styles follow */
 
 
-h3. 2) Add the class attribute @cleanslate@ to your HTML container
+h3. 2) Add the class @cleanslate@ to the HTML container element
 
-The @cleanslate@ element will have its styling be reset:
+The @cleanslate@ element will have its styles reset:
 
 bc. <body>
     <div class="blah">
@@ -76,7 +94,7 @@ bc. .myContainer a {
     font-weight:bold !important;
 }
 
-h3. 4) Set the default styling
+h3. 4) [optional] Set the default styles
 
 CleanSlate automatically applies the following styles to any @cleanslate@ element and its children:
 
@@ -92,7 +110,7 @@ bc. .cleanslate {
     text-decoration:none !important;
 }
 
-If you want to override these default styles, then simply add the new values to your own stylesheet. It's best to use a CSS selector that is specific to your content, instead of using @.cleanslate@, because there may be other @.cleanslate@ elements on the page, now or in future. For example:
+If you want to override these default styles, then simply add the new values to your own stylesheet. It's best to use a CSS selector that is specific to your content, instead of using @.cleanslate@, in case there are other @.cleanslate@ elements on the page. For example:
 
 bc. .myContainer {
     font-family: Verdana, Arial, sans-serif !important;
@@ -102,18 +120,16 @@ bc. .myContainer {
 
 h2. History
 
-This approach, of aggressively reset styling on a host page with the use of @!important@ rules, came about while developing the "BBC World Service widget":http://www.bbc.co.uk/worldservice/programmes/000000_widget_terms.shtml (see "this blog post":http://dharmafly.com/bbc-world-service-widget). The widget is injected into a page, not with an @iframe@, but a simple @<div>@ element (the widget's "lightbox" overlay is similarly just a simple @<div>@). The @!important@ styles helped us to prevent any unpredictable CSS styles "bleeding" into the widget.
+This approach, of aggressively resetting the styles on a host page with the use of @!important@ rules, came about while developing the "BBC World Service widget":http://www.bbc.co.uk/worldservice/programmes/000000_widget_terms.shtml (see "this blog post":http://dharmafly.com/bbc-world-service-widget). The widget is injected into a page, not with an @iframe@, but a simple @<div>@ element (the widget's "lightbox" overlay is similarly just a simple @<div>@). The @!important@ styles helped us to prevent any unpredictable CSS "bleeding" into the widget.
 
 Since then, the various rules have been consolidated, cleaned up and extended, to form the CleanSlate stylesheet.
 
 
 h2. Manipulating @!important@ styles with JavaScript
 
-You don't need to use JavaScript to take advantage of the CleanSlate stylesheet. However, if you do want to manipulate CleanSlated elements with JavaScript, then you will find that you cannot change its styles by simply manipulating its @elem.style@ object, as you might do normally. Instead, you will need to edit its @elem.style.cssText@ property, or change its @style@ attribute.
+You don't need to use JavaScript to take advantage of CleanSlate. However, if you do want to manipulate a CleanSlated element with JavaScript, then you will find that you cannot change its styles by manipulating the @elem.style@ object, as you might normally. Instead, you will need to edit its @elem.style.cssText@ property, or change its @style@ attribute.
 
-E.g.
-
-bc. elem.style.border = "red";                            // won't work
+E.g. bc. elem.style.border = "red";                            // won't work
 elem.style.border = "red !important";                 // won't work
 elem.style.cssText = "border: red !important";        // WILL work
 elem.setAttribute("style", "border: red !important"); // WILL work
@@ -152,5 +168,3 @@ The following documents were invaluable as building blocks for CleanSlate:
  * W3C CSS2 Cascade & Inheritance - "http://www.w3.org/TR/CSS2/cascade.html":http://www.w3.org/TR/CSS2/cascade.html
  * W3C CSS3 Selectors - "http://www.w3.org/TR/css3-selectors":http://www.w3.org/TR/css3-selectors
  * List of CSS Properties - "http://meiert.com/en/indices/css-properties/":http://meiert.com/en/indices/css-properties/
-
-Please get in touch if you have any thoughts, would like to contribute, or if you use CleanSlate within a project.
