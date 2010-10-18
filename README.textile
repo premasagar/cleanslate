@@ -41,7 +41,7 @@ The stylesheet lists all possible HTML elements, and assigns them the default (o
 
 h2. How do I use it?
 
-h3. 1) Include a stylesheet link in the head
+h3. 1) Include the stylesheet
 
 E.g. add this to the host document's @<head>@:
 
@@ -59,7 +59,7 @@ bc. jQuery('<link rel=stylesheet href="cleanslate.css">')
 Alternatively, if you want to import CleanSlate into another stylesheet or @<style>@ element, then you can "@import":http://www.w3.org/TR/CSS2/cascade.html#at-import it:
 
 bc. /* start of stylesheet */
-@import http://example.com/cleanslate.css
+    @import http://example.com/cleanslate.css
 /* your other styles follow */
 
 
