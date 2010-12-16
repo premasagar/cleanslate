@@ -91,10 +91,28 @@
 /* == BLOCK-LEVEL == */
 /* Actually, some of these should be inline-block and other values, but block works fine (TODO: rigorously verify this) */
 /* HTML 4.01 */
-.cleanslate, .cleanslate th, .cleanslate table, .cleanslate h3, .cleanslate h5, .cleanslate p, .cleanslate h1, .cleanslate td, .cleanslate dl, .cleanslate tr, .cleanslate dt, .cleanslate h6, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate tbody, .cleanslate h2, .cleanslate tfoot, .cleanslate caption, .cleanslate thead, .cleanslate h4, .cleanslate ul, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate textarea, .cleanslate hr,
+.cleanslate, .cleanslate h3, .cleanslate h5, .cleanslate p, .cleanslate h1, .cleanslate dl, .cleanslate dt, .cleanslate h6, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate h2, .cleanslate caption, .cleanslate h4, .cleanslate ul, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate textarea, .cleanslate hr,
 /* HTML5 new elements */
 .cleanslate article, .cleanslate aside, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section {
     display:block !important; 
+}
+.cleanslate table {
+    display: table !important;
+}
+.cleanslate thead {
+    display: table-header-group !important;
+}
+.cleanslate tbody {
+    display: table-row-group !important;
+}
+.cleanslate tfoot {
+    display: table-footer-group !important;
+}
+.cleanslate tr {
+    display: table-row !important;
+}
+.cleanslate th, .cleanslate td {
+    display: table-cell !important;
 }
 /* == SPECIFIC ELEMENTS == */
 /* Some of these are browser defaults; some are just useful resets */
