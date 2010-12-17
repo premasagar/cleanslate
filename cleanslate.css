@@ -76,7 +76,7 @@
 	top:auto !important;
 	unicode-bidi:normal !important;
 	vertical-align:baseline !important;
-	visibility:visible !important;
+	visibility:inherit !important;
 	white-space:normal !important;
 	width:auto !important;
 	word-spacing:normal !important;
