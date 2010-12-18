@@ -54,7 +54,7 @@
 	letter-spacing:normal !important;
 	line-height:inherit !important;
 	list-style-type: inherit !important; /* Could set list-style-type to none */
-	list-style-position: inside !important;
+	list-style-position: outside !important;
 	list-style-image: none !important;
 	margin:0 !important;
 	max-height:none !important;
