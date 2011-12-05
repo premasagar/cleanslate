@@ -170,3 +170,5 @@ The following documents were invaluable as building blocks for CleanSlate:
  * W3C CSS2 Cascade & Inheritance - "http://www.w3.org/TR/CSS2/cascade.html":http://www.w3.org/TR/CSS2/cascade.html
  * W3C CSS3 Selectors - "http://www.w3.org/TR/css3-selectors":http://www.w3.org/TR/css3-selectors
  * List of CSS Properties - "http://meiert.com/en/indices/css-properties/":http://meiert.com/en/indices/css-properties/
+ * CSS 2.1 User Agent Style Sheet Defaults - "http://css-class.com/test/css/defaults/UA-style-sheet-defaults.htm":http://css-class.com/test/css/defaults/UA-style-sheet-defaults.htm
+ * Internet Explorer User Agent Style Sheets - "http://www.iecss.com/":http://www.iecss.com
