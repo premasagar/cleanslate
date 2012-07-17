@@ -1,22 +1,21 @@
 # Your project's details
-PROJECT_NAME: Dharmafly Docs
+PROJECT_NAME: Cleanslate
 GITHUB_CURRENT_VERSION: 1.0
-GITHUB_PROJECT_URL: https://github.com/dharmafly/dharmafly-docs
+GITHUB_PROJECT_URL: https://github.com/dharmafly/cleanslate
 
 # The style for your site (currently only default)
 THEME: default
     
 ############ Optional extras
 
-GITHUB_ZIP_URL: https://github.com/dharmafly/dharmafly-docs/zipball/gh-pages
-TWITTER_PROJECT_URL: https://twitter.com/dharmafly
+GITHUB_ZIP_URL: https://github.com/premasagar/cleanslate/zipball/master
+TWITTER_PROJECT_URL: https://twitter.com/premasagar
 # javascript, css or html5
 LANG: css
 
 # Add your project's scripts here to be available to any examples
 SCRIPTS:
-- src: https://raw.github.com/dharmafly/jquery.promises/master/image.js
-- src: https://raw.github.com/dharmafly/jquery.promises/master/timer.js
+- src: 
 
 # A quote to add at the footer of your project page
 QUOTE:
