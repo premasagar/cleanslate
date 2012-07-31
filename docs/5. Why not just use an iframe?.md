@@ -10,7 +10,7 @@ However, iframes have some drawbacks:
 * Your content will be unable to interact with the host page, even if it is trusted
 * Search engines like Google will not see the content on the host page. Content that is syndicated from a partner website can avoid this by being directly included in the host page.
 
-iframe-based resetting for distributed content
+Iframe-based resetting for distributed content
 ----------------------------------------------
 
 CleanSlate only resets CSS styles. But if you also need to protect your content from JavaScript on the host page, then see ["AppleOfMyIframe"](https://github.com/premasagar/appleofmyiframe)', which allows you to inject HTML into a "sourceless" iframe element that the browser treats as being on the same domain as the host.
