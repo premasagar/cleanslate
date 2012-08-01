@@ -1,5 +1,6 @@
 ---
 category: about
+heading: "Why would I need it?"
 ---
 
 CleanSlate is useful when there are existing CSS styles on a page, and you want to prevent those styles cascading into some part of the page. This is _not_ a stylesheet to use when developing your own website (for that, try [Eric Meyer's classic "Reset CSS"](http://meyerweb.com/eric/tools/css/reset/) or the ["HTML5 Doctors' adaptation"](http://html5doctor.com/html-5-reset-stylesheet).

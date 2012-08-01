@@ -1,5 +1,6 @@
 ---
 category: reference
+heading: "Include the stylesheet"
 ---
 
 E.g. add this to the host document's `<head>`:

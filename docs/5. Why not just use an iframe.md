@@ -1,5 +1,6 @@
 ---
 category: about
+heading: "Why not just use an iframe?"
 ---
 
 Third-party content is often distributed in iframes. Because JavaScript within an iframe can be prevented from accessing the host page, iframes are particularly useful when the host site has security concerns and does not explicitly trust the third-party content.

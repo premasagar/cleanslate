@@ -1,5 +1,6 @@
 ---
 category: reference
+heading: "[optional] Set the default styles"
 ---
 
 CleanSlate automatically applies the following styles to any `cleanslate` element and its children:
