@@ -24,7 +24,28 @@ Full documentation can be found on the main [README] (https://github.com/dharmaf
 How Can I set up a new Dharmafly project website?
 ----------------------------
 
+<<<<<<< HEAD
 Full documentation can be found on the main [README] (https://github.com/dharmafly/dharmafly-docs#https://github.com/dharmafly/dharmafly-docs#how-can-i-set-up-a-new-dharmafly-project-website)
+=======
+If your environment has a working [Ruby](http://www.ruby-lang.org/) installation you can [download this Rakefile](https://github.com/downloads/dharmafly/dharmafly-docs/Rakefile) to your project's working branch and run `rake build` to setup Dharmafly Docs in a new gh-pages branch. You can find the Rakefile documentation here https://github.com/dharmafly/dharmafly-docs/wiki/Rakefile-Guide
+
+If you don't have access to Ruby or if the Rakefile fails, then follow the steps below to setup Dharmafly Docs.
+
+1. Firstly, navigate to your project's local directory.
+
+2. Create an empty `gh-pages` branch:
+
+     `git checkout --orphan gh-pages`
+
+3. To prevent merge conflicts when you pull from dharmafly-docs, remove any files
+ which came from the last branch you were working on.
+
+     `git rm -rf .`
+
+  (INFO: Make sure to remove any untracked files as well, as these may be candidates for merge conflicts. For example, hidden files like `.DS_STORE`)
+
+3. Add a link to the dharmafly-docs repository: `git remote add dharmafly-docs git@github.com:dharmafly/dharmafly-docs.git`
+>>>>>>> 9ed7bd1c4c295ffc4110f7e61f438eb9bb0815f4
 
 Getting started
 ===================
@@ -54,15 +75,162 @@ Templating using liquid
 Updating the CSS
 -----------------
 
+<<<<<<< HEAD
 ### Creating new themes / colour schemes
+=======
+WARNING: If posts do not have either one of these prologues, they won't be displayed.
+
+In addition to the category, you can also add the optional `heading` variable. This will override the default post heading when it is rendered on the page (the default being the post's filename). The `heading` variable should be used like so:
+
+    ---
+    category: about
+    heading: Post Heading
+    ---
+>>>>>>> 9ed7bd1c4c295ffc4110f7e61f438eb9bb0815f4
 
 Blocks of code in posts
 --------------------------
 
+<<<<<<< HEAD
 ### Code highlighting themes
+=======
+The language icon is on the top right hand side of the main content under the github and twitter icons. It's there to quickly show site visitors the main focus of the project.
+
+To change the language icon, edit the `_config.yml`
+
+    # javascript, css or html5
+    LANG: javascript
+
+There are icons for JavaScript, CSS and HTML5.
+
+Adding your project code to the page
+----------------------------------------
+
+To add your own JavaScript files to the page to be available to the code blocks, edit the `_config.yml`:
+
+    SCRIPTS:
+    - src: https://raw.github.com/dharmafly/jquery.promises/master/image.js
+    - src: https://raw.github.com/dharmafly/jquery.promises/master/timer.js
+
+Otherwise just leave the 'src' blank.
+
+The examples here use files from the [jquery.promises](http://jquerypromises.com/) project.
+
+
+Adding a link to your twitter account
+-------------------------------------
+
+If your project has a twitter account, you can add a link to it in the `_config.yml`.
+
+    TWITTER_PROJECT_URL: https://twitter.com/dharmafly
+
+An icon will appear on the right hand side under the github icon for your project.
+
+
+Adding a download button
+------------------------
+
+The site will already include a link to your project. If you have a downloadable zip of your project, you can add this by editing the `_config.yml`.
+
+    GITHUB_ZIP_URL: https://github.com/dharmafly/dharmafly-docs/zipball/gh-pages
+
+This will add a download button to your site.
+
+Adding a quote to your project
+------------------------------
+
+If you have a quote that sums up the ideas in your project, you can optionally add it by editing the `_config.yml`.
+
+    QUOTE:
+      quote:  Promises are the uniquely human way of ordering the future, making it predictable and reliable to the extent that this is humanly possible.
+      cite: Hannah Arendt
+
+Including Google Analytics tracking
+-----------------------------------
+
+Add your Google Analytics web property ID (in the form 'UA-XXXXX-X') within `_config.yml`. E.g.
+
+    GA_ID: UA-XXXXX-X
+
+
+Changing the project colourscheme and style
+-------------------------------------------
+
+Currently, only the default theme is available. Once alternate themes are implemented, you can chnage theme by updating the `THEME` variable.
+
+Formatting your posts
+====================
+
+Special sections
+----------------
+
+To add a highlighted version of text (for example for your project name) within the overview section, add the following html.
+
+    <span class="project_name">Project Name</span>
+
+If this is at the beginning of the line, you need to add an invisible unicode character as follows, due to [this bug] (http://groups.google.com/group/pdoc/browse_thread/thread/725e4809de2fcc18)
+
+    &#8291;<span class="project_name">Project Name</span>
+
+Code Blocks in Posts
+---------------------
+
+Any  code blocks in the markdown will be formatted as syntax highlighted code blocks in the website.
+
+If the example uses the `$output` variable or `alert()` then a "run" button will appear next to
+the code block allowing the user to run the example.
+
+Each code block is given access to a `$output` variable. This refers to a
+jQuery wrapped `<output>` element inserted after the code block.
+
+For example:
+
+    var image = new Image()
+    image.src = "my-image.png";
+    image.onload = function () {
+      $output.append(image);
+    }
+
+The code snippet will appear with a run button. In this example, when the image has loaded then
+the element will be appended to the output.
+
+The `dharmafly-docs` project
+==============================
+
+How can I get bugfixes and enhancements for my `dharmafly-docs` project instance
+------------------------------------------------------------------
+
+First recreate the link between your project and `dharmafly-docs`
+
+`git remote add dharmafly-docs git@github.com:dharmafly/dharmafly-docs.git`
+
+Making sure you are in your project's `gh-pages` branch, pull from the 
+Dharmafly Docs master branch
+
+`git pull dharmafly-docs master`
+
+You may find minor merge conflicts occur in the `_config.yml`, as it needs to be updated for a project website instance, but is likely to be updated and enhanced in the Dharmafly Docs` `master` branch.
+
+How can I update the styling or format of all Dharmafly project websites?
+------------------------------
+
+Changes made to this repository won't automatically be reflected in projects previously created using the code in this repository and the github pages facility.
+
+There's currently no facility to automatically update all instances of Dharmafly Docs with bugfixes. An [issue exists] (https://github.com/dharmafly/dharmafly-docs/issues/8) for this enhancement.
+
+How Can I add a new page (not a new post) to a Dharmafly project
+-----------------------------------------------
+
+There's no process yet to do this easily, but [this issue outlines the process required to generalise adding new page levels]
+(https://github.com/dharmafly/dharmafly-docs/issues/1)
+
+Is there a process for automatically generating new project websites from project documentation?
+----------------------------
+>>>>>>> 9ed7bd1c4c295ffc4110f7e61f438eb9bb0815f4
 
 ### Allowing users to edit code inline
 
+<<<<<<< HEAD
 Responsive design
 -------------------------------------
 
@@ -83,3 +251,9 @@ The animation is done by css transforms set on certain properties of those class
 SVG - how and where it's used
 -----------------------------
 
+=======
+How do I add a new icon for the coding language my project's about? 
+-------------------------------------------------
+
+If the language exists as an icon, please see the [documentation on the gh-pages branch] (https://github.com/dharmafly/dharmafly-docs/#changing-the-language-icon). If not, you can [create a new icon to be available to all projects using dharmafly-docs] (https://github.com/dharmafly/dharmafly-docs/wiki/Adding-a-new-language-icon-to-the-sidebar)
+>>>>>>> 9ed7bd1c4c295ffc4110f7e61f438eb9bb0815f4

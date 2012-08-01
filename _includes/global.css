@@ -10,7 +10,6 @@ body {
   background-image: url(./img/tile.png) -webkit-linear-gradient(left, {{ page.body_background_colour }} 0%,{{ page.background_mid_stop }} 50%,{{ page.body_background_colour }} 100%);
   background-image: url(./img/tile.png) -o-linear-gradient(left, {{ page.body_background_colour }} 0%,{{ page.background_mid_stop }} 50%,{{ page.body_background_colour }} 100%);
   background-image: url(./img/tile.png) -ms-linear-gradient(left, {{ page.body_background_colour }} 0%,{{ page.background_mid_stop }} 50%,{{ page.body_background_colour }} 100%);
-  background-image: url(./img/tile.png) linear-gradient(left, {{ page.body_background_colour }} 0%,{{ page.background_mid_stop }} 50%,{{ page.body_background_colour }} 100%);
   background-attachment: fixed;
 }
 
@@ -110,6 +109,9 @@ pre code .comment              { color: #75715E; }
 	height: 0;
 }
 
+.ltIE9 .content section {
+  clear:left;
+}
 
 pre {
   position: relative;
@@ -128,6 +130,10 @@ pre {
   -moz-box-shadow:    4px 4px 5px rgba(0, 0, 0, 0.45) inset;
   -o-box-shadow:    4px 4px 5px rgba(0, 0, 0, 0.45) inset;
   box-shadow:         4px 4px 5px rgba(0, 0, 0, 0.45) inset;
+}
+
+section pre.hasEditor {
+  padding-bottom: 3.5em;
 }
 
 pre code {
@@ -358,25 +364,29 @@ section.content {
 
 section.content:after{
   content: "";
-    display: block;
-    width: 506px;
-    height: 231px;
-    margin: 0;
-    position: absolute;
-    bottom: 177px;
-    left: -336px;
-    z-index: -1;
-    background: transparent;
-    background-repeat: no-repeat;
-    background-position: left top;
-    background-image: url(./svg/{{ page.svg_asset }}) ;
-    -webkit-transform: rotate({{ page.svg_asset_rotation }});
-    -moz-transform: rotate({{ page.svg_asset_rotation }});
-    -ms-transform: rotate({{ page.svg_asset_rotation }});
-    -o-transform: rotate({{ page.svg_asset_rotation }});
-    transform: rotate({{ page.svg_asset_rotation }});
-    opacity: 0.2;
-    background-size: {{ page.svg_asset_size }}
+  display: block;
+  width: 506px;
+  height: 231px;
+  margin: 0;
+  position: absolute;
+  bottom: 177px;
+  left: -336px;
+  z-index: -1;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-image: url(./svg/{{ page.svg_asset }}) ;
+  -webkit-transform: rotate({{ page.svg_asset_rotation }});
+  -moz-transform: rotate({{ page.svg_asset_rotation }});
+  -ms-transform: rotate({{ page.svg_asset_rotation }});
+  -o-transform: rotate({{ page.svg_asset_rotation }});
+  transform: rotate({{ page.svg_asset_rotation }});
+  opacity: 0.2;
+  background-size: {{ page.svg_asset_size }}
+}
+
+.ie section.content:after{
+  background-image: none;
 }
 
 section > h1 {
@@ -388,6 +398,11 @@ section > h1:hover .permalink {
 	visibility: visible;
 }
 
+@font-face{ 
+  font-family: 'Rail Model'; 
+  src: url('./ie/railmodelfont-webfont.eot?#iefix') format('embedded-opentype'); 
+}
+
 section .permalink {
 	text-decoration: none;
 	float: left;
@@ -395,11 +410,14 @@ section .permalink {
 	visibility: hidden;
   position: relative;
   bottom: 0;
-  font-family: Code2000, "DejaVu Sans", "DejaVu Sans Bold", "DejaVu Sans Bold Oblique", "DejaVu Sans Condensed", "DejaVu Sans Condensed Bold", "DejaVu Sans Condensed Bold Oblique", "DejaVu Sans Condensed Oblique", "DejaVu Sans Mono", "DejaVu Sans Mono Bold", "DejaVu Sans Oblique", "EversonMono", "EversonMono-Oblique", "Symbola"
+  font-family: "DejaVu Sans", "DejaVu Sans Bold", "DejaVu Sans Bold Oblique", "DejaVu Sans Condensed", "DejaVu Sans Condensed Bold", "DejaVu Sans Condensed Bold Oblique", "DejaVu Sans Condensed Oblique", "DejaVu Sans Mono", "DejaVu Sans Mono Bold", "DejaVu Sans Oblique", "EversonMono", "EversonMono-Oblique", "Symbola", "Free Serif", "Quivira", "Rail Model", Code2000 
 }
 
-section .permalink:hover {
+.ltIE9 section .permalink {
+  font-family: "Rail Model";
 }
+
+
 
 .project-name {
     font-family: {{ page.font }}, serif;
@@ -462,6 +480,11 @@ section.quote:after {
   -o-transform: {{ page.quote_svg_left_transform }};
   transform: {{ page.quote_svg_left_transform }};
   visibility: visible;
+}
+
+.ie section.quote:before,
+.ie section.quote:after {
+  background-image: none;
 }
 
 section.quote:after {
@@ -662,9 +685,13 @@ button:active {
 }
 
 #navigation li.show-subnav {
-    float: left;
-    margin-top: -0.3em;
-    border-right:0;
+  float: left;
+  margin-top: -0.3em;
+  border-right:0;
+}
+
+.ltIE9 #navigation li.show-subnav {
+  display: none;
 }
 
 #navigation.show-subnav-button li.show-subnav + li {
@@ -762,7 +789,11 @@ aside li  span,
   padding-top: 2.5em;
 }
 
-
+.ltIE9 aside li  a,
+.ltIE9 aside li  span,
+.ltIE9  .buttons .badge {
+  border-width: 0;
+} 
 
 aside li  a:hover {
   border-color: {{ page.content_bg_colour }};
@@ -773,30 +804,17 @@ aside li  a:hover {
   transition: border-color 0.3s ease-out;
 }
 
-aside li.github a {
-    background-position: -5px 0;
-}
+.ltIE9 aside li.github a {  background-position: -4px 4px; background-color: white;}
+aside li.github a {  background-position: -5px 0; }
+aside li.twitter a{ background-position: -2px -128px; }
+aside li.code-javascript span { background-position: -6px -246px; }
+aside li.code-html5 span { background-position: -2px -457px; }
+aside li.code-css span { background-position: -2px -546px; }
 
-aside li.twitter a{
-    background-position: -2px -128px;
-}
+.buttons .badge.github {  background-position: 0px -359px; }
 
-aside li.code-javascript span {
-    background-position: -6px -246px;
-}
-aside li.code-html5 span {
-    background-position: -2px -457px;
-}
-aside li.code-css span {
-    background-position: -2px -546px;
-}
-
-.buttons .badge.github {
-    background-position: 0px -359px;
-}
-
-aside  a:after ,
-aside  span:after ,
+aside a:after ,
+aside span:after ,
 .buttons .badge:after {
   content: "";
   display: block;
@@ -820,6 +838,14 @@ aside  span:after ,
   height: 2.5em;
   top: 0;
   left: 0;
+}
+
+
+.ltIE9 aside a:after ,
+.ltIE9 aside span:after ,
+.ltIE9 .buttons .badge:after {
+  display: none;
+  background-color: transparent;
 }
 
 aside  a:hover:after ,
@@ -918,10 +944,16 @@ aside  span:hover:after ,
 	section pre {
 		margin-left: -5.6em;
 		margin-right: -5.6em;
-		padding-left: 5em;
+		padding-left: 2.5em;
 		padding-right: 2.5em;
     max-width:65em;
 	}
+  
+  section pre.hasEditor {
+		padding-left: 5em;
+    padding-bottom: 1.5em;
+	}
+
 
   #navigation.float h1 {
     font-size: 2.6em;
@@ -1030,6 +1062,7 @@ aside  span:hover:after ,
     //-webkit-transform:scale3d(1,1,1);
   }
 }
+
 
 /* Force correct font loading behaviour to avoid FOUT in all browsers */
 /*
