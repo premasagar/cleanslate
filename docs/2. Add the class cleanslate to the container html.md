@@ -1,6 +1,6 @@
 ---
 category: reference
-heading: "Add the class 'cleanslate' to the container html"
+heading: "2) Add the class <code>'cleanslate'</code> to the container html"
 ---
 
 The `cleanslate` element will have its styles reset:

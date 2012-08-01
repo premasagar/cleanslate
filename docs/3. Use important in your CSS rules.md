@@ -1,6 +1,6 @@
 ---
 category: reference
-heading: "Use !important in your css rules"
+heading: "3) Use <code>!important</code> in your css rules"
 ---
 
 For all of your CSS rules that relate to a `cleanslate` element or its children, add the keyword `!important`:
