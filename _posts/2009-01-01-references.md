@@ -1,5 +1,6 @@
 ---
 category: about
+heading: "References"
 ---
 
 The following documents were invaluable as building blocks for CleanSlate:
