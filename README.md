@@ -84,7 +84,14 @@ In addition to the category, you can also add the optional `heading` variable. T
 
     ---
     category: about
-    heading: Post Heading
+    heading: "Post Heading"
+    ---
+    
+Complex characters and html are also permitted:
+
+    ---
+    category: about
+    heading: "Why I love the <code>!important</code> rule"
     ---
 >>>>>>> 9ed7bd1c4c295ffc4110f7e61f438eb9bb0815f4
 
@@ -135,6 +142,17 @@ The site will already include a link to your project. If you have a downloadable
     GITHUB_ZIP_URL: https://github.com/dharmafly/dharmafly-docs/zipball/gh-pages
 
 This will add a download button to your site.
+
+Updating the Overview page reference text
+-----------------------------------------
+
+The last section on the overview page is a link to the reference section. 
+
+This link isn't editable via the `_config.yml`, but the text introducing it can be changed through the `REFERENCE_LINK_TEXT` variable
+in the in the `_config.yml`. For example:
+
+    REFERENCE_LINK_TEXT: "Complete documentation can be found here:"
+
 
 Adding a quote to your project
 ------------------------------

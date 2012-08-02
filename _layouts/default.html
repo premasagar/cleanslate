@@ -23,7 +23,7 @@
             <script src="{{ relative_path }}javascript/html5shiv.js"></script>
         <![endif]-->
         <link href="{{ relative_path }}css/{{ site.THEME }}.css" rel="stylesheet" />
-        <link rel="shortcut icon" href="{{ relative_path }}favicon.ico" />
+        <link rel="shortcut icon" href="{{ relative_path }}img/{{ site.THEME }}-favicon.ico" />
 		</head>
 		<body>
 			<header>
@@ -81,12 +81,13 @@
               GLOBAL.relative_path = '{{ relative_path }}';
             </script>
             
-            <!--[ if lt IE10 ]>
+            <!--[if lt IE 10]> 
               <script type="text/javascript">
                 GLOBAL.isltIE10 = true;
               </script>
             <![endif]-->
-            <!--[if IE9 ]>
+              
+            <!--[if IE 9]>
               <script src="{{ relative_path }}javascript/IEshims.js"></script>
             <![endif]-->
 
