@@ -17,7 +17,7 @@ LANG: css
 SCRIPTS:
 - src: 
 
-REFERENCE_LINK_TEXT: "Complete documentation can be found here:"
+REFERENCE_LINK_TEXT: "A quick guide in how to get started can be found in"
 
 # A quote to add at the footer of your project page
 QUOTE:
