@@ -86,6 +86,10 @@
     /* This section needs extending */
 	-moz-border-radius:0 !important;
 	-webkit-border-radius:0 !important;
+	-moz-box-sizing: content-box !important;
+	-webkit-box-sizing: content-box !important;
+	box-sizing: content-box !important;
+	text-shadow: none !important;	
 }
 
 /* == BLOCK-LEVEL == */
