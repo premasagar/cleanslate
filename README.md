@@ -21,7 +21,7 @@ Contents
 - [Changing the domain for your project's site](#changing-the-domain-for-your-projects-site)
 - [Required posts] (#required-posts)
 
-### [Site Variables] (#site-variables)
+### [Site Variables] (#site-variables-1)
 
 - [Updating the main nav] (#updating-the-main-nav)
 - [Changing the language icon] (#changing-the-language-icon)
@@ -173,8 +173,16 @@ Adding new pages
 Templating using liquid
 ----------------------
 
+<<<<<<< HEAD
 Updating the CSS
 -----------------
+=======
+or
+
+    ---
+    category: overview
+    ---
+>>>>>>> c0f2b4d1cf3a4f5a85c27a988a8d2d5dbdd23892
 
 <<<<<<< HEAD
 ### Creating new themes / colour schemes
@@ -188,24 +196,28 @@ This will display the text within `heading` as the heading for your post. (If th
 The `heading` variable should be used like so:
 
     ---
-    category: about
+    category: overview
     heading: "Post Heading"
     ---
     
 Complex characters and html are also permitted:
 
     ---
-    category: about
+    category: overview
     heading: "Why I love the <code>!important</code> rule"
     ---
 >>>>>>> 9ed7bd1c4c295ffc4110f7e61f438eb9bb0815f4
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Blocks of code in posts
 =======
 The very first 'about' post in the directory will be used for the project overview (it will be displayed in a highlighted box).
+=======
+The very first `overview` post in the directory will be used for the project overview (it will be displayed in a highlighted box).
+>>>>>>> c0f2b4d1cf3a4f5a85c27a988a8d2d5dbdd23892
 
-The remaining posts with `category: about` will appear in the main nav and on the front page.
+The remaining posts with `category: overview` will appear in the main nav and on the front page.
 
 `category: reference` posts will appear in the *Reference* sub-page.
 
