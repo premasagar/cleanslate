@@ -1,0 +1,13 @@
+{
+  "name": "cleanslate",
+  "repo": "premasagar/cleanslate",
+  "description": "extreme CSS reset stylesheet",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "styles": [
+    "cleanslate.css"
+  ]
+}
