@@ -167,6 +167,7 @@ The following documents were invaluable as building blocks for Cleanslate:
  * HTML5 Reset Stylesheet by Richard Clark - "http://html5doctor.com/html-5-reset-stylesheet":http://html5doctor.com/html-5-reset-stylesheet
  * Default stylesheet for HTML 4 - "http://www.w3.org/TR/CSS2/sample.html":http://www.w3.org/TR/CSS2/sample.html
  * Default stylesheet for Mozilla Firefox - "http://mxr.mozilla.org/mozilla-central/source/layout/style/html.css?raw=1":http://mxr.mozilla.org/mozilla-central/source/layout/style/html.css?raw=1
+ * Default stylesheet for Webkit (in Chromium) - "https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/core/css/html.css":https://code.google.com/p/chromium/codesearch#chromium/src/third_party/WebKit/Source/core/css/html.css
  * W3C CSS2 Cascade & Inheritance - "http://www.w3.org/TR/CSS2/cascade.html":http://www.w3.org/TR/CSS2/cascade.html
  * W3C CSS3 Selectors - "http://www.w3.org/TR/css3-selectors":http://www.w3.org/TR/css3-selectors
  * List of CSS Properties - "http://meiert.com/en/indices/css-properties/":http://meiert.com/en/indices/css-properties/
