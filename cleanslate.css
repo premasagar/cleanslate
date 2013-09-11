@@ -13,17 +13,17 @@
 
     **
         
-    v0.9.2
+    v0.9.3
         
 */
 
 /* == BLANKET RESET RULES == */
 
 /* HTML 4.01 */
-.cleanslate, .cleanslate h1, .cleanslate h2, .cleanslate h3, .cleanslate h4, .cleanslate h5, .cleanslate h6, .cleanslate p, .cleanslate td, .cleanslate dl, .cleanslate tr, .cleanslate dt, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate table,  .cleanslate th, .cleanslate tbody, .cleanslate tfoot, .cleanslate caption, .cleanslate thead, .cleanslate ul, .cleanslate li, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate li, .cleanslate iframe, .cleanslate strong, .cleanslate legend, .cleanslate em, .cleanslate s, .cleanslate cite, .cleanslate span, .cleanslate input, .cleanslate sup, .cleanslate label, .cleanslate dfn, .cleanslate object, .cleanslate big, .cleanslate q, .cleanslate font, .cleanslate samp, .cleanslate acronym, .cleanslate small, .cleanslate img, .cleanslate strike, .cleanslate code, .cleanslate sub, .cleanslate ins, .cleanslate textarea, .cleanslate var, .cleanslate a, .cleanslate abbr, .cleanslate applet, .cleanslate del, .cleanslate kbd, .cleanslate tt, .cleanslate b, .cleanslate i, .cleanslate hr,
+.cleanslate, .cleanslate h1, .cleanslate h2, .cleanslate h3, .cleanslate h4, .cleanslate h5, .cleanslate h6, .cleanslate p, .cleanslate td, .cleanslate dl, .cleanslate tr, .cleanslate dt, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate table,  .cleanslate th, .cleanslate tbody, .cleanslate tfoot, .cleanslate caption, .cleanslate thead, .cleanslate ul, .cleanslate li, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate li, .cleanslate iframe, .cleanslate strong, .cleanslate legend, .cleanslate em, .cleanslate summary, .cleanslate cite, .cleanslate span, .cleanslate input, .cleanslate sup, .cleanslate label, .cleanslate dfn, .cleanslate object, .cleanslate big, .cleanslate q, .cleanslate samp, .cleanslate acronym, .cleanslate small, .cleanslate img, .cleanslate strike, .cleanslate code, .cleanslate sub, .cleanslate ins, .cleanslate textarea, .cleanslate var, .cleanslate a, .cleanslate abbr, .cleanslate applet, .cleanslate del, .cleanslate kbd, .cleanslate tt, .cleanslate b, .cleanslate i, .cleanslate hr,
 
-/* HTML5 */
-.cleanslate article, .cleanslate aside, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section, .cleanslate time, .cleanslate mark, .cleanslate audio, .cleanslate video {
+/* HTML5 - Sept 2013 taken from MDN https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5/HTML5_element_list */
+.cleanslate article, .cleanslate aside, .cleanslate figure, .cleanslate figcaption, .cleanslate footer, .cleanslate header, .cleanslate menu, .cleanslate nav, .cleanslate section, .cleanslate time, .cleanslate mark, .cleanslate audio, .cleanslate video, .cleanslate abbr, .cleanslate address, .cleanslate area, .cleanslate blockquote, .cleanslate canvas, .cleanslate caption, .cleanslate cite, .cleanslate code, .cleanslate colgroup, .cleanslate col, .cleanslate datalist, .cleanslate fieldset, .cleanslate main, .cleanslate map, .cleanslate meta, .cleanslate optgroup, .cleanslate output, .cleanslate progress {
 	background-attachment:scroll !important;
 	background-color:transparent !important;
 	background-image:none !important; /* This rule affects the use of pngfix JavaScript http://dillerdesign.com/experiment/DD_BelatedPNG for IE6, which is used to force the browser to recognise alpha-transparent PNGs files that replace the IE6 lack of PNG transparency. (The rule overrides the VML image that is used to replace the given CSS background-image). If you don't know what that means, then you probably haven't used the pngfix script, and this comment may be ignored :) */
@@ -82,22 +82,110 @@
 	word-spacing:normal !important;
 	z-index:auto !important;
 	
-	/* Proprietary and draft rules */
-    /* This section needs extending */
-	-moz-border-radius:0 !important;
+	/* CSS3 */
+    /* Including all prefixes according to http://caniuse.com/ */
+    -webkit-animation-name: none !important;
+            animation-name: none !important;
+    -webkit-animation-duration: 0s !important;
+            animation-duration: 0s !important;
+    -webkit-animation-timing-function: ease !important;
+            animation-timing-function: ease !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-animation-direction: normal !important;
+            animation-direction: normal !important;
+    -webkit-animation-play-state: running !important;
+            animation-play-state: running !important;
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+    -webkit-animation-fill-mode: none !important;
+            animation-fill-mode: none !important; /* haven't included shorthand as the spec is due to change */
+	-webkit-appearance: normal !important;
+	   -moz-appearance: normal !important;
+	        appearance: normal !important;
+	-webkit-background-origin: padding-box !important;
+	        background-origin: padding-box !important;
+	-webkit-background-clip: border-box !important;
+	        background-clip: border-box !important;
+	-webkit-background-size: auto !important;
+	   -moz-background-size: auto !important;
+	        background-size: auto !important;
+	-webkit-border-image: none !important;
+	   -moz-border-image: none !important;
+	     -o-border-image: none !important;
+	        border-image: none !important;
 	-webkit-border-radius:0 !important;
-	-moz-box-sizing: content-box !important;
+	   -moz-border-radius:0 !important;
+	        border-radius: 0 !important;
+	-webkit-box-shadow: none !important;
+	        box-shadow: none !important;
 	-webkit-box-sizing: content-box !important;
-	box-sizing: content-box !important;
-	text-shadow: none !important;	
+	   -moz-box-sizing: content-box !important;
+	        box-sizing: content-box !important;
+	-webkit-column-count: auto !important;
+	   -moz-column-count: auto !important;
+	        column-count: auto !important;
+	-webkit-column-gap: normal !important;
+	   -moz-column-gap: normal !important;
+	        column-gap: normal !important;
+	-webkit-column-rule: medium none black !important;
+	   -moz-column-rule: medium none black !important;
+	        column-rule: medium none black !important;
+	-webkit-column-span: 1 !important;
+	   -moz-column-span: 1 !important; /* doesn't exist yet but probably will */
+	        column-span: 1 !important;
+	-webkit-column-width: auto !important;
+	   -moz-column-width: auto !important;
+	        column-width: auto !important;
+    font-feature-settings: normal !important;
+	overflow-x: visible !important;
+	overflow-y: visible !important;
+	-webkit-hyphens: manual !important;
+	   -moz-hyphens: manual !important;
+	        hyphens: manual !important;
+	-webkit-perspective: none !important;
+	   -moz-perspective: none !important;
+	    -ms-perspective: none !important;
+	     -o-perspective: none !important;
+	        perspective: none !important;
+	-webkit-perspective-origin: 50% 50% !important;
+	   -moz-perspective-origin: 50% 50% !important;
+	    -ms-perspective-origin: 50% 50% !important;
+	     -o-perspective-origin: 50% 50% !important;
+	        perspective-origin: 50% 50% !important;
+	-webkit-backface-visibility: visible !important;
+	   -moz-backface-visibility: visible !important;
+	    -ms-backface-visibility: visible !important;
+	     -o-backface-visibility: visible !important;
+	        backface-visibility: visible !important;
+	text-shadow: none !important;
+	-webkit-transition: all 0s ease 0s !important;
+	        transition: all 0s ease 0s !important;
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	     -o-transform: none !important;
+	        transform: none !important;
+	-webkit-transform-origin: 50% 50% !important;
+	   -moz-transform-origin: 50% 50% !important;
+	    -ms-transform-origin: 50% 50% !important;
+	     -o-transform-origin: 50% 50% !important;
+	        transform-origin: 50% 50% !important;
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	     -o-transform-style: flat !important;
+	        transform-style: flat !important;
+	word-break: normal !important;
 }
 
 /* == BLOCK-LEVEL == */
 /* Actually, some of these should be inline-block and other values, but block works fine (TODO: rigorously verify this) */
 /* HTML 4.01 */
 .cleanslate, .cleanslate h3, .cleanslate h5, .cleanslate p, .cleanslate h1, .cleanslate dl, .cleanslate dt, .cleanslate h6, .cleanslate ol, .cleanslate form, .cleanslate select, .cleanslate option, .cleanslate pre, .cleanslate div, .cleanslate h2, .cleanslate caption, .cleanslate h4, .cleanslate ul, .cleanslate address, .cleanslate blockquote, .cleanslate dd, .cleanslate fieldset, .cleanslate textarea, .cleanslate hr,
+
 /* HTML5 new elements */
-.cleanslate article, .cleanslate aside, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section {
+.cleanslate article, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section, .cleanslate audio, .cleanslate video, .cleanslate address, .cleanslate blockquote, .cleanslate colgroup, .cleanslate main, .cleanslate progress, .cleanslate summary {
     display:block !important; 
 }
 .cleanslate table {
@@ -118,8 +206,14 @@
 .cleanslate th, .cleanslate td {
     display: table-cell !important;
 }
+
 /* == SPECIFIC ELEMENTS == */
 /* Some of these are browser defaults; some are just useful resets */
+
+/* make sure bullet points are visible */
+.cleanslate ul li, .cleanslate ul ul li, .cleanslate ul ul ul li, .cleanslate ol li, .cleanslate ol ol li, .cleanslate ol ol ol li, .cleanslate ul ol ol li, .cleanslate ul ul ol li, .cleanslate ol ul ul li, .cleanslate ol ol ul li {
+	list-style-position: inside !important;
+}
 
 .cleanslate nav ul, .cleanslate nav ol {
 	list-style-type:none !important;
@@ -127,13 +221,13 @@
 .cleanslate ul, .cleanslate menu {
 	list-style-type:disc !important;
 }
-.cleanslate ol {
+div.cleanslate ol {
 	list-style-type:decimal !important;
 }
-.cleanslate ol ul, .cleanslate ul ul, .cleanslate menu ul, .cleanslate ol menu, .cleanslate ul menu, .cleanslate menu menu {
+div.cleanslate ol ul, .cleanslate ul ul, .cleanslate menu ul, .cleanslate ol menu, .cleanslate ul menu, .cleanslate menu menu {
 	list-style-type:circle !important;
 }
-.cleanslate ol ol ul, .cleanslate ol ul ul, .cleanslate ol menu ul, .cleanslate ol ol menu, .cleanslate ol ul menu, .cleanslate ol menu menu, .cleanslate ul ol ul, .cleanslate ul ul ul, .cleanslate ul menu ul, .cleanslate ul ol menu, .cleanslate ul ul menu, .cleanslate ul menu menu, .cleanslate menu ol ul, .cleanslate menu ul ul, .cleanslate menu menu ul, .cleanslate menu ol menu, .cleanslate menu ul menu, .cleanslate menu menu menu {
+div.cleanslate ol ol ul, .cleanslate ol ul ul, .cleanslate ol menu ul, .cleanslate ol ol menu, .cleanslate ol ul menu, .cleanslate ol menu menu, .cleanslate ul ol ul, .cleanslate ul ul ul, .cleanslate ul menu ul, .cleanslate ul ol menu, .cleanslate ul ul menu, .cleanslate ul menu menu, .cleanslate menu ol ul, .cleanslate menu ul ul, .cleanslate menu menu ul, .cleanslate menu ol menu, .cleanslate menu ul menu, .cleanslate menu menu menu {
 	list-style-type:square !important;
 }
 .cleanslate li {	
@@ -141,6 +235,7 @@
 	/* Fixes IE7 issue with positioning of nested bullets */
 	min-height:auto !important;
 	min-width:auto !important;
+	padding-left: 40px !important; /* replace -webkit-padding-start: 40px; */
 }
 .cleanslate strong {
 	font-weight:bold !important;
@@ -156,6 +251,9 @@
 }
 .cleanslate a:hover {
 	text-decoration:underline !important;
+}
+.cleanslate a:visited {
+	color: #529 !important;
 }
 .cleanslate button, .cleanslate input[type=submit] {
   text-align: center !important;
@@ -216,7 +314,8 @@
 	font-size: medium !important;
 	line-height: 1 !important;
 	direction:ltr !important;
-	text-align:left !important;
+	text-align: left !important; /* for IE, Opera */
+	text-align: start !important; /* recommended W3C Spec */
 	font-family: "Times New Roman", Times, serif !important; /* Override this with whatever font-family is required */
 	color: black !important;
 	font-style:normal !important;
