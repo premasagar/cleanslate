@@ -188,6 +188,30 @@
 .cleanslate article, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section, .cleanslate audio, .cleanslate video, .cleanslate address, .cleanslate blockquote, .cleanslate colgroup, .cleanslate main, .cleanslate progress, .cleanslate summary {
     display:block !important; 
 }
+.cleanslate h1, .cleanslate h2, .cleanslate h3, .cleanslate h4, .cleanslate h5, .cleanslate h6 {
+	font-weight: bold !important;
+}
+.cleanslate h1 {
+	font-size: 2em !important;
+	padding: .67em 0 !important;
+}
+.cleanslate h2 {
+	font-size: 1.5em !important;
+	padding: .83em 0 !important;
+}
+.cleanslate h3 {
+	font-size: 1.17em !important;
+	padding: .83em 0 !important;
+}
+.cleanslate h4 {
+	font-size: 1em !important;
+}
+.cleanslate h5 {
+	font-size: .83em !important;
+}
+.cleanslate p {
+	margin: 1em 0 !important;
+}
 .cleanslate table {
     display: table !important;
 }
@@ -205,29 +229,37 @@
 }
 .cleanslate th, .cleanslate td {
     display: table-cell !important;
+    padding: 2px !important;
 }
 
 /* == SPECIFIC ELEMENTS == */
 /* Some of these are browser defaults; some are just useful resets */
-
-/* make sure bullet points are visible */
+.cleanslate ol, .cleanslate ul {
+	margin: 1em 0 !important;
+}
 .cleanslate ul li, .cleanslate ul ul li, .cleanslate ul ul ul li, .cleanslate ol li, .cleanslate ol ol li, .cleanslate ol ol ol li, .cleanslate ul ol ol li, .cleanslate ul ul ol li, .cleanslate ol ul ul li, .cleanslate ol ol ul li {
 	list-style-position: inside !important;
+	margin-top: .08em !important;
 }
-
+.cleanslate ol ol, .cleanslate ol ol ol, .cleanslate ul ul, .cleanslate ul ul ul, .cleanslate ol ul, .cleanslate ol ul ul, .cleanslate ol ol ul, .cleanslate ul ol, .cleanslate ul ol ol, .cleanslate ul ul ol {
+	padding-left: 40px !important;
+	margin: 0 !important;
+}
+/* helper for general navigation */
 .cleanslate nav ul, .cleanslate nav ol {
 	list-style-type:none !important;
+
 }
 .cleanslate ul, .cleanslate menu {
 	list-style-type:disc !important;
 }
-div.cleanslate ol {
+.cleanslate ol {
 	list-style-type:decimal !important;
 }
-div.cleanslate ol ul, .cleanslate ul ul, .cleanslate menu ul, .cleanslate ol menu, .cleanslate ul menu, .cleanslate menu menu {
+.cleanslate ol ul, .cleanslate ul ul, .cleanslate menu ul, .cleanslate ol menu, .cleanslate ul menu, .cleanslate menu menu {
 	list-style-type:circle !important;
 }
-div.cleanslate ol ol ul, .cleanslate ol ul ul, .cleanslate ol menu ul, .cleanslate ol ol menu, .cleanslate ol ul menu, .cleanslate ol menu menu, .cleanslate ul ol ul, .cleanslate ul ul ul, .cleanslate ul menu ul, .cleanslate ul ol menu, .cleanslate ul ul menu, .cleanslate ul menu menu, .cleanslate menu ol ul, .cleanslate menu ul ul, .cleanslate menu menu ul, .cleanslate menu ol menu, .cleanslate menu ul menu, .cleanslate menu menu menu {
+.cleanslate ol ol ul, .cleanslate ol ul ul, .cleanslate ol menu ul, .cleanslate ol ol menu, .cleanslate ol ul menu, .cleanslate ol menu menu, .cleanslate ul ol ul, .cleanslate ul ul ul, .cleanslate ul menu ul, .cleanslate ul ol menu, .cleanslate ul ul menu, .cleanslate ul menu menu, .cleanslate menu ol ul, .cleanslate menu ul ul, .cleanslate menu menu ul, .cleanslate menu ol menu, .cleanslate menu ul menu, .cleanslate menu menu menu {
 	list-style-type:square !important;
 }
 .cleanslate li {	
@@ -235,7 +267,7 @@ div.cleanslate ol ol ul, .cleanslate ol ul ul, .cleanslate ol menu ul, .cleansla
 	/* Fixes IE7 issue with positioning of nested bullets */
 	min-height:auto !important;
 	min-width:auto !important;
-	padding-left: 40px !important; /* replace -webkit-padding-start: 40px; */
+	padding-left: 20px !important; /* replace -webkit-padding-start: 40px; */
 }
 .cleanslate strong {
 	font-weight:bold !important;
@@ -248,9 +280,10 @@ div.cleanslate ol ol ul, .cleanslate ol ul ul, .cleanslate ol menu ul, .cleansla
 }
 .cleanslate a, .cleanslate a *, .cleanslate input[type=submit], .cleanslate input[type=radio], .cleanslate input[type=checkbox], .cleanslate select {
 	cursor:pointer !important;
-}
-.cleanslate a:hover {
 	text-decoration:underline !important;
+}
+.cleanslate a {
+	color: blue !important;
 }
 .cleanslate a:visited {
 	color: #529 !important;
@@ -305,8 +338,55 @@ div.cleanslate ol ol ul, .cleanslate ol ul ul, .cleanslate ol menu ul, .cleansla
 	font-style:italic !important;
 	font-weight:bold !important;
 }
-
-
+.cleanslate menu {
+	padding-left: 40px !important;
+	padding-top: 8px !important;
+}
+/* restore form defaults */
+.cleanslate textarea {
+	-webkit-appearance: textarea !important;
+	background: white !important;
+	padding: 2px !important;
+	word-wrap: break-word !important;
+	white-space: pre-wrap !important;
+	font-size: small !important;
+	font-family: arial, helvetica sans-serif !important;
+	resize: both !important;
+	font-family: inherit !important; /* forces FF to inherit font family */
+}
+.cleanslate textarea:focus, .cleanslate input:focus {
+	outline: auto 5px -webkit-focus-ring-color !important;
+	outline: initial !important;
+}
+.cleanslate input[type=text] {
+	background: white !important;
+	padding: 1px !important;
+	font-family: initial !important;
+	font-size: small !important;
+}
+.cleanslate input[type=checkbox], .cleanslate input[type=radio] {
+	border: 1px #2b2b2b solid !important;
+	border-radius: 4px !important;
+}
+.cleanslate input[type=checkbox], .cleanslate input[type=radio] {
+	outline: intial !important;
+}
+.cleanslate input[type=submit] {
+	text-align: center !important;
+	padding: 2px 6px 3px !important;
+	border-radius: 4px !important;
+	text-decoration: none !important;
+	font-family: arial, helvetica, sans-serif !important;
+	font-size: small !important;
+	background: white !important;
+	-webkit-appearance: push-button !important;
+	color: buttontext !important;
+	border: 1px #a6a6a6 solid !important;
+	background: lightgrey !important;
+	background: -webkit-linear-gradient(top, #fff, #ddd) !important;
+	-webkit-box-shadow: 1px 1px 0px #eee !important;
+	outline: initial !important;
+}
 
 /* == ROOT CONTAINER ELEMENT == */
 /* This contains default values for child elements to inherit  */
