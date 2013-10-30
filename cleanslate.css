@@ -84,25 +84,7 @@
     
     /* CSS3 */
     /* Including all prefixes according to http://caniuse.com/ */
-    -webkit-animation-name: none !important;
-            animation-name: none !important;
-    -webkit-animation-duration: 0s !important;
-            animation-duration: 0s !important;
-    -webkit-animation-timing-function: ease !important;
-            animation-timing-function: ease !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
-    -webkit-animation-direction: normal !important;
-            animation-direction: normal !important;
-    -webkit-animation-play-state: running !important;
-            animation-play-state: running !important;
-    -webkit-animation-delay: 0s !important;
-            animation-delay: 0s !important;
-    -webkit-animation-fill-mode: none !important;
-            animation-fill-mode: none !important; /* haven't included shorthand as the spec is due to change */
-    -webkit-appearance: normal !important;
-       -moz-appearance: normal !important;
-            appearance: normal !important;
+    /* CSS Animations don't cascade, so don't require resetting */
     -webkit-background-origin: padding-box !important;
             background-origin: padding-box !important;
     -webkit-background-clip: border-box !important;
@@ -371,7 +353,7 @@
 .cleanslate input[type=checkbox], .cleanslate input[type=radio] {
     outline: intial !important;
 }
-.cleanslate input[type=submit] {
+.cleanslate input[type=submit], .cleanslate button {
     text-align: center !important;
     padding: 2px 6px 3px !important;
     border-radius: 4px !important;
@@ -382,10 +364,27 @@
     -webkit-appearance: push-button !important;
     color: buttontext !important;
     border: 1px #a6a6a6 solid !important;
-    background: lightgrey !important;
-    background: -webkit-linear-gradient(top, #fff, #ddd) !important;
+    background: lightgrey !important; /* Old browsers */
+    background: rgb(255,255,255); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(221,221,221,1) 100%, rgba(209,209,209,1) 100%, rgba(221,221,221,1) 100%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(221,221,221,1)), color-stop(100%,rgba(209,209,209,1)), color-stop(100%,rgba(221,221,221,1))) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(221,221,221,1) 100%,rgba(209,209,209,1) 100%,rgba(221,221,221,1) 100%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(221,221,221,1) 100%,rgba(209,209,209,1) 100%,rgba(221,221,221,1) 100%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(221,221,221,1) 100%,rgba(209,209,209,1) 100%,rgba(221,221,221,1) 100%) !important; /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(221,221,221,1) 100%,rgba(209,209,209,1) 100%,rgba(221,221,221,1) 100%) !important; /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#dddddd',GradientType=0 ) !important; /* IE6-9 */
     -webkit-box-shadow: 1px 1px 0px #eee !important;
     outline: initial !important;
+}
+.cleanslate input[type=submit]:active, .cleanslate button:active {
+    background: rgb(59,103,158) !important; /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(59,103,158,1) 0%, rgba(43,136,217,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%) !important; /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(59,103,158,1)), color-stop(50%,rgba(43,136,217,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))) !important; /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* IE10+ */
+    background: linear-gradient(to bottom, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* W3C */
+    border-color: #5259b0 !important;
 }
 
 /* additional helpers */
