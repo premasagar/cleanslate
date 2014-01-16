@@ -1,0 +1,11 @@
+{
+  "name": "cleanslate",
+  "version": "0.0.1",
+  "main": "cleanslate.css",
+  "homepage": "https://github.com/premasagar/cleanslate",
+  "authors": [
+    "Premasagar Rose <p@dharmafly.com>"
+  ],
+  "description": "extreme CSS reset stylesheet",
+  "license": "MIT"
+}
