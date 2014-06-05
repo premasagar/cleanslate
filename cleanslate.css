@@ -34,6 +34,7 @@
 	border-radius:0 !important;
 	border-style:none !important;
 	border-width:medium !important;
+	box-sizing:content-box !important;
 	bottom:auto !important;
 	clear:none !important;
 	clip:auto !important;
