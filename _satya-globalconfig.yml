@@ -1,0 +1,34 @@
+#########################################
+# global config
+
+project_name: Project site
+project_url: https://github.com/dharmafly/PROJECT-REPO
+version: '0.0.1'
+jquery_no_conflict: true
+theme: forest
+twitter_url: https://twitter.com/dharmafly
+twitter_name: Dharmafly
+lang: javascript
+scripts:
+stylesheets:
+quote:
+ga_id:
+download_links:
+sections:
+  - path: /index.html
+    name: Overview
+  - path: /reference/index.html
+    name: Reference
+
+############ Jekyll options
+
+safe:        false
+future:      true
+lsi:         false
+highlighter: pygments
+markdown:    kramdown
+permalink:   /:title
+baseurl:     /
+exclude: ['README.md', 'FiddlerRules.farx']
+
+########### END global config ###########
