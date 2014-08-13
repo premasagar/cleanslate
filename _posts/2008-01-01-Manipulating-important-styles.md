@@ -15,19 +15,4 @@ You don't need to use JavaScript to take advantage of Cleanslate. However, if yo
     jQuery(elem).css("border", "red !important");         // won't work
     jQuery(elem).attr("style", "border: red !important"); // WILL work
 
-If you are using jQuery, you can use the ['Important' plugin](https://github.com/premasagar/important) to make this process much more easy. With this, you can add `true` as a third argument to the `css()` method:
-
-    jQuery(elem).css("border", "red", true);
-
-or turn on `!important` handling by default:
-
-    jQuery.important();
-    jQuery(elem).css("border", "red");
-
-or make an element's styles use `!important`:
-
-    jQuery(elem).important();
-
-or not:
-
-    jQuery(elem).important(false);
+A no-longer maintained jQuery plugin, ['Important'](https://github.com/premasagar/important), may be of use.
