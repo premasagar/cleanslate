@@ -1,12 +1,12 @@
 <!DOCTYPE html> 
 <!--
   Proprietary CSS Sniffer
-  A resource for CleanSlateCSS, an extreme CSS reset stylesheet: http://code.google.com/p/cleanslatecss/
+  A resource for Cleanslate <http://cleanslatecss.com>, an extreme CSS reset stylesheet.
+
   Finds default values for browsers' proprietary CSS properties. Run this page in multiple browsers to find their proprietary values.
 
-  From an original script by Alistair James: http://www.worldreviewer.com
-  Adapted by Premasagar Rose: http://premasagar.com
-  A Dharmafly project: http://dharmafly.com
+  From an original script by Alistair James <http://www.worldreviewer.com>
+  Adapted by Premasagar Rose <http://premasagar.com>
 
   Lisensed under the MIT license:
   http://www.opensource.org/licenses/mit-license.php
@@ -40,7 +40,7 @@
   <h1>Proprietary CSS Sniffer</h1>
   <p class="intro">
     <span id="numStylesReport"><span id="numStyles"></span> proprietary CSS rules were found in your browser.</span> Their default values are shown below.<br />
-    <em>(This is a resource for <a href="http://code.google.com/p/cleanslatecss/">CleanSlateCSS</a>, an extreme CSS reset stylesheet).</em>
+    <em>(This is a resource for <a href="http://cleanslatecss.com">Cleanslate</a>, an extreme CSS reset stylesheet).</em>
   </p>
   
   <div class="test"></div>
@@ -49,38 +49,16 @@
     <textarea id="css-properties"></textarea> 
   </div> 
   
-  <script> 
-    // _(args) = Log
-    (function(){
-      var console = window.console;
-      window._ = (console && console.debug && typeof console.debug.apply === 'function') ?
-        console.debug : // FF Firebug
-        function(){
-          var i, args = arguments, log;
-          if (console){
-            log = console.log;
-            if (log){ // Webkit
-              if (typeof log.apply === 'function'){
-                log.apply(console, args);
-              }
-              else { // IE8
-                $.each(args, function(){
-                  log(this);
-                });
-              }
-            }
-          }
-        };
-    })();
- 
-    // Setup
-    var elem, defaultView, styles, numStyles, maxRuleLength, cssText, computedStyle;
-    elem = $('.test')[0]; // TODO: multiple test for block-level, inline, table elements
-    defaultView = document.defaultView;
-    styles = {};
-    numStyles = 0;
-    maxRuleLength = 0;
-    cssText = '';
+  <script>
+    'use strict';
+
+    var elem = $('.test')[0],
+      defaultView = document.defaultView,
+      styles = {},
+      numStyles = 0,
+      maxRuleLength = 0,
+      cssText = '',
+      computedStyle;
     
     // W3C
     if (defaultView && defaultView.getComputedStyle){

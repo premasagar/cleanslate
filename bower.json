@@ -1,11 +1,21 @@
 {
   "name": "cleanslate",
-  "version": "0.0.1",
-  "main": "cleanslate.css",
-  "homepage": "https://github.com/premasagar/cleanslate",
+  "version": "0.9.3",
+  "homepage": "http://cleanslatecss.com",
+  "description": "Extreme CSS reset stylesheet",
   "authors": [
     "Premasagar Rose <p@dharmafly.com>"
   ],
-  "description": "extreme CSS reset stylesheet",
-  "license": "MIT"
+  "main": "cleanslate.css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/premasagar/cleanslate.git"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "bower_components",
+    "component.json",
+    "Makefile"
+  ]
 }

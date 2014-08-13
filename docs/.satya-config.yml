@@ -1,0 +1,42 @@
+#########################################
+# global config
+
+project_name: Cleanslate
+project_url: https://github.com/premasagar/cleanslate
+version: '0.9.3'
+jquery_no_conflict: true
+theme: slate
+twitter_url: https://twitter.com/premasagar
+twitter_name: Premasagar
+lang: css
+scripts:
+stylesheets:
+quote:
+  - quote: Things are only impossible until they're not.
+  - cite: Hannah Louise Shearer
+ga_id: UA-34978047-8
+download_links:
+  - text: cleanslate.css
+    subtext: v{{ version }}
+    href: https://raw.githubusercontent.com/premasagar/cleanslate/master/cleanslate.css
+    title: Download stylesheet
+  - text: Repository
+    subtext: (zip)
+    href: https://github.com/premasagar/cleanslate/zipball/master
+    title: Latest codebase
+sections:
+  - path: /index.html
+    name: Overview
+
+############ Jekyll options
+
+safe:        false
+future:      true
+lsi:         false
+highlighter: pygments
+markdown:    kramdown
+permalink:   /:title
+baseurl:     /
+exclude: ['README.md', 'FiddlerRules.farx']
+
+########### END global config ###########
