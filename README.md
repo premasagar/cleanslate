@@ -6,7 +6,16 @@ Full site: [cleanslatecss.com](http://cleanslatecss.com)
 
 It does not require any JavaScript – it’s just a CSS stylesheet. However, you may find it useful when used within JavaScript widgets, such as those created by the ‘“Sqwidget”:https://github.com/premasagar/sqwidget’ library. If you are using JavaScript, then see the section “Manipulating !important styles with JavaScript” below and check out the [‘Important’ jQuery plugin](https://github.com/premasagar/important).
 
-**If you have any feedback or questions**, or if you’ve found Cleanslate useful, please [raise an issue](https://github.com/premasagar/cleanslate/issues) or tell [@premasagar](http://twitter.com/premasagar). Feel free to fork and improve the code.
+
+Usage
+-----
+
+1. Include a `<link>` to cleanslate.css in the host page
+2. Add the class `cleanslate` to the HTML container element of the widget
+3. Add `!important` to all of the widget's CSS rules
+4. (optional) Set the default styles on the widget container
+
+For more details, see ['Usage'](http://cleanslatecss.com/usage/).
 
 
 Why would I need it?
@@ -42,12 +51,7 @@ How does it do it?
 The stylesheet lists all possible HTML elements, and assigns them the default (or otherwise appropriate) values for every CSS property. It only looks within elements that have a `class` attribute of “@cleanslate@”.
 
 
-How do I use it?
-----------------
+Pull requests
+-------------
 
-1. Include a `<link>` to cleanslate.css in the host page
-2. Add the class `cleanslate` to the HTML container element of the widget
-3. Add `!important` to all of the widget's CSS rules
-4. (optional) Set the default styles on the widget container
-
-For more details, see ['Usage'](http://cleanslatecss.com/usage/).
+Pull requests are welcome. Please comment on the reason for the change.
