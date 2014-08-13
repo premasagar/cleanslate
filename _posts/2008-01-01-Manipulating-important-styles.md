@@ -1,7 +1,7 @@
 ---
-category: overview
 heading: "Manipulating !important styles"
-path: overview
+category: usage
+path: usage
 ---
 
 You don't need to use JavaScript to take advantage of Cleanslate. However, if you do want to manipulate a Cleanslated element with JavaScript, then you will find that you cannot change its styles by manipulating the `elem.style` object, as you might normally. Instead, you will need to edit its `elem.style.cssText` property, or change its `style` attribute:

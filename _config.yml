@@ -25,6 +25,8 @@ download_links:
 sections: 
   - path: /index.html
     name: Overview
+  - path: /usage/index.html
+    name: Usage
 safe: false
 future: true
 lsi: false
