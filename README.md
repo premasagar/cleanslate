@@ -15,7 +15,7 @@ Usage
 3. Add `!important` to all of the widget's CSS rules
 4. (optional) Set the default styles on the widget container
 
-For more details, see ['Usage'](http://cleanslatecss.com/usage/).
+For more details, see ['Usage'](http://cleanslatecss.com/#Usage).
 
 
 Why would I need it?
