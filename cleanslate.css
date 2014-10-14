@@ -123,6 +123,13 @@
 }
 .cleanslate th, .cleanslate td {
     display: table-cell !important;
+    vertical-align: middle !important;
+}
+.cleanslate td[valign=top] {
+    vertical-align: top !important
+}
+.cleanslate td[valign=bottom] {
+    vertical-align: bottom !important
 }
 /* == SPECIFIC ELEMENTS == */
 /* Some of these are browser defaults; some are just useful resets */
