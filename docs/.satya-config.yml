@@ -11,9 +11,11 @@ twitter_name: Premasagar
 lang: css
 scripts:
 stylesheets:
+  - url: /css/custom.css
+  - url: /cleanslate.css
 quote:
-  - quote: Things are only impossible until they're not.
-  - cite: Hannah Louise Shearer
+  quote: Things are only impossible until they're not.
+  cite: Hannah Louise Shearer
 ga_id: UA-34978047-8
 download_links:
   - text: cleanslate.css

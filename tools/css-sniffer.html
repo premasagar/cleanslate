@@ -1,0 +1,135 @@
+<!DOCTYPE html> 
+<!--
+  Proprietary CSS Sniffer
+  A resource for Cleanslate <http://cleanslatecss.com>.
+
+  Finds default values for browsers' proprietary CSS properties. Run this page in multiple browsers to find their proprietary values.
+
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Cleanslate CSS sniffer</title>
+  <style>
+    body {
+      margin:0;
+      padding:0.5em 3em;
+    }
+
+    textarea {
+      padding:0.5em 1em 0.3em;
+      font-family:monospace;
+      font-size:1.2em;
+      line-height:1.4;
+      color:white;
+      background-color:black;
+      border:none;
+    }
+  </style> 
+</head> 
+<body> 
+  <h1>CSS properties sniffer</h1>
+  <p class="intro">
+    <span id="numPropsReport"><span id="numProps"></span> CSS properties were found, including were found in your browser.</span> Their default values are shown below.<br />
+    <em>(This is a resource for <a href="http://cleanslatecss.com">Cleanslate</a>, an extreme CSS reset stylesheet).</em>
+  </p>
+
+  <section>
+    <h1>Vendor-prefixed properties</h1>
+    <textarea id="css-prefixed-properties"></textarea>
+  </section> 
+  
+  <section>
+    <h1>Standard properties</h1>
+    <textarea id="css-properties"></textarea>
+  </section>
+
+  <div id="test"></div>
+  
+  <script>
+    'use strict';
+
+    function isNumeric(obj) {
+      return typeof obj === 'number' ||
+        (typeof obj === 'string' && !isNaN(Number(obj)));
+    }
+
+    // Could use el.currentStyle in legacy IE
+    function getProperties(el) {
+      if (!(
+        'defaultView' in document &&
+        'keys' in Object &&
+        'filter' in Array.prototype
+      )){
+        throw new Error('This browser does not support the test');
+      }
+
+      el || (el = document.body);
+
+      var ret = {};
+      var props = document.defaultView.getComputedStyle(el, null);
+      Object.keys(props)
+        .filter(isNumeric)
+        .forEach(function(i){
+          var name = props[i];
+          ret[name] = props.getPropertyCSSValue(name).cssText;
+        });
+
+      return ret;
+    }
+
+    function getCategorizedProperties(el) {
+      var props = getProperties(el);
+      var ret = {
+        prefixed: {},
+        standard: {}
+      };
+
+      Object.keys(props).forEach(function(prop){
+        var collection = prop.indexOf('-') === 0 ?
+          ret.prefixed : ret.standard;
+
+        collection[prop] = props[prop];
+      });
+
+      return ret;
+    }
+
+    function printProperties(props, textarea) {
+      var numProps = 0;
+      var maxRuleLength = 0;
+      var cssText = '';
+    
+      Object.keys(props).forEach(function(prop){
+        var val = props[prop];
+        var rule = prop + ':' + ' ' + val + /* ' !important' + ';' + */ '\n';
+        cssText += rule;
+        // Record max string length of CSS rule, for textarea display
+        if (rule.length >  maxRuleLength){
+           maxRuleLength = rule.length;
+        }
+        numProps++;
+      });
+
+      // Remove last line break
+      cssText = cssText.replace(/\n$/, '');
+
+      textarea.setAttribute('rows', numProps);
+      textarea.setAttribute('cols', maxRuleLength + 6);
+      textarea.textContent = cssText;
+      textarea.addEventListener('click', function(){
+          textarea.select()
+      });
+    }
+
+
+    /////
+
+
+    var props = getCategorizedProperties(document.getElementById('test'));
+
+    printProperties(props.standard, document.getElementById('css-properties'));
+    printProperties(props.prefixed, document.getElementById('css-prefixed-properties'));
+  </script> 
+</body> 
+</html>
