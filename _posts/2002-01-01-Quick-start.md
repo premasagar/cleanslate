@@ -1,5 +1,5 @@
 ---
-heading: Usage
+heading: Quick start
 category: overview
 path: overview
 ---
@@ -10,3 +10,4 @@ path: overview
 4. (optional) Set the default styles on the widget container
 
 For more details, see the ['Usage' section](/usage/).
+
