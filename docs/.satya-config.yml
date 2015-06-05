@@ -3,7 +3,7 @@
 
 project_name: Cleanslate
 project_url: https://github.com/premasagar/cleanslate
-version: '0.9.3'
+version: '0.10.1'
 jquery_no_conflict: true
 theme: slate
 twitter_url: https://twitter.com/premasagar
