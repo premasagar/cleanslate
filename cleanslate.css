@@ -447,3 +447,7 @@
     text-decoration:none !important;
     list-style-type:disc !important;
 }
+
+.cleanslate pre {
+    white-space:pre !important;
+}
