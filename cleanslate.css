@@ -257,7 +257,7 @@
 .cleanslate em {
     font-style:italic !important;
 }
-.cleanslate kbd, .cleanslate samp, .cleanslate code {
+.cleanslate kbd, .cleanslate samp, .cleanslate code, .cleanslate pre {
   font-family:monospace !important;
 }
 .cleanslate a {
