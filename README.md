@@ -42,9 +42,9 @@ However, iframes have some drawbacks:
 
 ### iframe-based resetting for distributed content
 
-Cleanslate only resets CSS styles. But if you also need to protect your content from JavaScript on the host page, then see ‘“AppleOfMyIframe”:https://github.com/premasagar/appleofmyiframe’, which allows you to inject HTML into a “sourceless” iframe element that the browser treats as being on the same domain as the host.
+Cleanslate only resets CSS styles. But if you also need to protect your content from JavaScript on the host page, then see [AppleOfMyIframe](https://github.com/premasagar/appleofmyiframe), which allows you to inject HTML into a “sourceless” iframe element that the browser treats as being on the same domain as the host.
 
-If your host page needs to isolate and sandbox third-party JavaScript, then you might want to use ‘“Sandie”:https://github.com/premasagar/sandie’.
+If your host page needs to isolate and sandbox third-party JavaScript, then you might want to use [Sandie](https://github.com/premasagar/sandie).
 
 
 How does it do it?
