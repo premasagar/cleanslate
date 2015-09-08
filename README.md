@@ -6,7 +6,9 @@ Full site: [cleanslatecss.com](http://cleanslatecss.com)
 
 It does not require any JavaScript – it’s just a CSS stylesheet. However, you may find it useful when used within JavaScript widgets, such as those created by [Sqwidget](https://github.com/premasagar/sqwidget).
 
-If you have any feedback or questions, please raise an [issue](https://github.com/premasagar/cleanslate/issues) or contact [@premasagar](http://twitter.com/premasagar). Feel free to fork and improve the code.
+If you have any feedback or questions, please raise an [issue](https://github.com/premasagar/cleanslate/issues) or contact [@premasagar](https://twitter.com/premasagar). Fork away.
+
+License: Open source, [MIT](http://opensource.org/licenses/MIT)
 
 
 Usage
@@ -56,4 +58,4 @@ The stylesheet lists all possible HTML elements, and assigns them the default (o
 Pull requests
 -------------
 
-Pull requests are welcome. Please comment on the reason for the change.
+Pull requests are welcome.
