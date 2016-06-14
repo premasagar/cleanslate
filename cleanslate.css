@@ -267,7 +267,7 @@
 .cleanslate a:visited {
     color: #529 !important;
 }
-.cleanslate a, .cleanslate a *, .cleanslate input[type=submit], .cleanslate input[type=radio], .cleanslate input[type=checkbox], .cleanslate select {
+.cleanslate a, .cleanslate a *, .cleanslate input[type=submit], .cleanslate input[type=button], .cleanslate input[type=radio], .cleanslate input[type=checkbox], .cleanslate select, .cleanslate button {
     cursor:pointer !important;
 }
 .cleanslate button, .cleanslate input[type=submit] {
