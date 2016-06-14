@@ -12,9 +12,9 @@
         opensource.org/licenses/mit-license.php
 
     **
-        
+
     v0.10.1
-        
+
 */
 
 /* == BLANKET RESET RULES == */
@@ -81,7 +81,7 @@
     width:auto !important;
     word-spacing:normal !important;
     z-index:auto !important;
-    
+
     /* CSS3 */
     /* Including all prefixes according to http://caniuse.com/ */
     /* CSS Animations don't cascade, so don't require resetting */
@@ -168,7 +168,7 @@
 
 /* HTML5 new elements */
 .cleanslate article, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section, .cleanslate audio, .cleanslate video, .cleanslate address, .cleanslate blockquote, .cleanslate colgroup, .cleanslate main, .cleanslate progress, .cleanslate summary {
-    display:block !important; 
+    display:block !important;
 }
 .cleanslate h1, .cleanslate h2, .cleanslate h3, .cleanslate h4, .cleanslate h5, .cleanslate h6 {
     font-weight: bold !important;
@@ -244,7 +244,7 @@
 .cleanslate ol ol ul, .cleanslate ol ul ul, .cleanslate ol menu ul, .cleanslate ol ol menu, .cleanslate ol ul menu, .cleanslate ol menu menu, .cleanslate ul ol ul, .cleanslate ul ul ul, .cleanslate ul menu ul, .cleanslate ul ol menu, .cleanslate ul ul menu, .cleanslate ul menu menu, .cleanslate menu ol ul, .cleanslate menu ul ul, .cleanslate menu menu ul, .cleanslate menu ol menu, .cleanslate menu ul menu, .cleanslate menu menu menu {
     list-style-type:square !important;
 }
-.cleanslate li {    
+.cleanslate li {
     display:list-item !important;
     /* Fixes IE7 issue with positioning of nested bullets */
     min-height:auto !important;
@@ -267,7 +267,7 @@
 .cleanslate a:visited {
     color: #529 !important;
 }
-.cleanslate a, .cleanslate a *, .cleanslate input[type=submit], .cleanslate input[type=radio], .cleanslate input[type=checkbox], .cleanslate select {
+.cleanslate a, .cleanslate a *, .cleanslate input[type=submit], .cleanslate input[type=button], .cleanslate input[type=radio], .cleanslate input[type=checkbox], .cleanslate select, .cleanslate button {
     cursor:pointer !important;
 }
 .cleanslate button, .cleanslate input[type=submit] {
@@ -295,6 +295,16 @@
          -o-box-shadow: 1px 1px 0px #eee !important;
             box-shadow: 1px 1px 0px #eee !important;
     outline: initial !important;
+}
+.cleanslate button:active, .cleanslate input[type=submit]:active, .cleanslate input[type=button]:active, .cleanslate button:active {
+	background: rgb(59,103,158) !important; /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(59,103,158,1) 0%, rgba(43,136,217,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%) !important; /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(59,103,158,1)), color-stop(50%,rgba(43,136,217,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))) !important; /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* IE10+ */
+	background: linear-gradient(to bottom, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* W3C */
+	border-color: #5259b0 !important;
 }
 .cleanslate button {
     padding: 1px 6px 2px 6px !important;
@@ -339,20 +349,10 @@
     border-radius: 4px !important;
 }
 .cleanslate input[type=checkbox], .cleanslate input[type=radio] {
-    outline: intial !important;
+    outline: initial !important;
 }
 .cleanslate input[type=radio] {
     margin: 2px 2px 3px 2px !important;
-}
-.cleanslate input[type=submit]:active, .cleanslate button:active {
-    background: rgb(59,103,158) !important; /* Old browsers */
-    background: -moz-linear-gradient(top, rgba(59,103,158,1) 0%, rgba(43,136,217,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%) !important; /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(59,103,158,1)), color-stop(50%,rgba(43,136,217,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1))) !important; /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* IE10+ */
-    background: linear-gradient(to bottom, rgba(59,103,158,1) 0%,rgba(43,136,217,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%) !important; /* W3C */
-    border-color: #5259b0 !important;
 }
 .cleanslate abbr[title], .cleanslate acronym[title], .cleanslate dfn[title] {
     cursor:help !important;
