@@ -12,9 +12,9 @@
         opensource.org/licenses/mit-license.php
 
     **
-        
+
     v0.10.1
-        
+
 */
 
 /* == BLANKET RESET RULES == */
@@ -81,7 +81,7 @@
     width:auto !important;
     word-spacing:normal !important;
     z-index:auto !important;
-    
+
     /* CSS3 */
     /* Including all prefixes according to http://caniuse.com/ */
     /* CSS Animations don't cascade, so don't require resetting */
@@ -168,7 +168,7 @@
 
 /* HTML5 new elements */
 .cleanslate article, .cleanslate dialog, .cleanslate figure, .cleanslate footer, .cleanslate header, .cleanslate hgroup, .cleanslate menu, .cleanslate nav, .cleanslate section, .cleanslate audio, .cleanslate video, .cleanslate address, .cleanslate blockquote, .cleanslate colgroup, .cleanslate main, .cleanslate progress, .cleanslate summary {
-    display:block !important; 
+    display:block !important;
 }
 .cleanslate h1, .cleanslate h2, .cleanslate h3, .cleanslate h4, .cleanslate h5, .cleanslate h6 {
     font-weight: bold !important;
@@ -244,7 +244,7 @@
 .cleanslate ol ol ul, .cleanslate ol ul ul, .cleanslate ol menu ul, .cleanslate ol ol menu, .cleanslate ol ul menu, .cleanslate ol menu menu, .cleanslate ul ol ul, .cleanslate ul ul ul, .cleanslate ul menu ul, .cleanslate ul ol menu, .cleanslate ul ul menu, .cleanslate ul menu menu, .cleanslate menu ol ul, .cleanslate menu ul ul, .cleanslate menu menu ul, .cleanslate menu ol menu, .cleanslate menu ul menu, .cleanslate menu menu menu {
     list-style-type:square !important;
 }
-.cleanslate li {    
+.cleanslate li {
     display:list-item !important;
     /* Fixes IE7 issue with positioning of nested bullets */
     min-height:auto !important;
@@ -339,7 +339,7 @@
     border-radius: 4px !important;
 }
 .cleanslate input[type=checkbox], .cleanslate input[type=radio] {
-    outline: intial !important;
+    outline: initial !important;
 }
 .cleanslate input[type=radio] {
     margin: 2px 2px 3px 2px !important;
