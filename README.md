@@ -21,6 +21,8 @@ Usage
 
 For more details, see ['Usage'](http://cleanslatecss.com/usage/).
 
+Cleanslate is [available on cdnjs](https://cdnjs.com/libraries/cleanslate), if you want the stylesheet already hosted.
+
 
 Why would I need it?
 --------------------
@@ -28,6 +30,8 @@ Why would I need it?
 Cleanslate is useful when there are existing CSS styles on a page, and you want to prevent those styles cascading into some part of the page. This is *not* a stylesheet to use when developing your own website (for that, try Eric Meyer’s classic [Reset CSS](http://meyerweb.com/eric/tools/css/reset/) or the [HTML5 Doctors’ adaptation](http://html5doctor.com/html-5-reset-stylesheet)).
 
 The stylesheet can be useful when distributing content (e.g. a widget, or syndicated news) to third-party websites. The CSS rules in the host site may be unknown and unpredictable, or may change in future without notice, or there may be so many websites you need to distribute to that it is impractical to write specific CSS that overrides the styles in each one. In such situations, the Cleanslate stylesheet will aggressively reset your portion of the content (and nothing else) back to some reasonable default values that you can then build from.
+
+The stylesheet aims to list all standard HTML elements, and assigns them a default (or otherwise relevant) value for every CSS property. The stylesheet only targets elements that have a `class` attribute of `"cleanslate"` and their child elements.
 
 
 Why not just use an iframe?
@@ -39,20 +43,10 @@ However, iframes have some drawbacks:
 
 -   You cannot display content outside of the box of the iframe
 -   It is tricky to resize the iframe to match the size of its contents
--   Your content will be unable to interact with the host page, even if it is trusted
+-   Your content will be unable to interact with the host page
 -   Search engines like Google will not see the content on the host page. Content that is syndicated from a partner website can avoid this by being directly included in the host page.
 
-### iframe-based resetting for distributed content
-
-Cleanslate only resets CSS styles. But if you also need to protect your content from JavaScript on the host page, then see [AppleOfMyIframe](https://github.com/premasagar/appleofmyiframe), which allows you to inject HTML into a “sourceless” iframe element that the browser treats as being on the same domain as the host.
-
-If your host page needs to isolate and sandbox third-party JavaScript, then you might want to use [Sandie](https://github.com/premasagar/sandie).
-
-
-How does it do it?
-------------------
-
-The stylesheet lists all possible HTML elements, and assigns them the default (or otherwise appropriate) values for every CSS property. It only looks within elements that have a `class` attribute of “@cleanslate@”.
+[Edit]: The [iframe's `sandbox` attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox) that was added in HTML5 address a number of issues.
 
 
 Pull requests
