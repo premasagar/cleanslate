@@ -432,6 +432,9 @@
     vertical-align: top !important;
 }
 
+.cleanslate *:before { display: none !important; }
+.cleanslate *:after { display: none !important; }
+
 /* == ROOT CONTAINER ELEMENT == */
 /* This contains default values for child elements to inherit  */
 .cleanslate {
