@@ -81,6 +81,7 @@
     width:auto !important;
     word-spacing:normal !important;
     z-index:auto !important;
+    box-sizing: content-box !important; /* Initial and default value in CSS standard */
 
     /* CSS3 */
     /* Including all prefixes according to http://caniuse.com/ */
