@@ -1,6 +1,6 @@
 # Cleanslate
 
-Full site: [cleanslatecss.com](http://cleanslatecss.com)
+[Cleanslate](https://cleanslate.dharmafly.com)
 
 **Cleanslate is an extreme CSS reset stylesheet.** It is used to reset the styling of an HTML element and all its children, back to default CSS values. It is composed exclusively of [!important rules](http://www.w3.org/TR/CSS2/cascade.html#important-rules), which override all other types of rules.
 
